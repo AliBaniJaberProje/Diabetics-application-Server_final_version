@@ -7,7 +7,7 @@ app.set('port',env.PORT)
 
 const server=http.createServer(app)
 
-server.listen(process.env.PORT || PORT)
+server.listen(process.env.PORT || '3000')
 
 server.on('error',onError)
 server.on("listening", ()=>{
