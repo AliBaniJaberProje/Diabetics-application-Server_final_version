@@ -22,7 +22,7 @@ app.use(helmet());
 app.use("/auth",authApi)
 
 app.use("/doctor",doctorApi)
-app.use("/patientServes-handler",patientApi)
+app.use("/patient",patientApi)
 
 
 
