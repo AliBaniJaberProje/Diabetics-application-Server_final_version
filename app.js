@@ -17,6 +17,7 @@ app.use(allowLevelOne)
 app.all(allowLevelTwo)
 
 app.use(helmet());
+
 app.use("/auth",authApi)
 
 app.use("/doctor",doctorApi)
