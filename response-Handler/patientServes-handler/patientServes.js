@@ -1,9 +1,10 @@
 import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken"
 
-const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+
 
 const updateInfo=async (req,res,next)=>{
+    const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
     Patient.findOneAndUpdate({id:resultDecodeJWT.id},{$set:req.body}).then(value=>{
 
         res.status(200).json({
