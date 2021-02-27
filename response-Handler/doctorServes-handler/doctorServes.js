@@ -20,6 +20,26 @@ const addNewPatient=async (req,res,_)=>{
     }
 }
 
+const updateCurrentDoctor=async (req,res,next)=>{
+    try {
+        const idPatient =req.body.id;
+        const patient=await Patient.find({id:idPatient})
+        await Patient.updateOne({id:req.body.id},{$push:{"lastDoctor":patient[0].currentDoctor}})
+        await Patient.updateOne({id:req.body.id},{$set:{"currentDoctor":req.body.newDoctor}})
+        res.status(200).json({
+            msg:"operation accomplished successfully",
+            status:200,
+        })
+    }catch (e) {
+        res.status(401).json({
+            msg:e.message,
+            status:401,
+        })
+    }
+
+}
+
 export {
-    addNewPatient
+    addNewPatient,
+    updateCurrentDoctor
 }

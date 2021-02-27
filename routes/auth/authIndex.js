@@ -5,7 +5,7 @@ import patientAuthRoutes from "./patient-auth-router.js"
 
 router.use('/doctor',doctorAuthRoutes)
 
-router.use('/patient',patientAuthRoutes)
+router.use('/patientServes-handler',patientAuthRoutes)
 
 export default router
 

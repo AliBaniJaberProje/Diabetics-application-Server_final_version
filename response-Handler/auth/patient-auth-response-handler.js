@@ -6,7 +6,6 @@ import jwt from "jsonwebtoken"
 
 const signInPatient =async (req,res,_)=>{
     try{
-
         const patientUser=await Patient.find({"id":req.body.id})//.select({"__v":0,})
 
         const checkPassword =await bcrypt.compare(req.body.password,patientUser[0].password)

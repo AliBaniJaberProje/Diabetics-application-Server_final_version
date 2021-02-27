@@ -6,6 +6,7 @@ import {allowLevelOne ,allowLevelTwo} from "./serverSettings.js"
 import helmet from "helmet"
 import authApi from "./routes/auth/authIndex.js"
 import doctorApi from "./routes/doctorApi.js"
+import patientApi from "./routes/patientApi.js"
 const app=express()
 
 connectMongoDB()
@@ -21,6 +22,8 @@ app.use(helmet());
 app.use("/auth",authApi)
 
 app.use("/doctor",doctorApi)
+app.use("/patientServes-handler",patientApi)
+
 
 
 app.use('/rr',(req, res, next) =>{
