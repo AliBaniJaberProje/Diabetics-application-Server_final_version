@@ -1,6 +1,6 @@
 import express from "express"
 import * as isAuthorisedUser from "../middleware/auth/isAuthorisedUser.js"
-import * as doctor_ServesApi from "../response-Handler/doctorServes-handler/doctorServes.js";
+import * as doctor_ServesApi from "../response-Handler/doctorServes-handler/doctorServesHandler.js";
 const router=express.Router()
 
 
