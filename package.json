@@ -18,6 +18,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.18",
     "morgan": "~1.9.1",
-    "twilio": "^3.57.0"
+    "node-fetch": "^2.6.1",
+    "twilio": "^3.57.0",
+    "unirest": "^0.6.0"
   }
 }

@@ -10,7 +10,7 @@ import doctorRoute from "./routes/doctorRoute.js"
 import patientRoute from "./routes/patientRoute.js"
 import eventRoute from "./routes/eventRoute.js"
 import client from "twilio"
-
+import foodRoute from "./routes/foodRoute.js";
 
 
 const app=express()
@@ -31,7 +31,7 @@ app.use("/doctor",doctorRoute)
 app.use("/patient",patientRoute)
 
 app.use('/event',eventRoute)
-
+app.use("/food",foodRoute)
 
 app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
@@ -42,6 +42,9 @@ app.get('/',(req, res, next)=>{
     const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
     const authToken ="d38fb8f5f22be6af88451f263177a08b";
     const client2 = client(accountSid, authToken);
+
+
+
 
     // client2.messages
     //     .create({
