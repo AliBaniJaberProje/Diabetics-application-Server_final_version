@@ -12,7 +12,6 @@ import eventRoute from "./routes/eventRoute.js"
 import client from "twilio"
 import foodRoute from "./routes/foodRoute.js";
 
-
 const app=express()
 
 connectMongoDB()
@@ -43,7 +42,14 @@ app.get('/',(req, res, next)=>{
     const authToken ="d38fb8f5f22be6af88451f263177a08b";
     const client2 = client(accountSid, authToken);
 
-
+    tr("Hello", { from: "en", to: "ja", tld: "co.jp" })
+        .then(function (result) {
+            console.log(result.text); // こんにちは
+            console.log(result.src); // en
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 
 
     // client2.messages

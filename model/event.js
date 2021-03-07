@@ -22,6 +22,10 @@ const event=new mongoose.Schema({
 
             default:true,
         },
+        ApprovalFromDr:{
+            type:Boolean,
+          default:false
+        },
         userTake:{
 
             type:String,

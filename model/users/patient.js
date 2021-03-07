@@ -1,4 +1,5 @@
 import mongoose from "mongoose"
+
 import joi from "joi"
 
 
@@ -71,7 +72,6 @@ const patient=new mongoose.Schema({
     phoneToken:{
         type:String,
 
-
     },
     lastDoctor:{
         type:Array,
@@ -85,6 +85,10 @@ const patient=new mongoose.Schema({
     imgURL:{
         type:String,
 
+    },
+    idAppointment:{
+        type:mongoose.Schema.Types.ObjectId ,
+        ref:"event"
     }
 
 })
