@@ -1,7 +1,7 @@
 import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken"
 import event from "../../model/event.js";
-
+import doctor  from "../../model/users/doctor.js";
 
 const updateInfo=async (req,res,next)=>{
     const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
@@ -24,6 +24,7 @@ const getIdAndIdCurrentDoctor=async (req, res, _)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
         const patientUser=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,id:true })
+
         res.status(200).json({
 
             patient:patientUser,
@@ -35,20 +36,42 @@ const getIdAndIdCurrentDoctor=async (req, res, _)=>{
         })
     }
 }
+
 const getAllDoctorToChat=async (req,res,_)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-        const idDoctors=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,lastDoctor:true,id:true,imgURL,true})
+
+        const infoPatient=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor imgURL lastDoctor ").populate("doctor")
+        infoPatient["lastDoctor"].push(infoPatient["currentDoctor"])
+        const infoDoctors=await doctor.find({id:{$in:infoPatient["lastDoctor"]}},"imgURL id isOnline username");
+        console.log(infoPatient)
+        console.log(infoDoctors)
         res.status(200).json({
-
-            ids:idDoctors,
-
+            patientInfo:infoPatient,
+            doctorsInfo:infoDoctors,
         })
     }catch(error){
         res.status(400).json({
             msg:"error"
         })
     }
+}
+
+const getProfileInfo=async (req,res,_)=>{
+
+    try{
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+        const result=await Patient.findOne({id:resultDecodeJWT.id})
+        res.status(200).json({
+            "msg":result
+        })
+    }catch(error){
+        res.status(400).json({
+            msg:"error"
+        })
+
+    }
+
 }
 
 
@@ -86,10 +109,10 @@ const t=async (req,res,next)=>{
 
 
 export {
-    updateInfo,
     t,
+    updateInfo,
+    getProfileInfo,
     getIdAndIdCurrentDoctor ,
     getAllDoctorToChat
-
 
 }

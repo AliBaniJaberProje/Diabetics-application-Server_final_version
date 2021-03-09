@@ -9,6 +9,7 @@ router.patch("/updateInfo",isAuthorisedUser.isAuthorisedPatient,patient_requestH
 //router.post("/test",patient_requestHandler.test)
 router.get("/getIdCurrentDoctorAndMyId",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getIdAndIdCurrentDoctor)
 router.get("/getIdDoctors",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getAllDoctorToChat)
+router.get("/getPatientProfile",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getProfileInfo)
 router.post("/t",patient_requestHandler.t)
 
 
