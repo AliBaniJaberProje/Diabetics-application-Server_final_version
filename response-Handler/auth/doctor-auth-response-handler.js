@@ -40,7 +40,7 @@ const signInDoctor=async (req, res, _)=>{
                 id:doctorUser[0].id,
                 password:doctorUser[0].password
             },'privateKey')
-            res.status(200).header('x-auth-token',token).json({
+            res.status(200).header('token',token).json({
                 msg:"user Authorised",
                 token:token,
             })
