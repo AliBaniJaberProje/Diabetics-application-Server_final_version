@@ -180,5 +180,6 @@ export{
     selectEventForUser,
     getMyEvent,
     getAllAvailableEvent,
-    deleteEvent
+    deleteEvent,
+
 }

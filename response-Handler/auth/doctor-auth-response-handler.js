@@ -13,6 +13,8 @@ const signUpDoctor=async(req,res,_)=>{
     const  salt=await bcrypt.genSalt(saltRounds);
     req.body.password = await hashPassword( req.body.password,salt)
     const newDoctor=new doctor(req.body)
+    console.log(newDoctor)
+
 
     let result;
     try{
