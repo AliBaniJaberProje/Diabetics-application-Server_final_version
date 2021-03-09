@@ -21,13 +21,19 @@ const updateInfo=async (req,res,next)=>{
 }
 
 const getPatientProfileInfo=async (req,res,_)=>{
-    const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-    const patientUser=await Patient.findOne({id:resultDecodeJWT.id})
-    res.status(200).header('x-auth-token',token).json({
-        msg:"user Authorised",
-        patient:patientUser,
-        token:token,
-    })
+    try{
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+        const patientUser=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,lastDoctor:true })
+        res.status(200).header('x-auth-token',token).json({
+            msg:"user Authorised",
+            patient:patientUser,
+            token:token,
+        })
+    }catch(error){
+        res.status(400).json({
+            msg:"error"
+        })
+    }
 }
 
 

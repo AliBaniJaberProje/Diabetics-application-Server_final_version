@@ -17,7 +17,7 @@ const signInPatient =async (req,res,_)=>{
             console.log(token)
             res.status(200).header('x-auth-token',token).json({
                 msg:"user Authorised",
-                //patient:patientUser[0],
+               // patient:patientUser[0],
                 token:token,
             })
         }else{
@@ -29,6 +29,10 @@ const signInPatient =async (req,res,_)=>{
         res.status(404).json({msg:' user not Authorised',token:"error"})
     }
 }
+
+
+
+
 export{
     signInPatient
 }
