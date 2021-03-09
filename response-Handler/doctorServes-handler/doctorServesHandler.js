@@ -43,6 +43,7 @@ const updateCurrentDoctor=async (req,res,next)=>{
 const getAllPatientForDoctor=async (req,res,_)=>{
 
     try {
+        console.log(req.headers["token"])
         const resultDecodeJWT= await jwt.decode(req.headers["token"]);
 
         const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id}," id ").populate("patient").select({currentDoctor:true,imgURL:true,isOnline:true})
