@@ -7,7 +7,8 @@ const router=express.Router()
 
 router.patch("/updateInfo",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.updateInfo)
 //router.post("/test",patient_requestHandler.test)
-router.get("/getIdDoctorAndMyId",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getPatientProfileInfo)
+router.get("/getIdCurrentDoctorAndMyId",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getIdAndIdCurrentDoctor)
+router.get("/getIdDoctors",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getAllDoctorToChat)
 router.post("/t",patient_requestHandler.t)
 
 

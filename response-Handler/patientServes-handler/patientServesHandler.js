@@ -20,7 +20,7 @@ const updateInfo=async (req,res,next)=>{
 
 }
 
-const getPatientProfileInfo=async (req,res,_)=>{
+const getIdAndIdCurrentDoctor=async (req, res, _)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
         const patientUser=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,id:true })
@@ -35,7 +35,21 @@ const getPatientProfileInfo=async (req,res,_)=>{
         })
     }
 }
+const getAllDoctorToChat=async (req,res,_)=>{
+    try{
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+        const idDoctors=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,lastDoctor:true})
+        res.status(200).json({
 
+            ids:idDoctors,
+
+        })
+    }catch(error){
+        res.status(400).json({
+            msg:"error"
+        })
+    }
+}
 
 
 const t=async (req,res,next)=>{
@@ -74,7 +88,8 @@ const t=async (req,res,next)=>{
 export {
     updateInfo,
     t,
-    getPatientProfileInfo
+    getIdAndIdCurrentDoctor ,
+    getAllDoctorToChat
 
 
 }
