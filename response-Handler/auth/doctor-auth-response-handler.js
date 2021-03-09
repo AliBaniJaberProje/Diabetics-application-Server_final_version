@@ -52,6 +52,7 @@ const signInDoctor=async (req, res, _)=>{
     catch (e){
         res.status(404).json({msg:' user not Authorised',token:"error"})
     }
+
 }
 
 

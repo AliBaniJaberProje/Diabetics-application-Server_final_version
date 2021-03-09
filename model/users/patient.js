@@ -86,6 +86,10 @@ const patient=new mongoose.Schema({
         type:String,
 
     },
+    isOnline:{
+      type:Boolean,
+      default:false
+    },
     idAppointment:{
         type:mongoose.Schema.Types.ObjectId ,
         ref:"event"

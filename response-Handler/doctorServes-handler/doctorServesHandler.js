@@ -1,4 +1,5 @@
 import Patient from "../../model/users/patient.js"
+import jwt from "jsonwebtoken";
 
 const addNewPatient=async (req,res,_)=>{
     try{
@@ -39,7 +40,31 @@ const updateCurrentDoctor=async (req,res,next)=>{
 
 }
 
+const getAllPatientForDoctor=async (req,res,_)=>{
+
+    try {
+        const resultDecodeJWT= await jwt.decode(req.headers["token"]);
+
+        const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id}," id ").populate("patient").select({currentDoctor:true,imgURL:true,isOnline:true})
+
+        console.log(patuiontResult)
+        }catch(e){
+        res.status(401).json({
+
+        })
+    }
+
+
+}
+
+
+
+
+
+
+
 export {
     addNewPatient,
+    getAllPatientForDoctor,
     updateCurrentDoctor
 }

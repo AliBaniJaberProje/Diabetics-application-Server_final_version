@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 const isAuthorisedDoctor= async (req,res,next)=>{
 
 
-    const token=req.header('x-auth-token');
+    const token=req.header('token');
     console.log("token")
     if(!token)
     {
