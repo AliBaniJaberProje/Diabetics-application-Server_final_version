@@ -8,5 +8,8 @@ router.get("/myEvent",isAuthorisedUser.isAuthorisedPatient,eventServesHandler.ge
 
 router.post("/selectEvent",isAuthorisedUser.isAuthorisedPatient,eventServesHandler.selectEventForUser)
 router.get("/getMyEvent",isAuthorisedUser.isAuthorisedPatient,eventServesHandler.getMyEvent)
+router.post("/AvailableEvent",isAuthorisedUser.isAuthorisedPatient,eventServesHandler.getAllAvailableEvent)
+router.delete("/:id",/*isAuthorisedUser.isAuthorisedPatient,*/eventServesHandler.deleteEvent)
+
 
 export default router

@@ -3,11 +3,8 @@ import mongoose from "mongoose"
 import event from "../../model/event.js";
 import patient from "../../model/users/patient.js"
 import * as event_mid from "../../middleware/eventMiddleware.js"
-function addDays(date, days) {
-    const copy = new Date(Number(date))
-    copy.setDate(date.getDate() + days)
-    return copy
-}
+
+
 
 const getEventWhereUserId=async (req,res,_)=>{
     const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
@@ -43,7 +40,17 @@ const selectEventForUser=async (req,res,_)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
         const patientResult =await patient.find({"id":resultDecodeJWT.id})
-        if(patientResult[0].idAppointment===undefined){
+
+        const eventToSelect=await event.findById(req.body.id)
+        if(eventToSelect.taken.available==false){
+             return res.status(400).json({
+                 msg:"this event was seleted"
+             })
+        }
+
+
+
+        if(patientResult[0].idAppointment==undefined){
 
             const  result=await event.findByIdAndUpdate(req.body.id,{
                 "taken.available":false,
@@ -68,7 +75,7 @@ const selectEventForUser=async (req,res,_)=>{
             })
         }else{
             console.log("ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp")
-            return res.status(200).json({
+            return res.status(401).json({
                 msg:"error operation"
             })
         }
@@ -84,6 +91,9 @@ const selectEventForUser=async (req,res,_)=>{
 }
 
 const getMyEvent=async (req,res,_)=>{
+
+
+
   try{
       console.log("hjkgffffff")
       const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
@@ -106,9 +116,69 @@ const getMyEvent=async (req,res,_)=>{
   }
 }
 
+const getAllAvailableEvent=async (req,res,_)=>{
+    try{
+
+
+       let startDate;
+
+        if(new Date(Date.now()).getDate()===Number(req.body["start"].split("-")[2].split(" ")[0])){
+            startDate=new Date(Number(req.body["start"].split('-')[0]),
+                Number(req.body["start"].split('-')[1]),
+                Number(req.body["start"].split("-")[2].split(" ")[0]),new Date(Date.now()).getHours(),new Date(Date.now()).getMinutes(),0,0)
+
+        }else{
+            startDate=new Date(Number(req.body["start"].split('-')[0]),
+                Number(req.body["start"].split('-')[1]),
+                Number(req.body["start"].split("-")[2].split(" ")[0]),0,0,0,0)
+
+        }
+
+
+
+
+        const endDate=new Date(Number(req.body["start"].split('-')[0]),
+            Number(req.body["start"].split('-')[1]),
+            Number(req.body["start"].split("-")[2].split(" ")[0]),23,59,59,0)
+
+
+        const  result=await event.find({startEventTime: { $gte: startDate, $lte: endDate },"taken.available":true,},"typeEvent taken startEventTime endEventTime ").sort("startEventTime")
+        console.log(result.length)
+        res.status(200).json({
+            msg:result
+        })
+    }catch(error){
+        res.status(400).json({
+            msg:error.message
+        })
+    }
+}
+
+const deleteEvent=async(req,res,_)=>{
+
+    try {
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+        await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:undefined})
+        await event.findByIdAndUpdate(req.param("id"),{"taken.available":true})
+        res.status(200).json({
+            "msg":"delete done"
+        })
+    }catch(error){
+        res.status(400).json({
+            "msg":"error"
+        })
+    }
+
+
+
+
+}
+
 
 export{
     getEventWhereUserId,
     selectEventForUser,
-    getMyEvent
+    getMyEvent,
+    getAllAvailableEvent,
+    deleteEvent
 }
