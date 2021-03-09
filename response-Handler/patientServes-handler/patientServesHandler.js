@@ -38,7 +38,7 @@ const getIdAndIdCurrentDoctor=async (req, res, _)=>{
 const getAllDoctorToChat=async (req,res,_)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-        const idDoctors=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,lastDoctor:true})
+        const idDoctors=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,lastDoctor:true,id:true})
         res.status(200).json({
 
             ids:idDoctors,
