@@ -11,6 +11,23 @@ import patientRoute from "./routes/patientRoute.js"
 import eventRoute from "./routes/eventRoute.js"
 import client from "twilio"
 import foodRoute from "./routes/foodRoute.js";
+import multer from "multer";
+import path from "path";
+const moduleURL = new URL(import.meta.url);
+const __dirname = path.dirname(moduleURL.pathname);
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './storage/images/')
+    },
+    filename: function (req, file, cb) {
+        cb(null,Date.now().toString()+ file.originalname)
+    }
+})
+const updlode = multer({
+    storage: storage
+})
+
 
 const app=express()
 
@@ -18,10 +35,12 @@ connectMongoDB()
 
 
 app.use(body_parser.json())
+// app.use(multer({storage:fileStorage , fileFilter:fileFilter}).single('storage'))
+// app.use("/image",express.static(path.join(__dirname,"storage")))
 app.use(body_parser.urlencoded({extended: true}));
 app.use(allowLevelOne)
 app.all(allowLevelTwo)
-
+app.use("/userImage",express.static('storage/images/'));
 app.use(helmet());
 
 app.use("/auth",authRoute)
@@ -36,13 +55,14 @@ app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
 })
 
-app.get('/',(req, res, next)=>{
+app.post('/',updlode.single('img'),(req, res, next)=>{
 
+    console.log(req.file)
     const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
     const authToken ="d38fb8f5f22be6af88451f263177a08b";
     const client2 = client(accountSid, authToken);
 
-
+    const imgurl=req.file.path;
 
     // tr("Hello", { from: "en", to: "ja", tld: "co.jp" })
     //     .then(function (result) {
