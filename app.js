@@ -49,7 +49,7 @@ app.get('/',(req, res, next)=>{
     const authToken ="d38fb8f5f22be6af88451f263177a08b";
     const client2 = client(accountSid, authToken);
 
-    const imgurl=req.file.path;
+
 
     // tr("Hello", { from: "en", to: "ja", tld: "co.jp" })
     //     .then(function (result) {
