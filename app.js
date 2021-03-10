@@ -42,7 +42,7 @@ app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
 })
 
-app.post('/',(req, res, next)=>{
+app.get('/',(req, res, next)=>{
 
 
     const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
