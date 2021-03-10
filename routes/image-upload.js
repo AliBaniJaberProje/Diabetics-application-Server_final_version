@@ -22,7 +22,7 @@ router.post("/patient",isAuthorisedUser.isAuthorisedPatient,updlode.single('img'
     console.log(req.file)
     res.status(200).json({
         msg:"success",
-        'imgUrl':"https://jaber-server.herokuapp.com/"+"images/patient"+req.file.filename
+        'imgUrl':"https://jaber-server.herokuapp.com/"+"images/patient/"+req.file.filename
     })
 })
 
