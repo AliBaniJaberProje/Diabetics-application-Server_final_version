@@ -20,7 +20,7 @@ const updlode = multer({
 router.post("/patient",isAuthorisedUser.isAuthorisedPatient,updlode.single('img'),async(req,res,_)=>{
     const resultJWT=await jwt.decode(req.headers["x-auth-token"])
 
-    await patient.findByIdAndUpdate({id:resultJWT.id},{imgURL:"https://jaber-server.herokuapp.com/"+"images/patient/"+req.file.filename})
+    await patient.findOneAndUpdate({id:resultJWT.id},{imgURL:"https://jaber-server.herokuapp.com/"+"images/patient/"+req.file.filename})
     res.status(200).json({
         msg:"success",
         'imgUrl':"https://jaber-server.herokuapp.com/"+"images/patient/"+req.file.filename
