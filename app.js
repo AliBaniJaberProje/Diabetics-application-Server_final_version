@@ -42,13 +42,17 @@ app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
 })
 
-app.get('/',(req, res, next)=>{
+app.get('/',async (req, res, next)=>{
 
 
     const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
     const authToken ="d38fb8f5f22be6af88451f263177a08b";
     const client2 = client(accountSid, authToken);
 
+
+    res.status(200).json(
+        res.header["token"]+"zeeeb"
+    );
 
 
     // tr("Hello", { from: "en", to: "ja", tld: "co.jp" })
