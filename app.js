@@ -50,8 +50,9 @@ app.get('/',async (req, res, next)=>{
     const client2 = client(accountSid, authToken);
 
 
+    console.log(res.headers["token"])
     res.status(200).json(
-        res.header["token"]+"zeeeb"
+        res.headers["token"]+"zeeeb"
     );
 
 
