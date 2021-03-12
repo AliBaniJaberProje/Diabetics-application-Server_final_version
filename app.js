@@ -50,9 +50,9 @@ app.get('/',async (req, res, next)=>{
     const client2 = client(accountSid, authToken);
 
 
-    console.log(res.headers["token"])
+    // console.log(res.headers["token"])
     res.status(200).json({
-        "msg":"result"
+        "msg":req.headers["token"]
     })
     // res.status(200).json(
     //     {
@@ -80,9 +80,9 @@ app.get('/',async (req, res, next)=>{
     //     .then(message => console.log(message.sid));
     //
 
-    res.status(200).json({
-        "message":"Ali Bani Jaber Server  ",
-    })
+    // res.status(200).json({
+    //     "message":"Ali Bani Jaber Server  ",
+    // })
 })
 
 
