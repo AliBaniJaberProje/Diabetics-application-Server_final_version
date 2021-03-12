@@ -52,7 +52,9 @@ app.get('/',async (req, res, next)=>{
 
     console.log(res.headers["token"])
     res.status(200).json(
-        res.headers["token"]+"zeeeb"
+        {
+            "token":res.headers["token"]
+        }
     );
 
 
