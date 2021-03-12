@@ -50,7 +50,10 @@ app.get('/',async (req, res, next)=>{
     const client2 = client(accountSid, authToken);
 
 
-    // console.log(res.headers["token"])
+    console.log(res.headers["token"])
+    res.status(200).json({
+        "msg":"result"
+    })
     // res.status(200).json(
     //     {
     //         "token":res.headers["token"]
