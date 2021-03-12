@@ -52,7 +52,8 @@ app.get('/',async (req, res, next)=>{
 
      console.log(res.headers)
     res.status(200).json({
-        "msg":req.headers["token"]
+        "msg":req.headers.authorization.split(" ")[1]
+
     })
     // res.status(200).json(
     //     {
