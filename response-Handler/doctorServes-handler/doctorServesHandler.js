@@ -31,16 +31,12 @@ const addNewPatient=async (req,res,_)=>{
         await newPatient.save()
 
 
-        const dose= new dose({
+        const newdose= new dose({
                 idPatient:req.body['id'],
                 inject:req.body['inj']
             })
 
-
-
-
-
-        const resultAddDose=await dose.save()
+        const resultAddDose=await newdose.save()
         console.log(newPatient+resultDecodeJWT)
         console.log(resultAddDose)
         res.status(200).json({
