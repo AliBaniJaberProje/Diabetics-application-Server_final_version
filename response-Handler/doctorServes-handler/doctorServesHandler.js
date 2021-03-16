@@ -36,7 +36,7 @@ const addNewPatient=async (req,res,_)=>{
         const dose= new dose(
             {
                 idPatient:req.body['id'],
-                inject:req.body['inject']
+                inject:req.body['inj']
             }
 
 
