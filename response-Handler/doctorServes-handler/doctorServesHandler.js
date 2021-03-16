@@ -7,8 +7,9 @@ import mongoose from "mongoose";
 const addNewPatient=async (req,res,_)=>{
 
     console.log(req.body)
-
+    console.log(req.headers)
     const resultDecodeJWT= await jwt.decode(req.headers.authorization.split(" ")[1]);
+
     try{
 
         const newPatient=new Patient({
