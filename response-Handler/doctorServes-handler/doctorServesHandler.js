@@ -16,7 +16,6 @@ const addNewPatient=async (req,res,_)=>{
     const  salt=await bcrypt.genSalt(saltRounds);
     req.body.password = await hashPassword( req.body.password,salt)
     const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
-   // console.log(resultDecodeJWT.id)
 
     try{
         const newPatient=new Patient({
@@ -44,9 +43,8 @@ const addNewPatient=async (req,res,_)=>{
                 inject:req.body['inj']
             })
 
-        const resultAddDose=await newdose.save()
-        //console.log(newPatient+resultDecodeJWT)
-        //console.log(resultAddDose)
+        await newdose.save()
+
         res.status(200).json({
             message:"operation accomplished successfully",
             status:200,
