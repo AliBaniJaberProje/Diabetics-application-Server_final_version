@@ -52,7 +52,7 @@ const addNewPatient=async (req,res,_)=>{
 
     }catch(e){
         res.status(400).json({
-            message:e.message,
+            message:"e.message",
             status:400,
         })
     }
