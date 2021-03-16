@@ -16,18 +16,16 @@ const event=new mongoose.Schema({
         required:true,
     },
     taken:{
-
         available:{
             type:Boolean,
 
             default:true,
         },
         ApprovalFromDr:{
-            type:Boolean,
+          type:Boolean,
           default:false
         },
         userTake:{
-
             type:String,
             ref :'patient'
         },

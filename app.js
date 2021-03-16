@@ -12,7 +12,7 @@ import eventRoute from "./routes/eventRoute.js"
 import client from "twilio"
 import foodRoute from "./routes/foodRoute.js"
 import imageUploadRouter from "./routes/image-upload.js"
-
+import dailyReadingRoute from "./routes/dailyReadingRoute.js"
 
 
 
@@ -36,6 +36,7 @@ app.use("/patient",patientRoute)
 
 app.use('/event',eventRoute)
 app.use("/food",foodRoute)
+app.use("/dailyReading",dailyReadingRoute)
 app.use("/imagesUpload",imageUploadRouter)
 
 app.use('/rr',(req, res, next) =>{
@@ -51,7 +52,7 @@ app.get('/',async (req, res, next)=>{
 
 
     res.status(200).json({
-        "token":req.headers.authorization.split(" ")[1]
+        "token":'req.headers.authorization.split(" ")[1]'
 
     })
     // res.status(200).json(

@@ -23,6 +23,7 @@ const addNewPatient=async (req,res,_)=>{
 
 const updateCurrentDoctor=async (req,res,next)=>{
     try {
+
         const idPatient =req.body.id;
         const patient=await Patient.find({id:idPatient})
         await Patient.updateOne({id:req.body.id},{$push:{"lastDoctor":patient[0].currentDoctor}})
@@ -43,16 +44,18 @@ const updateCurrentDoctor=async (req,res,next)=>{
 const getAllPatientForDoctor=async (req,res,_)=>{
 
     try {
-        console.log(req.headers["token"])
-        const resultDecodeJWT= await jwt.decode(req.headers["token"]);
 
-        const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id}," id ").populate("patient").select({currentDoctor:true,imgURL:true,isOnline:true})
+       // const resultDecodeJWT= await jwt.decode(req.headers['token']);
+
+        const patuiontResult=await Patient.find({"currentDoctor":"999999999"}," id ").populate("patient").select({currentDoctor:true,imgURL:true,isOnline:true})
+        ///const lastPatient=await Patient.find({lastDoctor:{$in:[]}})
 
         console.log(patuiontResult)
-        }catch(e){
         res.status(401).json({
-
+            "msg":patuiPaent
         })
+        }catch(e){
+
     }
 
 
