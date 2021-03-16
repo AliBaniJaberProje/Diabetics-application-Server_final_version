@@ -35,7 +35,7 @@ const doctor=new mongoose.Schema({
     },
     birthDate:{
         type:Date,
-        default:Date.now
+        default:Date.now(),
     },
     gender:{
         type:String,

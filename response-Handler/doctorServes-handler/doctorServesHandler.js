@@ -2,13 +2,14 @@ import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
 import mongoose from "mongoose";
+import event from "../../model/event";
 
 
 const addNewPatient=async (req,res,_)=>{
 
     console.table(req.body)
     console.table(req.headers)
-    const resultDecodeJWT= await jwt.decode(req.headers.authorization.split(" ")[1]);
+    const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
 
     try{
         const newPatient=new Patient({
@@ -24,18 +25,32 @@ const addNewPatient=async (req,res,_)=>{
                 height:req.body.height,
                 notes:req.body.notes,
                 currentDoctor:resultDecodeJWT.id,
-                password:'req.body.password',
+                password:req.body.password,
                 imgURL:req.body.imgURL,
                 numberOFinjCard:req.body.numberOFinjCard,
-        }
-
-
-        )
+        })
         await newPatient.save()
+
+
         const dose= new dose({
                 idPatient:req.body['id'],
                 inject:req.body['inj']
             })
+
+
+        // const newEvent=new event({
+        //     startEventTime:new Date(2021, 2, 8,23,20,0,0),
+        //     endEventTime:new Date(2021, 2, 8,23,55,0,0),
+        //     typeEvent:"8/3/2021",
+        //     taken:{
+        //         available:true,
+        //         userTake:null,
+        //     }
+        //
+        // })
+        //
+        // var result= await newEvent.save()
+
 
         const resultAddDose=await dose.save()
         console.log(newPatient+resultDecodeJWT)

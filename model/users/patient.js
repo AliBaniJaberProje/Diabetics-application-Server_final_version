@@ -55,7 +55,7 @@ const patient=new mongoose.Schema({
     //     required:true,
     // },
     weight:{
-        type:Number,
+        type:String,
         required:true,
     },
     height:{
@@ -87,7 +87,7 @@ const patient=new mongoose.Schema({
 
     },
     numberOFinjCard:{
-      type:Number,
+      type:String,
     },
     isOnline:{
       type:Boolean,
