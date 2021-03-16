@@ -11,7 +11,6 @@ const addNewPatient=async (req,res,_)=>{
     const resultDecodeJWT= await jwt.decode(req.headers.authorization.split(" ")[1]);
 
     try{
-
         const newPatient=new Patient({
                 id:req.body.id,
                 username:req.body.username,
@@ -33,15 +32,13 @@ const addNewPatient=async (req,res,_)=>{
 
         )
         await newPatient.save()
-        const dose= new dose(
-            {
+        const dose= new dose({
                 idPatient:req.body['id'],
                 inject:req.body['inj']
-            }
+            })
 
-        )
         const resultAddDose=await dose.save()
-        console.log(newPatient)
+        console.log(newPatient+resultDecodeJWT)
         console.log(resultAddDose)
         res.status(200).json({
             message:"operation accomplished successfully",
@@ -50,8 +47,8 @@ const addNewPatient=async (req,res,_)=>{
 
 
     }catch(e){
-        res.status(400).json({
-             message:e.message,
+        res.status(401).json({
+             message:e,
             status:400,
         })
     }
