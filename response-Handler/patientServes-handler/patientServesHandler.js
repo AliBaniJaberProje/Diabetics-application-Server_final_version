@@ -41,7 +41,7 @@ const getAllDoctorToChat=async (req,res,_)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
 
-        const infoPatient=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor imgURL lastDoctor ").populate("doctor")
+        const infoPatient=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor imgURL lastDoctor ").populate("doctor").select({imgURL:true})
         infoPatient["lastDoctor"].push(infoPatient["currentDoctor"])
         const infoDoctors=await doctor.find({id:{$in:infoPatient["lastDoctor"]}},"imgURL id isOnline username");
         console.log(infoPatient)
