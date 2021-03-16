@@ -6,8 +6,8 @@ import mongoose from "mongoose";
 
 const addNewPatient=async (req,res,_)=>{
 
-    console.log(req.body)
-    console.log(req.headers)
+    console.table(req.body)
+    console.table(req.headers)
     const resultDecodeJWT= await jwt.decode(req.headers.authorization.split(" ")[1]);
 
     try{
@@ -22,11 +22,9 @@ const addNewPatient=async (req,res,_)=>{
                 phoneNumber:req.body.phoneNumber,
                 diabetesType:req.body.diabetesType,
                 weight:req.body.weight,
-                height:req.body.height,/////////////////////////////////////////////////--
+                height:req.body.height,
                 notes:req.body.notes,
                 currentDoctor:resultDecodeJWT.id,
-                // req.body.phoneToken,
-                // req.body.lastDoctor,//
                 password:'req.body.password',
                 imgURL:req.body.imgURL,
                 numberOFinjCard:req.body.numberOFinjCard,
