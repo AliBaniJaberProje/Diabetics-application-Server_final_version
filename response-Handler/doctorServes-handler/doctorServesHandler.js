@@ -2,7 +2,6 @@ import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
 import mongoose from "mongoose";
-import event from "../../model/event";
 
 
 const addNewPatient=async (req,res,_)=>{
