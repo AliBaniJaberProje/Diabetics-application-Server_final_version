@@ -38,18 +38,18 @@ const addNewPatient=async (req,res,_)=>{
             })
 
 
-        // const newEvent=new event({
-        //     startEventTime:new Date(2021, 2, 8,23,20,0,0),
-        //     endEventTime:new Date(2021, 2, 8,23,55,0,0),
-        //     typeEvent:"8/3/2021",
-        //     taken:{
-        //         available:true,
-        //         userTake:null,
-        //     }
-        //
-        // })
-        //
-        // var result= await newEvent.save()
+        const newEvent=new event({
+            startEventTime:new Date(2021, 2, 8,23,20,0,0),
+            endEventTime:new Date(2021, 2, 8,23,55,0,0),
+            typeEvent:"8/3/2021",
+            taken:{
+                available:true,
+                userTake:null,
+            }
+
+        })
+
+        var result= await newEvent.save()
 
 
         const resultAddDose=await dose.save()
@@ -63,7 +63,7 @@ const addNewPatient=async (req,res,_)=>{
 
     }catch(e){
         res.status(401).json({
-             message:e,
+             message:e.message,
             status:400,
         })
     }

@@ -32,7 +32,6 @@ const patient=new mongoose.Schema({
         default:"1612967081423000"
     },
     diagnosisYear:{
-
         type:String,
         default:"1612967081423000",
     },
