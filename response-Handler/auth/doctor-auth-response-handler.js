@@ -7,7 +7,6 @@ async  function hashPassword(password,salt)  {
     return await bcrypt.hash(password,salt)
 }
 
-
 const signUpDoctor=async(req,res,_)=>{
 
     const  salt=await bcrypt.genSalt(saltRounds);

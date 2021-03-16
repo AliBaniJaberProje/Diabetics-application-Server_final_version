@@ -2,17 +2,23 @@ import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
+const saltRounds=10;
+async  function hashPassword(password,salt)  {
+    return await bcrypt.hash(password,salt)
+}
+
 
 
 const addNewPatient=async (req,res,_)=>{
 
     console.log(req.body)
-
+    const  salt=await bcrypt.genSalt(saltRounds);
+    req.body.password = await hashPassword( req.body.password,salt)
     const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
-    console.log(resultDecodeJWT.id)
+   // console.log(resultDecodeJWT.id)
 
     try{
-        let  r
         const newPatient=new Patient({
                 id:req.body.id,
                 username:req.body.username,
@@ -39,8 +45,8 @@ const addNewPatient=async (req,res,_)=>{
             })
 
         const resultAddDose=await newdose.save()
-        console.log(newPatient+resultDecodeJWT)
-        console.log(resultAddDose)
+        //console.log(newPatient+resultDecodeJWT)
+        //console.log(resultAddDose)
         res.status(200).json({
             message:"operation accomplished successfully",
             status:200,
