@@ -5,28 +5,32 @@ import mongoose from "mongoose";
 
 
 const addNewPatient=async (req,res,_)=>{
+
+    console.log(req.body)
+    const resultDecodeJWT= await jwt.decode(req.headers.authorization.split(" ")[1]);
     try{
 
-        const newPatient=new Patient(
-        req.body.id,
-        req.body.username,
-        req.body.gender,
-        req.body.location,
-        req.body.birthDate,
-        req.body.diagnosisYear,
-        req.body.phoneNumber,
-        req.body.diabetesType,
-        req.body.weight,
-        req.body.height,/////////////////////////////////////////////////--
-        req.body.notes,
-        req.body.currentDoctor,
-        req.body.phoneToken,
-        req.body.lastDoctor,//
-        req.body.password,
-        req.body.imgURL,
-        req.body.numberOFinjCard,
-        req.body.isOnline,
-        req.body.idAppointment
+        const newPatient=new Patient({
+                id:req.body.id,
+                username:req.body.username,
+                gender:req.body.gender,
+                location:req.body.location,
+                birthDate:req.body.birthDate,
+                diagnosisYear:req.body.diagnosisYear,
+                phoneNumber:req.body.phoneNumber,
+                diabetesType:req.body.diabetesType,
+                weight:req.body.weight,
+                height:req.body.height,/////////////////////////////////////////////////--
+                notes:req.body.notes,
+                currentDoctor:resultDecodeJWT.id,
+                // req.body.phoneToken,
+                // req.body.lastDoctor,//
+                password:'req.body.password',
+                imgURL:req.body.imgURL,
+                numberOFinjCard:req.body.numberOFinjCard,
+        }
+
+
         )
         await newPatient.save()
         const dose= new dose(
