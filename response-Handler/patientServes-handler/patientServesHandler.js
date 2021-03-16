@@ -23,11 +23,18 @@ const updateInfo=async (req,res,next)=>{
 const getIdAndIdCurrentDoctor=async (req, res, _)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-        const patientUser=await Patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true,id:true}).populate('doctor')
+        const patientUser=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor")
+        const docotrimgURL=await doctor.findOne({id:patientUser["currentDoctor"]},"imgURL")
 
+
+
+        console.log(patientUser)
         res.status(200).json({
 
-            patient:patientUser,
+            patient: {
+                patientUser,
+                'imgURLDoctor':docotrimgURL["imgURL"]
+            },
 
         })
     }catch(error){
@@ -41,7 +48,7 @@ const getAllDoctorToChat=async (req,res,_)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
 
-        const infoPatient=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor imgURL lastDoctor ").populate("doctor","imgURL")
+        const infoPatient=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor imgURL lastDoctor ").populate("doctor")
         infoPatient["lastDoctor"].push(infoPatient["currentDoctor"])
         const infoDoctors=await doctor.find({id:{$in:infoPatient["lastDoctor"]}},"imgURL id isOnline username");
         console.log(infoPatient)
