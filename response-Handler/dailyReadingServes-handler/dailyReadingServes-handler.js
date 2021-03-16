@@ -1,46 +1,136 @@
 import dailyReadingModel from "../../model/diabetesScreening.js"
+
+
 import jwt from 'jsonwebtoken'
+import mongoose from "mongoose";
+
+
 const addNewReading =async (req,res,_)=>{
 
-    const endDate=(new Date(Date.now()))
-    const start=new Date(endDate.getFullYear(),endDate.getUTCMonth(),endDate.getDate(),0,0,0,0)
-    const resultDailyReading =await dailyReadingModel.find({date:{ $gte: start, $lte: endDate }})
-    if(resultDailyReading.length==0){
-        const dailyReading =new  dailyReadingModel({
-            date:Date.now(),
-            idPatient:"123456789",
-            inputInfo:[
-                {
-                    "id":1,
-                    value:"102",
-                    timestamp:Date.now(),
-                    description:"قبل الأفطار"
-                }
-            ]
+    try{
+        const endDate=(new Date(Date.now()))
+        const start=new Date(endDate.getFullYear(),endDate.getUTCMonth(),endDate.getDate(),0,0,0,0)
+        const resultJWTDecode=await jwt.decode(req.headers['x-auth-token'])
+        const resultDailyReading =await dailyReadingModel.find({$and:[{date:{ $gte: start, $lte: endDate }},{idPatient:resultJWTDecode.id}]})
 
-        })
-        await dailyReading.save()
-        res.status(200).json({
-            "msg":resultDailyReading
-        })
-    }else{
-        //await Patient.updateOne({id:req.body.id},{$push:{"lastDoctor":patient[0].currentDoctor}})
+        if(resultDailyReading.length==0){
+            const dailyReading =new  dailyReadingModel({
+                date:Date.now(),
+                idPatient:'123456789',
+                inputInfo:[
 
-        const resultAddReading=await dailyReadingModel.findByIdAndUpdate(resultDailyReading[0]['_id'],
-            {$push:{"inputInfo":{
-                        "id":2,
-                        value:"102",
+                    {
+                        id:1,
+                        value:0.0,
+                        taken:false,
                         timestamp:Date.now(),
-                        description:"بعد الافطار بساعتين"
-                    }}}
-        )
+                        description:"قبل الأفطار",
+
+                    },
+
+                    {
+                        id:2,
+                        value:0.0,
+                        taken:false,
+                        timestamp:Date.now(),
+                        description:"بعد الأفطار بساعتين",
+
+                    },
+
+                    {
+                        id:3,
+                        value:0.0,
+                        taken:false,
+                        timestamp:Date.now(),
+                        description:"بعد الغداء بساعتين",
+                    },
+                    {
+                        id:4,
+                        value:0.0,
+                        taken:false,
+                        timestamp:Date.now(),
+                        description:"بعد العشاء بساعتين",
+                    },
+
+                ]
+
+            })
+
+            await dailyReading.save()
+            return res.status(201).json({
+                "msg":"create object for this day"
+            })
+        }else{
+            return  res.status(200).json({
+                "msg":await dailyReadingModel.find({date:{ $gte: start, $lte: endDate }}).select({inputInfo:true})
+            })
+        }
+
+    }catch(e){
+        res.status(400).json({
+            "msg":e.message
+        })
+    }
+}
+
+const insertAndUpdate=async (req,res,_)=>{
+    try{
+        let statusCode=200
+        const endDate=(new Date(Date.now()))
+        const start=new Date(endDate.getFullYear(),endDate.getUTCMonth(),endDate.getDate(),0,0,0,0)
+        const resultJWTDecode=await jwt.decode(req.headers['x-auth-token'])
+        const toCheckPreves=await dailyReadingModel.find({$and:[{'inputInfo.id':Number(req.body["idReading"])},
+                {date:{ $gte: start, $lte: endDate }},
+                {idPatient:resultJWTDecode.id}
+            ]})
+        let responseString=""
+
+
+        for(var i=Number(req.body["idReading"]);i>1;i--){
+
+            if(toCheckPreves[0]['inputInfo'][i-2]['taken']==false){
+
+                responseString+=","+toCheckPreves[0]['inputInfo'][i-2]['description']
+
+            }else{
+                break
+            }
+        }
+        console.log(responseString)
+
+
+
+
+
+
+        const resultAddReading=await dailyReadingModel.updateOne({$and:[{'inputInfo.id':Number(req.body["idReading"])},
+            {date:{ $gte: start, $lte: endDate }},
+            {idPatient:resultJWTDecode.id}
+            ]},{$set:{
+            "inputInfo.$.value": Number(req.body['value']),
+            "inputInfo.$.taken": true,
+            "inputInfo.$.timestamp":Date.now(),
+           // "inputInfo.$.description":'Date.now()',
+        }})
+
+
+       // {$and:[{'_id':{resultDailyReading[0]['_id']}}
+        // {$set:{
+        //     'inputInfo.$.value':18
+        // }}
+
         res.status(200).json({
-            "msg":resultAddReading
+            "msg":responseString
+        })
+    }catch(err){
+        res.status(400).json({
+            "error":err.message
         })
     }
 
 
 }
+
 
 const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
 
@@ -54,5 +144,8 @@ const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
 
 export {
     addNewReading,
-    getInformationDailyReadingAtThisDay
+    getInformationDailyReadingAtThisDay,
+    insertAndUpdate,
+
+
 }

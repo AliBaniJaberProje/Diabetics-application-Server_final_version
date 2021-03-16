@@ -3,7 +3,9 @@ import * as dailyReadingServesHandler from "./../response-Handler/dailyReadingSe
 import * as isAuthorisedUser from "../middleware/auth/isAuthorisedUser.js"
 const router = express.Router()
 
-router.get("/add",dailyReadingServesHandler.addNewReading)
+router.post("/add"/*,isAuthorisedUser.isAuthorisedPatient*/,dailyReadingServesHandler.addNewReading)
+router.post('/',isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.insertAndUpdate)
+
 router.get("/thisDay"/*,isAuthorisedUser.isAuthorisedPatient*/,dailyReadingServesHandler.getInformationDailyReadingAtThisDay)
 
 
