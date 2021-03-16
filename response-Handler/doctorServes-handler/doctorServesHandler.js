@@ -39,7 +39,6 @@ const addNewPatient=async (req,res,_)=>{
                 inject:req.body['inj']
             }
 
-
         )
         const resultAddDose=await dose.save()
         console.log(newPatient)
@@ -52,7 +51,7 @@ const addNewPatient=async (req,res,_)=>{
 
     }catch(e){
         res.status(400).json({
-            message:"e.message",
+             message:e.message,
             status:400,
         })
     }
