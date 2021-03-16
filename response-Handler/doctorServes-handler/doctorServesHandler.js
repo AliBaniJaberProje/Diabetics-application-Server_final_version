@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 const addNewPatient=async (req,res,_)=>{
 
     console.log(req.body)
+
     const resultDecodeJWT= await jwt.decode(req.headers.authorization.split(" ")[1]);
     try{
 
@@ -43,7 +44,7 @@ const addNewPatient=async (req,res,_)=>{
         )
         const resultAddDose=await dose.save()
         console.log(newPatient)
-        console.log(dose)
+        console.log(resultAddDose)
         res.status(200).json({
             message:"operation accomplished successfully",
             status:200,
