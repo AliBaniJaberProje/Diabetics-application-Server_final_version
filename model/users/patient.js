@@ -46,22 +46,22 @@ const patient=new mongoose.Schema({
         required:true,
 
     },
-    injectionType:{
-        type:String,
-        required:true,
-    },
-    capsuleType:{
-        type:String,
-        required:true,
-    },
+    // injectionType:{
+    //     type:String,
+    //     required:true,
+    // },
+    // capsuleType:{
+    //     type:String,
+    //     required:true,
+    // },
     weight:{
         type:Number,
         required:true,
     },
-    length:{
+    height:{
         type:String,
         required:true
-    },
+    },/////////////////////////////////////////////////--
     notes:{
         type:String,
     },
@@ -77,7 +77,7 @@ const patient=new mongoose.Schema({
         type:Array,
         ref :'doctor'
 
-    },
+    },//
     password:{
         type:String,
 
@@ -85,6 +85,9 @@ const patient=new mongoose.Schema({
     imgURL:{
         type:String,
 
+    },
+    numberOFinjCard:{
+      type:Number,
     },
     isOnline:{
       type:Boolean,
