@@ -1,21 +1,53 @@
 import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
+import dose from '../../model/dose.js'
+import mongoose from "mongoose";
+
 
 const addNewPatient=async (req,res,_)=>{
     try{
 
-        const newPatient=new Patient(req.body)
-        console.log(newPatient)
+        const newPatient=new Patient(
+        req.body.id,
+        req.body.username,
+        req.body.gender,
+        req.body.location,
+        req.body.birthDate,
+        req.body.diagnosisYear,
+        req.body.phoneNumber,
+        req.body.diabetesType,
+        req.body.weight,
+        req.body.height,/////////////////////////////////////////////////--
+        req.body.notes,
+        req.body.currentDoctor,
+        req.body.phoneToken,
+        req.body.lastDoctor,//
+        req.body.password,
+        req.body.imgURL,
+        req.body.numberOFinjCard,
+        req.body.isOnline,
+        req.body.idAppointment
+        )
         await newPatient.save()
+        const dose= new dose(
+            {
+                idPatient:req.body['id'],
+                inject:req.body['inject']
+            }
+
+
+        )
+        console.log(newPatient)
+        console.log(dose)
         res.status(200).json({
-            msg:"operation accomplished successfully",
+            message:"operation accomplished successfully",
             status:200,
         })
 
 
     }catch(e){
         res.status(400).json({
-            msg:e.message,
+            message:e.message,
             status:400,
         })
     }

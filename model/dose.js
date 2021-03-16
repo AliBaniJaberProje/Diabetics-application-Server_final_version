@@ -9,6 +9,11 @@ const dose=new mongoose.Schema({
     },
     idPatient:{
         type:String,
+        ref:'patient'
+    },
+    inject:{
+        type:Array,
+
     }
 
 })
