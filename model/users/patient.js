@@ -2,6 +2,7 @@ import mongoose from "mongoose"
 
 import joi from "joi"
 
+import uniqueValidator from "mongoose-unique-validator"
 
 const patient=new mongoose.Schema({
 
@@ -69,7 +70,8 @@ const patient=new mongoose.Schema({
         ref :'doctor'
     },
     phoneToken:{
-        type:String,
+     type:String,
+
 
     },
     lastDoctor:{
@@ -98,5 +100,5 @@ const patient=new mongoose.Schema({
     }
 
 })
-
+patient.plugin(uniqueValidator);
 export default mongoose.model('patient',patient)

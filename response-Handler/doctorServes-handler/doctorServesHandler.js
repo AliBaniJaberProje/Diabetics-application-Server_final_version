@@ -12,6 +12,7 @@ const addNewPatient=async (req,res,_)=>{
     console.log(resultDecodeJWT.id)
 
     try{
+        let  r
         const newPatient=new Patient({
                 id:req.body.id,
                 username:req.body.username,
@@ -29,7 +30,7 @@ const addNewPatient=async (req,res,_)=>{
                 imgURL:req.body.imgURL,
                 numberOFinjCard:req.body.numberOFinjCard,
         })
-        await newPatient.save()
+           await newPatient.save()
 
 
         const newdose= new dose({
@@ -53,7 +54,7 @@ const addNewPatient=async (req,res,_)=>{
         })
     }
 }
-
+//
 const updateCurrentDoctor=async (req,res,next)=>{
     try {
 
