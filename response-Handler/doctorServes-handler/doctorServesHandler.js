@@ -37,6 +37,7 @@ const addNewPatient=async (req,res,_)=>{
 
 
         )
+        const resultAddDose=await dose.save()
         console.log(newPatient)
         console.log(dose)
         res.status(200).json({
