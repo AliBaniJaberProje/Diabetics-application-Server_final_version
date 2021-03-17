@@ -61,7 +61,7 @@ const addNewPatient=async (req,res,_)=>{
 const updateCurrentDoctor=async (req,res,next)=>{
     try {
 
-        
+
         const idPatient =req.body.id;
         const patient=await Patient.find({id:idPatient})
         await Patient.updateOne({id:req.body.id},{$push:{"lastDoctor":patient[0].currentDoctor}})
@@ -84,6 +84,7 @@ const getAllPatientForDoctor=async (req,res,_)=>{
     try {
 
        // const resultDecodeJWT= await jwt.decode(req.headers['token']);
+        console.log(req.headers.authorization.split(" ")[1])
         const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
         const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id}," id ").populate(" patient ").select({imgURL:true,_id :false,username:true})
         ///const lastPatient=await Patient.find({lastDoctor:{$in:[]}})
