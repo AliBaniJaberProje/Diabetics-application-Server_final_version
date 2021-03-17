@@ -55,6 +55,9 @@ const doctor=new mongoose.Schema({
         minlength:4,
         unique:true,
     },
+    imgURL:{
+        type:String
+    }
 
 })
 

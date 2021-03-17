@@ -46,40 +46,25 @@ app.use('/rr',(req, res, next) =>{
 app.get('/',async (req, res, next)=>{
 
 
-    const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
-    const authToken ="d38fb8f5f22be6af88451f263177a08b";
-    const client2 = client(accountSid, authToken);
-
-
-    res.status(200).json({
-        "token":'req.headers.authorization.split(" ")[1]'
-
-    })
-    // res.status(200).json(
-    //     {
-    //         "token":res.headers["token"]
-    //     }
-    // );
-
-
-    // tr("Hello", { from: "en", to: "ja", tld: "co.jp" })
-    //     .then(function (result) {
-    //         console.log(result.text); // こんにちは
-    //         console.log(result.src); // en
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //     });
-
-
+    // const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
+    // const authToken ="d38fb8f5f22be6af88451f263177a08b";
+    // const client2 = client(accountSid, authToken);
     // client2.messages
     //     .create({
     //         body: 'server side',
     //         from: '+14704358572',
-    //         to: '+970595049501'
+    //         to: '+972598045018'
     //     })
     //     .then(message => console.log(message.sid));
-    //
+
+    res.status(200).json({
+        "token":'req.headers.authorization.split(" ")[1]'
+    })
+
+
+
+
+
 
     // res.status(200).json({
     //     "message":"Ali Bani Jaber Server  ",

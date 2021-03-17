@@ -1,7 +1,6 @@
 import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
-import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 const saltRounds=10;
 async  function hashPassword(password,salt)  {
