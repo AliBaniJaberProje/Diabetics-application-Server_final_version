@@ -92,7 +92,7 @@ const getAllPatientForDoctor=async (req,res,_)=>{
         ///const lastPatient=await Patient.find({lastDoctor:{$in:[]}})
       //  console.log(patuiontResult)
         console.log(patuiontResult)
-        res.status(401).json({
+        res.status(200).json({
             "patient":patuiontResult
         })
         }catch(e){
