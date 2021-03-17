@@ -34,6 +34,7 @@ app.use("/auth",authRoute)
 app.use("/doctor",doctorRoute)
 app.use("/patient",patientRoute)
 
+
 app.use('/event',eventRoute)
 app.use("/food",foodRoute)
 app.use("/dailyReading",dailyReadingRoute)
