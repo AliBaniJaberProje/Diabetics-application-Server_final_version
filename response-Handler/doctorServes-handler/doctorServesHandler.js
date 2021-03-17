@@ -86,9 +86,12 @@ const getAllPatientForDoctor=async (req,res,_)=>{
        // const resultDecodeJWT= await jwt.decode(req.headers['token']);
         console.log(req.headers.authorization.split(" ")[1])
         const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
+        console.log(resultDecodeJWT.id)
         const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id}," id ").populate(" patient ").select({imgURL:true,_id :false,username:true})
+
         ///const lastPatient=await Patient.find({lastDoctor:{$in:[]}})
       //  console.log(patuiontResult)
+        console.log(patuiontResult)
         res.status(401).json({
             "patient":patuiontResult
         })
