@@ -4,21 +4,17 @@ import dailyReadingModel from "../../model/diabetesScreening.js"
 import jwt from 'jsonwebtoken'
 import mongoose from "mongoose";
 
-
 const addNewReading =async (req,res,_)=>{
-
     try{
         const endDate=(new Date(Date.now()))
         const start=new Date(endDate.getFullYear(),endDate.getUTCMonth(),endDate.getDate(),0,0,0,0)
         const resultJWTDecode=await jwt.decode(req.headers['x-auth-token'])
         const resultDailyReading =await dailyReadingModel.find({$and:[{date:{ $gte: start, $lte: endDate }},{idPatient:resultJWTDecode.id}]})
-
         if(resultDailyReading.length==0){
             const dailyReading =new  dailyReadingModel({
                 date:Date.now(),
                 idPatient:'123456789',
                 inputInfo:[
-
                     {
                         id:1,
                         value:0.0,
@@ -27,7 +23,6 @@ const addNewReading =async (req,res,_)=>{
                         description:"قبل الأفطار",
 
                     },
-
                     {
                         id:2,
                         value:0.0,
@@ -36,7 +31,6 @@ const addNewReading =async (req,res,_)=>{
                         description:"بعد الأفطار بساعتين",
 
                     },
-
                     {
                         id:3,
                         value:0.0,
@@ -51,11 +45,8 @@ const addNewReading =async (req,res,_)=>{
                         timestamp:Date.now(),
                         description:"بعد العشاء بساعتين",
                     },
-
                 ]
-
             })
-
             await dailyReading.save()
             return res.status(201).json({
                 "msg":"create object for this day"
@@ -65,14 +56,12 @@ const addNewReading =async (req,res,_)=>{
                 "msg":await dailyReadingModel.find({date:{ $gte: start, $lte: endDate }}).select({inputInfo:true})
             })
         }
-
     }catch(e){
         res.status(400).json({
             "msg":e.message
         })
     }
 }
-
 const insertAndUpdate=async (req,res,_)=>{
     try{
         let statusCode=200
@@ -130,17 +119,13 @@ const insertAndUpdate=async (req,res,_)=>{
 
 
 }
-
-
 const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
-
     const resultJWT= await jwt.decode(req.headers.token)
     console.log(resultJWT.id)
     res.status(200).json({
         "msg":Date.now()
     })
 }
-
 
 export {
     addNewReading,
