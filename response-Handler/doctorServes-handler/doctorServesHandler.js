@@ -115,7 +115,7 @@ const getPatientInfoById=async (req,res,_)=>{
         })
     }catch(e){
         res.status(401).json({
-            "patientInfo":" error get information "
+            "patientInfo":e.message
         })
     }
 }
