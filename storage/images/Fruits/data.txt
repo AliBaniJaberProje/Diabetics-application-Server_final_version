@@ -1,0 +1,4141 @@
+{
+    "_id": {
+        "$oid": "6053e85960510f629e8b2658"
+    },
+    "category": "Fruits",
+    "data": [{
+        "id": "1202963 ",
+        "name": "برتقال",
+        "FoodNutrient": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "15531649"
+            },
+            "amount": {
+                "$numberDouble": "90.48"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "15531650"
+            },
+            "amount": {
+                "$numberInt": "381"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "15531647"
+            },
+            "amount": {
+                "$numberDouble": "4.76"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "15531648"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "15531652"
+            },
+            "amount": {
+                "$numberInt": "381"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "15531651"
+            },
+            "amount": {
+                "$numberDouble": "90.48"
+            }
+        }],
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84.png"
+    }, {
+        "id": "1298154 ",
+        "name": "عنب",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%B9%D9%86%D8%A8.png",
+        "FoodNutrient": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17064635"
+            },
+            "amount": {
+                "$numberDouble": "13.18"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17064633"
+            },
+            "amount": {
+                "$numberDouble": "13.18"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17064632"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17064634"
+            },
+            "amount": {
+                "$numberInt": "54"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17064631"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "17064636"
+            },
+            "amount": {
+                "$numberInt": "3"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1162"
+                },
+                "number": "401",
+                "name": "Vitamin C, total ascorbic acid",
+                "rank": {
+                    "$numberInt": "6300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "17064637"
+            },
+            "amount": {
+                "$numberDouble": "20.3"
+            }
+        }]
+    }, {
+        "id": "1270319 ",
+        "name": "خوخ",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AE%D9%88%D8%AE.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14387071"
+            },
+            "amount": {
+                "$numberInt": "4"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14387070"
+            },
+            "amount": {
+                "$numberDouble": "1.2"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14387065"
+            },
+            "amount": {
+                "$numberDouble": "0.42"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14387069"
+            },
+            "amount": {
+                "$numberDouble": "17.92"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14387067"
+            },
+            "amount": {
+                "$numberDouble": "19.17"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "14387066"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "14387068"
+            },
+            "amount": {
+                "$numberInt": "75"
+            }
+        }]
+    }, {
+        "id": "1368860 ",
+        "name": "مشمش",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D8%B4%D9%85%D8%B4.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1087"
+                },
+                "number": "301",
+                "name": "Calcium, Ca",
+                "rank": {
+                    "$numberInt": "5300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384134"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384129"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384130"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384133"
+            },
+            "amount": {
+                "$numberInt": "45"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1235"
+                },
+                "number": "539",
+                "name": "Sugars, added",
+                "rank": {
+                    "$numberInt": "1540"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384137"
+            },
+            "amount": {
+                "$numberInt": "40"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384131"
+            },
+            "amount": {
+                "$numberInt": "60"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "16384136"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16384132"
+            },
+            "amount": {
+                "$numberInt": "250"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1092"
+                },
+                "number": "306",
+                "name": "Potassium, K",
+                "rank": {
+                    "$numberInt": "5700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "16384135"
+            },
+            "amount": {
+                "$numberInt": "35"
+            }
+        }]
+    }, {
+        "id": "1328513 ",
+        "name": "بطيخ",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A8%D8%B7%D9%8A%D8%AE.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990611"
+            },
+            "amount": {
+                "$numberDouble": "6.27"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1258"
+                },
+                "number": "606",
+                "name": "Fatty acids, total saturated",
+                "rank": {
+                    "$numberInt": "9700"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990616"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990608"
+            },
+            "amount": {
+                "$numberDouble": "0.25"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1253"
+                },
+                "number": "601",
+                "name": "Cholesterol",
+                "rank": {
+                    "$numberInt": "15700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990614"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990607"
+            },
+            "amount": {
+                "$numberDouble": "0.78"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "14990613"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990609"
+            },
+            "amount": {
+                "$numberDouble": "7.45"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1257"
+                },
+                "number": "605",
+                "name": "Fatty acids, total trans",
+                "rank": {
+                    "$numberInt": "15400"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990615"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14990610"
+            },
+            "amount": {
+                "$numberInt": "31"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "14990612"
+            },
+            "amount": {
+                "$numberDouble": "0.4"
+            }
+        }]
+    }, {
+        "id": "1102657 ",
+        "name": "شمام",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%B4%D9%85%D8%A7%D9%85.png",
+        "foodNutrients": [{
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2045"
+                },
+                "number": "951",
+                "name": "Proximates",
+                "rank": {
+                    "$numberInt": "50"
+                },
+                "unitName": "g"
+            },
+            "type": "FoodNutrient"
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1051"
+                },
+                "number": "255",
+                "name": "Water",
+                "rank": {
+                    "$numberInt": "100"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209778"
+            },
+            "amount": {
+                "$numberDouble": "91.85"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "id": {
+                "$numberInt": "13209776"
+            },
+            "amount": {
+                "$numberInt": "28"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209773"
+            },
+            "amount": {
+                "$numberDouble": "1.11"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209774"
+            },
+            "amount": {
+                "$numberDouble": "0.1"
+            }
+        }, {
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2039"
+                },
+                "number": "956",
+                "name": "Carbohydrates",
+                "rank": {
+                    "$numberInt": "1100"
+                },
+                "unitName": "g"
+            },
+            "type": "FoodNutrient"
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209775"
+            },
+            "amount": {
+                "$numberDouble": "6.58"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209782"
+            },
+            "amount": {
+                "$numberDouble": "0.9"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209781"
+            },
+            "amount": {
+                "$numberDouble": "5.69"
+            }
+        }, {
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2043"
+                },
+                "number": "300",
+                "name": "Minerals",
+                "rank": {
+                    "$numberInt": "5200"
+                },
+                "unitName": "mg"
+            },
+            "type": "FoodNutrient"
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1087"
+                },
+                "number": "301",
+                "name": "Calcium, Ca",
+                "rank": {
+                    "$numberInt": "5300"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209783"
+            },
+            "amount": {
+                "$numberInt": "11"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1089"
+                },
+                "number": "303",
+                "name": "Iron, Fe",
+                "rank": {
+                    "$numberInt": "5400"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209784"
+            },
+            "amount": {
+                "$numberDouble": "0.34"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1090"
+                },
+                "number": "304",
+                "name": "Magnesium, Mg",
+                "rank": {
+                    "$numberInt": "5500"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209785"
+            },
+            "amount": {
+                "$numberInt": "11"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1091"
+                },
+                "number": "305",
+                "name": "Phosphorus, P",
+                "rank": {
+                    "$numberInt": "5600"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209786"
+            },
+            "amount": {
+                "$numberInt": "5"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1092"
+                },
+                "number": "306",
+                "name": "Potassium, K",
+                "rank": {
+                    "$numberInt": "5700"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209787"
+            },
+            "amount": {
+                "$numberInt": "182"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209788"
+            },
+            "amount": {
+                "$numberInt": "9"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1095"
+                },
+                "number": "309",
+                "name": "Zinc, Zn",
+                "rank": {
+                    "$numberInt": "5900"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209789"
+            },
+            "amount": {
+                "$numberDouble": "0.07"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1098"
+                },
+                "number": "312",
+                "name": "Copper, Cu",
+                "rank": {
+                    "$numberInt": "6000"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209790"
+            },
+            "amount": {
+                "$numberDouble": "0.06"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1103"
+                },
+                "number": "317",
+                "name": "Selenium, Se",
+                "rank": {
+                    "$numberInt": "6200"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209791"
+            },
+            "amount": {
+                "$numberDouble": "0.4"
+            }
+        }, {
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2046"
+                },
+                "number": "952",
+                "name": "Vitamins and Other Components",
+                "rank": {
+                    "$numberInt": "6250"
+                },
+                "unitName": "g"
+            },
+            "type": "FoodNutrient"
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1162"
+                },
+                "number": "401",
+                "name": "Vitamin C, total ascorbic acid",
+                "rank": {
+                    "$numberInt": "6300"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209801"
+            },
+            "amount": {
+                "$numberDouble": "21.8"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1165"
+                },
+                "number": "404",
+                "name": "Thiamin",
+                "rank": {
+                    "$numberInt": "6400"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209802"
+            },
+            "amount": {
+                "$numberDouble": "0.015"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1166"
+                },
+                "number": "405",
+                "name": "Riboflavin",
+                "rank": {
+                    "$numberInt": "6500"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209803"
+            },
+            "amount": {
+                "$numberDouble": "0.031"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1167"
+                },
+                "number": "406",
+                "name": "Niacin",
+                "rank": {
+                    "$numberInt": "6600"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209804"
+            },
+            "amount": {
+                "$numberDouble": "0.232"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1175"
+                },
+                "number": "415",
+                "name": "Vitamin B-6",
+                "rank": {
+                    "$numberInt": "6800"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209805"
+            },
+            "amount": {
+                "$numberDouble": "0.163"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1177"
+                },
+                "number": "417",
+                "name": "Folate, total",
+                "rank": {
+                    "$numberInt": "6900"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209806"
+            },
+            "amount": {
+                "$numberInt": "8"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1186"
+                },
+                "number": "431",
+                "name": "Folic acid",
+                "rank": {
+                    "$numberInt": "7000"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209810"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1187"
+                },
+                "number": "432",
+                "name": "Folate, food",
+                "rank": {
+                    "$numberInt": "7100"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209811"
+            },
+            "amount": {
+                "$numberInt": "8"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1190"
+                },
+                "number": "435",
+                "name": "Folate, DFE",
+                "rank": {
+                    "$numberInt": "7200"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209812"
+            },
+            "amount": {
+                "$numberInt": "8"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1180"
+                },
+                "number": "421",
+                "name": "Choline, total",
+                "rank": {
+                    "$numberInt": "7220"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209808"
+            },
+            "amount": {
+                "$numberDouble": "7.6"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1178"
+                },
+                "number": "418",
+                "name": "Vitamin B-12",
+                "rank": {
+                    "$numberInt": "7300"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209807"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1246"
+                },
+                "number": "578",
+                "name": "Vitamin B-12, added",
+                "rank": {
+                    "$numberInt": "7340"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209814"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1106"
+                },
+                "number": "320",
+                "name": "Vitamin A, RAE",
+                "rank": {
+                    "$numberInt": "7420"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209793"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1105"
+                },
+                "number": "319",
+                "name": "Retinol",
+                "rank": {
+                    "$numberInt": "7430"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209792"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1107"
+                },
+                "number": "321",
+                "name": "Carotene, beta",
+                "rank": {
+                    "$numberInt": "7440"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209794"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1108"
+                },
+                "number": "322",
+                "name": "Carotene, alpha",
+                "rank": {
+                    "$numberInt": "7450"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209795"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1120"
+                },
+                "number": "334",
+                "name": "Cryptoxanthin, beta",
+                "rank": {
+                    "$numberInt": "7460"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209798"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1122"
+                },
+                "number": "337",
+                "name": "Lycopene",
+                "rank": {
+                    "$numberInt": "7530"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209799"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1123"
+                },
+                "number": "338",
+                "name": "Lutein + zeaxanthin",
+                "rank": {
+                    "$numberInt": "7560"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209800"
+            },
+            "amount": {
+                "$numberInt": "26"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1109"
+                },
+                "number": "323",
+                "name": "Vitamin E (alpha-tocopherol)",
+                "rank": {
+                    "$numberInt": "7905"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209796"
+            },
+            "amount": {
+                "$numberDouble": "0.05"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1242"
+                },
+                "number": "573",
+                "name": "Vitamin E, added",
+                "rank": {
+                    "$numberInt": "7920"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209813"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1114"
+                },
+                "number": "328",
+                "name": "Vitamin D (D2 + D3)",
+                "rank": {
+                    "$numberInt": "8700"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209797"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1185"
+                },
+                "number": "430",
+                "name": "Vitamin K (phylloquinone)",
+                "rank": {
+                    "$numberInt": "8800"
+                },
+                "unitName": "µg"
+            },
+            "id": {
+                "$numberInt": "13209809"
+            },
+            "amount": {
+                "$numberDouble": "2.5"
+            }
+        }, {
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2044"
+                },
+                "number": "950",
+                "name": "Lipids",
+                "rank": {
+                    "$numberInt": "9600"
+                },
+                "unitName": "g"
+            },
+            "type": "FoodNutrient"
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1258"
+                },
+                "number": "606",
+                "name": "Fatty acids, total saturated",
+                "rank": {
+                    "$numberInt": "9700"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209816"
+            },
+            "amount": {
+                "$numberDouble": "0.025"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1259"
+                },
+                "number": "607",
+                "name": "4:0",
+                "rank": {
+                    "$numberInt": "9800"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209817"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1260"
+                },
+                "number": "608",
+                "name": "6:0",
+                "rank": {
+                    "$numberInt": "9900"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209818"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1261"
+                },
+                "number": "609",
+                "name": "8:0",
+                "rank": {
+                    "$numberInt": "10000"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209819"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1262"
+                },
+                "number": "610",
+                "name": "10:0",
+                "rank": {
+                    "$numberInt": "10100"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209820"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1263"
+                },
+                "number": "611",
+                "name": "12:0",
+                "rank": {
+                    "$numberInt": "10300"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209821"
+            },
+            "amount": {
+                "$numberDouble": "0.001"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1264"
+                },
+                "number": "612",
+                "name": "14:0",
+                "rank": {
+                    "$numberInt": "10500"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209822"
+            },
+            "amount": {
+                "$numberDouble": "0.001"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1265"
+                },
+                "number": "613",
+                "name": "16:0",
+                "rank": {
+                    "$numberInt": "10700"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209823"
+            },
+            "amount": {
+                "$numberDouble": "0.021"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1266"
+                },
+                "number": "614",
+                "name": "18:0",
+                "rank": {
+                    "$numberInt": "10900"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209824"
+            },
+            "amount": {
+                "$numberDouble": "0.002"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1292"
+                },
+                "number": "645",
+                "name": "Fatty acids, total monounsaturated",
+                "rank": {
+                    "$numberInt": "11400"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209836"
+            },
+            "amount": {
+                "$numberDouble": "0.002"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1275"
+                },
+                "number": "626",
+                "name": "16:1",
+                "rank": {
+                    "$numberInt": "11700"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209830"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1268"
+                },
+                "number": "617",
+                "name": "18:1",
+                "rank": {
+                    "$numberInt": "12100"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209825"
+            },
+            "amount": {
+                "$numberDouble": "0.002"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1277"
+                },
+                "number": "628",
+                "name": "20:1",
+                "rank": {
+                    "$numberInt": "12400"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209832"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1279"
+                },
+                "number": "630",
+                "name": "22:1",
+                "rank": {
+                    "$numberInt": "12500"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209834"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1293"
+                },
+                "number": "646",
+                "name": "Fatty acids, total polyunsaturated",
+                "rank": {
+                    "$numberInt": "12900"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209837"
+            },
+            "amount": {
+                "$numberDouble": "0.039"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1269"
+                },
+                "number": "618",
+                "name": "18:2",
+                "rank": {
+                    "$numberInt": "13100"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209826"
+            },
+            "amount": {
+                "$numberDouble": "0.017"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1270"
+                },
+                "number": "619",
+                "name": "18:3",
+                "rank": {
+                    "$numberInt": "13900"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209827"
+            },
+            "amount": {
+                "$numberDouble": "0.022"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1276"
+                },
+                "number": "627",
+                "name": "18:4",
+                "rank": {
+                    "$numberInt": "14250"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209831"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1271"
+                },
+                "number": "620",
+                "name": "20:4",
+                "rank": {
+                    "$numberInt": "14700"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209828"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1278"
+                },
+                "number": "629",
+                "name": "20:5 n-3 (EPA)",
+                "rank": {
+                    "$numberInt": "15000"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209833"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1280"
+                },
+                "number": "631",
+                "name": "22:5 n-3 (DPA)",
+                "rank": {
+                    "$numberInt": "15200"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209835"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1272"
+                },
+                "number": "621",
+                "name": "22:6 n-3 (DHA)",
+                "rank": {
+                    "$numberInt": "15300"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209829"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1253"
+                },
+                "number": "601",
+                "name": "Cholesterol",
+                "rank": {
+                    "$numberInt": "15700"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209815"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2042"
+                },
+                "number": "500",
+                "name": "Amino acids",
+                "rank": {
+                    "$numberInt": "16250"
+                },
+                "unitName": "g"
+            },
+            "type": "FoodNutrient"
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1018"
+                },
+                "number": "221",
+                "name": "Alcohol, ethyl",
+                "rank": {
+                    "$numberInt": "18200"
+                },
+                "unitName": "g"
+            },
+            "id": {
+                "$numberInt": "13209777"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1057"
+                },
+                "number": "262",
+                "name": "Caffeine",
+                "rank": {
+                    "$numberInt": "18300"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209779"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1058"
+                },
+                "number": "263",
+                "name": "Theobromine",
+                "rank": {
+                    "$numberInt": "18400"
+                },
+                "unitName": "mg"
+            },
+            "id": {
+                "$numberInt": "13209780"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }]
+    }, {
+        "id": "1356023 ",
+        "name": "تفاح",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%81%D8%A7%D8%AD.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16413080"
+            },
+            "amount": {
+                "$numberDouble": "11.67"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16413081"
+            },
+            "amount": {
+                "$numberInt": "15"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16413077"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16413078"
+            },
+            "amount": {
+                "$numberDouble": "11.67"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1162"
+                },
+                "number": "401",
+                "name": "Vitamin C, total ascorbic acid",
+                "rank": {
+                    "$numberInt": "6300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "16413082"
+            },
+            "amount": {
+                "$numberDouble": "32.5"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "16413076"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "16413079"
+            },
+            "amount": {
+                "$numberInt": "46"
+            }
+        }]
+    }, {
+        "id": "1372059 ",
+        "name": "تين ",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%8A%D9%86.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960636"
+            },
+            "amount": {
+                "$numberDouble": "64.29"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1253"
+                },
+                "number": "601",
+                "name": "Cholesterol",
+                "rank": {
+                    "$numberInt": "15700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960645"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1162"
+                },
+                "number": "401",
+                "name": "Vitamin C, total ascorbic acid",
+                "rank": {
+                    "$numberInt": "6300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960644"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960634"
+            },
+            "amount": {
+                "$numberDouble": "3.57"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960642"
+            },
+            "amount": {
+                "$numberInt": "11"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960639"
+            },
+            "amount": {
+                "$numberDouble": "10.7"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1087"
+                },
+                "number": "301",
+                "name": "Calcium, Ca",
+                "rank": {
+                    "$numberInt": "5300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960640"
+            },
+            "amount": {
+                "$numberInt": "179"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960635"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960637"
+            },
+            "amount": {
+                "$numberInt": "250"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1089"
+                },
+                "number": "303",
+                "name": "Iron, Fe",
+                "rank": {
+                    "$numberInt": "5400"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960641"
+            },
+            "amount": {
+                "$numberDouble": "1.93"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1104"
+                },
+                "number": "318",
+                "name": "Vitamin A, IU",
+                "rank": {
+                    "$numberInt": "7500"
+                },
+                "unitName": "IU"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "14960643"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "14960638"
+            },
+            "amount": {
+                "$numberDouble": "46.43"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1258"
+                },
+                "number": "606",
+                "name": "Fatty acids, total saturated",
+                "rank": {
+                    "$numberInt": "9700"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "14960646"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }]
+    }, {
+        "id": "472712 ",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D9%8A%D9%88%D9%8A.png",
+        "name": "كيوي ",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "4899539"
+            },
+            "amount": {
+                "$numberDouble": "86.67"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "4899538"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "4899541"
+            },
+            "amount": {
+                "$numberDouble": "66.67"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "4899540"
+            },
+            "amount": {
+                "$numberInt": "353"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "4899542"
+            },
+            "amount": {
+                "$numberDouble": "3.3"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "4899543"
+            },
+            "amount": {
+                "$numberInt": "140"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1104"
+                },
+                "number": "318",
+                "name": "Vitamin A, IU",
+                "rank": {
+                    "$numberInt": "7500"
+                },
+                "unitName": "IU"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3354016"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1087"
+                },
+                "number": "301",
+                "name": "Calcium, Ca",
+                "rank": {
+                    "$numberInt": "5300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3354014"
+            },
+            "amount": {
+                "$numberInt": "67"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1253"
+                },
+                "number": "601",
+                "name": "Cholesterol",
+                "rank": {
+                    "$numberInt": "15700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3354018"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1162"
+                },
+                "number": "401",
+                "name": "Vitamin C, total ascorbic acid",
+                "rank": {
+                    "$numberInt": "6300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3354017"
+            },
+            "amount": {
+                "$numberInt": "4"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1089"
+                },
+                "number": "303",
+                "name": "Iron, Fe",
+                "rank": {
+                    "$numberInt": "5400"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3354015"
+            },
+            "amount": {
+                "$numberDouble": "1.2"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1258"
+                },
+                "number": "606",
+                "name": "Fatty acids, total saturated",
+                "rank": {
+                    "$numberInt": "9700"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3354019"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "3354013"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }]
+    }, {
+        "id": "1452852 ",
+        "name": "انناس",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%86%D9%86%D8%A7%D8%B3.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1235"
+                },
+                "number": "539",
+                "name": "Sugars, added",
+                "rank": {
+                    "$numberInt": "1540"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936640"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936638"
+            },
+            "amount": {
+                "$numberInt": "1"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1089"
+                },
+                "number": "303",
+                "name": "Iron, Fe",
+                "rank": {
+                    "$numberInt": "5400"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936636"
+            },
+            "amount": {
+                "$numberDouble": "0.35"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1087"
+                },
+                "number": "301",
+                "name": "Calcium, Ca",
+                "rank": {
+                    "$numberInt": "5300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936635"
+            },
+            "amount": {
+                "$numberInt": "13"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1110"
+                },
+                "number": "324",
+                "name": "Vitamin D (D2 + D3), International Units",
+                "rank": {
+                    "$numberInt": "8650"
+                },
+                "unitName": "IU"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936639"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1258"
+                },
+                "number": "606",
+                "name": "Fatty acids, total saturated",
+                "rank": {
+                    "$numberInt": "9700"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936643"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936633"
+            },
+            "amount": {
+                "$numberDouble": "9.41"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936631"
+            },
+            "amount": {
+                "$numberDouble": "12.94"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1092"
+                },
+                "number": "306",
+                "name": "Potassium, K",
+                "rank": {
+                    "$numberInt": "5700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936637"
+            },
+            "amount": {
+                "$numberInt": "111"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1257"
+                },
+                "number": "605",
+                "name": "Fatty acids, total trans",
+                "rank": {
+                    "$numberInt": "15400"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936642"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1253"
+                },
+                "number": "601",
+                "name": "Cholesterol",
+                "rank": {
+                    "$numberInt": "15700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936641"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936634"
+            },
+            "amount": {
+                "$numberDouble": "1.2"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "17936629"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "17936630"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "17936632"
+            },
+            "amount": {
+                "$numberInt": "51"
+            }
+        }]
+    }, {
+        "id": "546613 ",
+        "name": "فرولة ",
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%81%D8%B1%D9%88%D9%84%D8%A9.png",
+        "foodNutrients": [{
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1008"
+                },
+                "number": "208",
+                "name": "Energy",
+                "rank": {
+                    "$numberInt": "300"
+                },
+                "unitName": "kcal"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "5049466"
+            },
+            "amount": {
+                "$numberInt": "36"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1079"
+                },
+                "number": "291",
+                "name": "Fiber, total dietary",
+                "rank": {
+                    "$numberInt": "1200"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "5049468"
+            },
+            "amount": {
+                "$numberDouble": "1.4"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1005"
+                },
+                "number": "205",
+                "name": "Carbohydrate, by difference",
+                "rank": {
+                    "$numberInt": "1110"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "5049465"
+            },
+            "amount": {
+                "$numberDouble": "8.57"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1257"
+                },
+                "number": "605",
+                "name": "Fatty acids, total trans",
+                "rank": {
+                    "$numberInt": "15400"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "5049469"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1003"
+                },
+                "number": "203",
+                "name": "Protein",
+                "rank": {
+                    "$numberInt": "600"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure"
+            },
+            "id": {
+                "$numberInt": "5049464"
+            },
+            "amount": {
+                "$numberDouble": "0.71"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "2000"
+                },
+                "number": "269",
+                "name": "Sugars, total including NLEA",
+                "rank": {
+                    "$numberInt": "1510"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "70"
+                },
+                "code": "LCCS",
+                "description": "Calculated from value per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "5049467"
+            },
+            "amount": {
+                "$numberDouble": "5.71"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1162"
+                },
+                "number": "401",
+                "name": "Vitamin C, total ascorbic acid",
+                "rank": {
+                    "$numberInt": "6300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443355"
+            },
+            "amount": {
+                "$numberDouble": "42.9"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1258"
+                },
+                "number": "606",
+                "name": "Fatty acids, total saturated",
+                "rank": {
+                    "$numberInt": "9700"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443357"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1089"
+                },
+                "number": "303",
+                "name": "Iron, Fe",
+                "rank": {
+                    "$numberInt": "5400"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443352"
+            },
+            "amount": {
+                "$numberDouble": "0.51"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1093"
+                },
+                "number": "307",
+                "name": "Sodium, Na",
+                "rank": {
+                    "$numberInt": "5800"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443353"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1104"
+                },
+                "number": "318",
+                "name": "Vitamin A, IU",
+                "rank": {
+                    "$numberInt": "7500"
+                },
+                "unitName": "IU"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443354"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1253"
+                },
+                "number": "601",
+                "name": "Cholesterol",
+                "rank": {
+                    "$numberInt": "15700"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443356"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1004"
+                },
+                "number": "204",
+                "name": "Total lipid (fat)",
+                "rank": {
+                    "$numberInt": "800"
+                },
+                "unitName": "g"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure"
+            },
+            "id": {
+                "$numberInt": "3443350"
+            },
+            "amount": {
+                "$numberInt": "0"
+            }
+        }, {
+            "type": "FoodNutrient",
+            "nutrient": {
+                "id": {
+                    "$numberInt": "1087"
+                },
+                "number": "301",
+                "name": "Calcium, Ca",
+                "rank": {
+                    "$numberInt": "5300"
+                },
+                "unitName": "mg"
+            },
+            "foodNutrientDerivation": {
+                "id": {
+                    "$numberInt": "75"
+                },
+                "code": "LCCD",
+                "description": "Calculated from a daily value percentage per serving size measure",
+                "foodNutrientSource": {
+                    "id": {
+                        "$numberInt": "9"
+                    },
+                    "code": "12",
+                    "description": "Manufacturer's analytical; partial documentation"
+                }
+            },
+            "id": {
+                "$numberInt": "3443351"
+            },
+            "amount": {
+                "$numberInt": "14"
+            }
+        }]
+    }]
+}

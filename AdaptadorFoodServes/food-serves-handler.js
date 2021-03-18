@@ -15,7 +15,7 @@ const getAllFood=async(req,res,_)=>{
    // const toprint=re[0]['data']
     console.log(re["0"]._doc['data'][0]['id'])
     
-    const api_url=`https://api.nal.usda.gov/fdc/v1/food/1452852?api_key=${encodeURIComponent(params.api_key)}&dataType=${encodeURIComponent(params.dataType)}&pagesize=${encodeURIComponent(params.pagesize)}`
+    const api_url=`https://api.nal.usda.gov/fdc/v1/food/546613?api_key=${encodeURIComponent(params.api_key)}&dataType=${encodeURIComponent(params.dataType)}&pagesize=${encodeURIComponent(params.pagesize)}`
 
     const   result=   await fetch(api_url).then(respons=>respons.json())
 
