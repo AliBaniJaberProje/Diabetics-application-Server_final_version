@@ -8,7 +8,6 @@ async  function hashPassword(password,salt)  {
 }
 
 
-
 const addNewPatient=async (req,res,_)=>{
 
     console.log(req.body)
@@ -57,7 +56,7 @@ const addNewPatient=async (req,res,_)=>{
         })
     }
 }
-//
+
 const updateCurrentDoctor=async (req,res,next)=>{
     try {
 
@@ -105,7 +104,21 @@ const getAllPatientForDoctor=async (req,res,_)=>{
 
 }
 
+const getPatientInfoById=async (req,res,_)=>{
 
+    try{
+        const idPatient=(req.params.id).trimEnd()
+        const pationResult=await Patient.findOne({"id":idPatient});
+        console.log(patuiontResult)
+        res.status(200).json({
+            patientInfo:pationResult
+        })
+    }catch(e){
+        res.status(401).json({
+            "patientInfo":" error get information "
+        })
+    }
+}
 
 
 
@@ -114,5 +127,6 @@ const getAllPatientForDoctor=async (req,res,_)=>{
 export {
     addNewPatient,
     getAllPatientForDoctor,
-    updateCurrentDoctor
+    updateCurrentDoctor,
+    getPatientInfoById
 }
