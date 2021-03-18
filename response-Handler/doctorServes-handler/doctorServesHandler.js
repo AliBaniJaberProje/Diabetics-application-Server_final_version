@@ -109,7 +109,7 @@ const getPatientInfoById=async (req,res,_)=>{
     try{
         const idPatient=(req.params.id).trimEnd()
         const pationResult=await Patient.findOne({"id":idPatient});
-        console.log(patuiontResult)
+        console.log(pationResult)
         res.status(200).json({
             patientInfo:pationResult
         })
