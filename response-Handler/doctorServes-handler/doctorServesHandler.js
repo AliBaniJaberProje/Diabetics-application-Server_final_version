@@ -110,7 +110,7 @@ const getPatientInfoById=async (req,res,_)=>{
         const idPatient=(req.params.id).trimEnd()
         const patientInfo=await Patient.findOne({"id":idPatient}).select({_id:false,__v:false,lastDoctor:false,currentDoctor:false,password:false,numberOFinjCard:false,isOnline:false});
         //console.log(patientInfo)
-        res.status(200).json(patientInfo)
+        res.status(200).json({"patientInfo":patientInfo})
     }catch(e){
         res.status(401).json({
             "patientInfo":e.message
