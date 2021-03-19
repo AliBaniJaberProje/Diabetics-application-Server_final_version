@@ -28,6 +28,24 @@ const getAllFood=async(req,res,_)=>{
 
 }
 
+const findFoodCategory=async(req,res,_)=>{
+    const foods=await food.findOne({"category":"Fruits"},)
+    var result=[];
+
+     for(var i=0;i<foods._doc.data.length;i++){
+         result.push({
+             "img":foods._doc.data[i]['img'],
+             "name":foods._doc.data[i]['name'],
+             "id":foods._doc.data[i]['id']
+         })
+     }
+    res.status(200).json(result)
+
+
+}
+
 export{
-    getAllFood
+    getAllFood,
+    findFoodCategory,
+
 }
