@@ -53,7 +53,7 @@ const addNewReading =async (req,res,_)=>{
             })
         }else{
             return  res.status(200).json({
-                "msg":await dailyReadingModel.find({date:{ $gte: start, $lte: endDate }}).select({inputInfo:true})
+                "msg":await dailyReadingModel.find({$and:[{date:{ $gte: start, $lte: endDate }},{idPatient:resultJWTDecode.id}]}).select({inputInfo:true})
             })
         }
     }catch(e){
