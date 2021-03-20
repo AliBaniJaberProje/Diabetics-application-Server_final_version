@@ -15,7 +15,7 @@ router.get("/",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getPr
 
 
 
-router.post("/t",patient_requestHandler.t)
+router.get("/t",patient_requestHandler.t)
 
 
 export default router

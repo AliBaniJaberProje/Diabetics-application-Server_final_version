@@ -5,7 +5,7 @@ const router =express.Router()
 
 router.get("/all",foodHandler.getAllFood)
 router.get("/",foodHandler.findFoodCategory)
-
+router.get("/:fcd_id",foodHandler.getFoodDetails)
 
 
 
