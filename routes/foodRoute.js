@@ -4,8 +4,8 @@ import * as foodHandler from "./../AdaptadorFoodServes/food-serves-handler.js"
 const router =express.Router()
 
 router.get("/all",foodHandler.getAllFood)
-router.get("/",foodHandler.findFoodCategory)
-router.get("/:fcd_id",foodHandler.getFoodDetails)
+router.get("/:foodCategory",foodHandler.findFoodCategory)
+router.get("/:foodCategory/:fcd_id",foodHandler.getFoodDetails)
 
 
 

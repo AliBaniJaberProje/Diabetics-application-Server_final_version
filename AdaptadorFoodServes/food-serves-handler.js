@@ -29,7 +29,7 @@ const getAllFood=async(req,res,_)=>{
 }
 
 const findFoodCategory=async(req,res,_)=>{
-    const foods=await food.findOne({"category":"Fruits"},)
+    const foods=await food.findOne({"category":req.params.foodCategory},)
     var result=[];
 
      for(var i=0;i<foods._doc.data.length;i++){
@@ -45,10 +45,9 @@ const findFoodCategory=async(req,res,_)=>{
 }
 const getFoodDetails=async(req,res,_)=>{
 
-    const foodDetails=await food.findOne({"category":"Fruits", },"data.FoodNutrients data.id data.name")
+    const foodDetails=await food.findOne({"category":"fruits", },"data.FoodNutrients data.id data.name")
     for(var index=0;index<foodDetails._doc.data.length;index++){
         if(foodDetails._doc.data[index]['id']==req.params.fcd_id){
-//req.params.id
             res.status(200).json(foodDetails._doc.data[index])
         }
     }

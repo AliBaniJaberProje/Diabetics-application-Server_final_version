@@ -13,7 +13,7 @@ const addNewReading =async (req,res,_)=>{
         if(resultDailyReading.length==0){
             const dailyReading =new  dailyReadingModel({
                 date:Date.now(),
-                idPatient:'123456789',
+                idPatient:resultJWTDecode.id,
                 inputInfo:[
                     {
                         id:1,
