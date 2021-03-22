@@ -1,0 +1,30 @@
+    {
+        "id": "173578",
+        "name": "سمك السردين",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "902",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.0",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "100",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0.0",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/white_meat/%D8%B3%D9%85%D9%83_%D8%B3%D8%B1%D8%AF%D9%8A%D9%86.png"
+
+}
+
+
+
+
+
+
