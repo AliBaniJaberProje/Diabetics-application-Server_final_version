@@ -44,7 +44,7 @@ const getFoodDetails=async(req,res,_)=>{
     const foodDetails=await food.findOne({"category":req.params.foodCategory, },"data.FoodNutrients data.id data.name")
     for(var index=0;index<foodDetails._doc.data.length;index++){
         if(foodDetails._doc.data[index]['id']==req.params.fcd_id){
-            res.status(200).json(foodDetails._doc.data[index])
+          return   res.status(200).json(foodDetails._doc.data[index])
         }
     }
 
