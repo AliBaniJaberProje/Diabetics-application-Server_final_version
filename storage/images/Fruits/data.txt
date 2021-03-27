@@ -1,6 +1,632 @@
+
+
+
 {
     "_id": {
-        "$oid": "6057f844b29569d455562a9d"
+        "$oid": "605e7a336e1abfc8255c0071"
+    },
+    "category": "eggs_and_milk",
+    "data": [{
+        "id": "577532 ",
+        "name": "بيض ",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "136",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "13.64",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "9.09",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0.0",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D8%A8%D9%8A%D8%B6.png"
+    }, {
+        "id": "1274352",
+        "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D9%84%D8%A8%D9%86%D8%A9.png",
+        "name": "لبنة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "286",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "17.86",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "21.43",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "1267780",
+        "name": "لبن",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "73",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "2.67",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "2.67",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "8.67",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D9%84%D8%A8%D9%86.png"
+    }, {
+        "id": "1259312",
+        "name": "حليب",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "42",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "3.33",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.04",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "5",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D8%AD%D9%84%D9%8A%D8%A8.png"
+    }, {
+        "id": "1293649",
+        "name": "قشطة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "333",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "3.33",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "36.67",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "3.33",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D9%82%D8%B4%D8%B7%D8%A9.png"
+    }, {
+        "id": "1293649",
+        "name": "جبنة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "393",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "25",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "32.14",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D8%AC%D8%A8%D9%86%D8%A9.png"
+    }]
+}
+///
+{
+    "_id": {
+        "$oid": "605e7a4a6e1abfc8255c0072"
+    },
+    "category": "oils_and_fats",
+    "data": [{
+        "id": "1103861",
+        "name": "زيت الزيتون",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "884",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.0",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "100",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/oils_and_fats/زيت_زيتون.png"
+    }, {
+        "id": "1103861",
+        "name": "سمنة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "882",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.0",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "100",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/oils_and_fats/سمنة.png"
+    }, {
+        "id": "551488",
+        "name": "زبده",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "714",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.0",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "78.57",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/oils_and_fats/%D8%B2%D8%A8%D8%AF%D9%87.png"
+    }]
+}
+////----------------------------------\\
+
+
+
+{
+    "_id": {
+        "$oid": "605e7a596e1abfc8255c0073"
+    },
+    "category": "vegetable",
+    "data": [{
+        "id": "1164160",
+        "name": "بندورة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "44",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.92",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "9.89",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%A8%D9%86%D8%AF%D9%88%D8%B1%D8%A9.png"
+    }, {
+        "id": "1103352",
+        "name": "خيار",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "15",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.65",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.11",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "3.63",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%AE%D9%8A%D8%A7%D8%B1.png"
+    }, {
+        "id": "539572",
+        "name": "بروكلي",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "34",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "2.7",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.34",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "5.41",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%A8%D8%B1%D9%88%D9%83%D9%84%D9%8A.png"
+    }, {
+        "id": "1103193",
+        "name": "جزر",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "41",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.93",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.24",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "9.58",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%AC%D8%B2%D8%B1.png"
+    }, {
+        "id": "1103364",
+        "name": "بصل",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "40",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.1",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.1",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "9.34",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/بصل.png"
+    }, {
+        "id": "1103370",
+        "name": "فلفل",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "22",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.91",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.22",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "5.13",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/فلفل.png"
+    }, {
+        "id": "169986",
+        "name": "قرنبيط",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "25",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.92",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.28",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "4.97",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/قرنبيط.png"
+    }, {
+        "id": "169230",
+        "name": "ثوم",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "149",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "6.36",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.5",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "33.06",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/ثوم.png"
+    }, {
+        "id": "169228",
+        "name": "باذنجان",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "25",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.98",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.18",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "5.88",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/باذنجان.png"
+    }, {
+        "id": "1103351",
+        "name": "ذرة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "86",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "3.27",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.35",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "18.7",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/ذرة.png"
+    }, {
+        "id": "1102594",
+        "name": "ليمون",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "29",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.1",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.3",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "9.32",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/لمون.png"
+    }, {
+        "id": "169260",
+        "name": "بامية",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "33",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.93",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.19",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "7.45",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/بامية.png"
+    }, {
+        "id": "1103362",
+        "name": "فطر",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "22",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "3.09",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.34",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "3.26",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/فطر.png"
+    }, {
+        "id": "169276",
+        "name": "فجل",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "16",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.68",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.1",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "3.4",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/فجل.png"
+    }, {
+        "id": "168448",
+        "name": "يقطين",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "26",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.0",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.1",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "6.5",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/يقطين.png"
+    }, {
+        "id": "1103380",
+        "name": "لفت",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "28",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.9",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.1",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "6.43",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/اللفت.png"
+    }, {
+        "id": "1425386",
+        "name": "افوكادوا",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "167",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "3.33",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "15",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "10",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/افوكادوا.png"
+    }, {
+        "id": "169231",
+        "name": "زنجبيل",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "80",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.82",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.75",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "17.77",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/vegetable/زنجبيل.png"
+    }]
+}
+
+///------------------------------------------
+
+{
+    "_id": {
+        "$oid": "605e7a756e1abfc8255c0074"
     },
     "category": "fruits",
     "data": [{
@@ -264,119 +890,394 @@
             },
             "Carbohydrate": {
                 "value": "33.33",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "1416909",
+        "name": "جوافة",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "49",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.6",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.2",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "11.15",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AC%D9%88%D8%A7%D9%81%D8%A9.png"
+    }, {
+        "id": "168151",
+        "name": "عناب",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "79",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.2",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.2",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "20.23",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/عناب.png"
+    }, {
+        "id": "1102591",
+        "name": "جريفوت",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "42",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.77",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.14",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "10.66",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/جريفوت.png"
+    }, {
+        "id": "169910",
+        "name": "مانجا",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "60",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.82",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.38",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "14.98",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/مانجا.png"
+    }, {
+        "id": "169908",
+        "name": "اسكدنيا",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "47",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.43",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.2",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "12.14",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/اسكدنيا.png"
+    }, {
+        "id": "1102695",
+        "name": "رمان",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "83",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "1.67",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.17",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "18.7",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/رمان.png"
+    }, {
+        "id": "1102693",
+        "name": "برقوق",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "46",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.7",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.28",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "11.42",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/Fruits/برقوق.png"
+    }]
+}
+
+///-------------------------------------------
+
+{
+    "_id": {
+        "$oid": "605e7a8a6e1abfc8255c0075"
+    },
+    "category": "drink",
+    "data": [{
+        "id": "171687",
+        "name": "كرز ",
+        "img": "https://jaber-server.herokuapp.com/images/drink/كرز_هندي.png",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "23",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.4",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "4.8",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.3",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "167763",
+        "name": "تمر هندي",
+        "img": "https://jaber-server.herokuapp.com/images/drink/تمر_هندي.png",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "239",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "2.8",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.6",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "62.5",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "168156",
+        "name": " لموناضه",
+        "img": "https://jaber-server.herokuapp.com/images/drink/%D9%84%D9%8A%D9%85%D9%88%D9%86%D8%A7%D8%B6%D9%87.png",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "25",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "0.42",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.07",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "8.42",
                 "unit": "g"
             }
         }
     }]
 }
-//--------------------------------------
 
+
+//////////////////////////
 
 
 {
     "_id": {
-        "$oid": "6057f844b29569d455562a9d"
+        "$oid": "605e7a9d6e1abfc8255c0076"
     },
-    "category": "fruits",
+    "category": "legumes",
     "data": [{
-        "id": "1202963",
-        "name": "برتقال",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84.png",
+        "id": "172420",
+        "name": "عدس",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/عدس.png",
         "FoodNutrients": {
             "Energy": {
-                "value": "381",
+                "value": "352",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "4.76",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "90.48",
+                "value": "24.63",
                 "unit": "g"
             },
             "fat": {
-                "value": "0",
+                "value": "1.06",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "63.35",
                 "unit": "g"
             }
         }
     }, {
-        "id": "1298154",
-        "name": "عنب",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%B9%D9%86%D8%A8.png",
+        "id": "170157",
+        "name": "مكسرات",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/مكسرات.png",
         "FoodNutrients": {
             "Energy": {
-                "value": "54",
+                "value": "387",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "6.15",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "23.86",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "13.18",
+                "value": "40.75",
                 "unit": "g"
             }
         }
     }, {
-        "id": "1270319",
-        "name": "خوخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AE%D9%88%D8%AE.png",
+        "id": "172434",
+        "name": "فول سوداني",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/فول سوداني.png",
         "FoodNutrients": {
             "Energy": {
-                "value": "75",
+                "value": "563",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.42",
+                "value": "25.19",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "48.75",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "19.17",
+                "value": "16.54",
                 "unit": "g"
             }
         }
     }, {
-        "id": "1368860",
-        "name": "مشمش",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D8%B4%D9%85%D8%B4.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "250",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "60.0",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1328513",
-        "name": "بطيخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A8%D8%B7%D9%8A%D8%AE.png",
+        "id": "1103337",
+        "name": "فول",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/فول.png",
         "FoodNutrients": {
             "Energy": {
                 "value": "31",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.78",
+                "value": "1.83",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "0.22",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "6.97",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "173756",
+        "name": "حمص",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/حمص.png",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "378",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "20.47",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "6.04",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "62.95",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "1351414",
+        "name": "فاصولياء",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/فاصولياء.png",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "107",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "4.58",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "3.05",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "16.03",
+                "unit": "g"
+            }
+        }
+    }, {
+        "id": "169224",
+        "name": "لوبياء",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/لوبياء.png",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "29",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "4.1",
                 "unit": "g"
             },
             "fat": {
@@ -384,203 +1285,137 @@
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "7.45",
+                "value": "4.82",
                 "unit": "g"
             }
         }
     }, {
-        "id": "1356023",
-        "name": "تفاح",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%81%D8%A7%D8%AD.png",
+        "id": "1103366",
+        "name": "بازلاء",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/بازلاء.png",
         "FoodNutrients": {
             "Energy": {
-                "value": "46",
+                "value": "81",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "5.42",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "0.4",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "11.67",
+                "value": "14.45",
                 "unit": "g"
             }
         }
     }, {
-        "id": "1372059",
-        "name": "تين ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%8A%D9%86.png",
+        "id": "172423",
+        "name": "ترمس",
+        "img": "https://jaber-server.herokuapp.com/images/legumes/ترمس.png",
         "FoodNutrients": {
             "Energy": {
-                "value": "250",
+                "value": "371",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "3.57",
+                "value": "36.17",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "9.74",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "64.29",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "472712",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D9%8A%D9%88%D9%8A.png",
-        "name": "كيوي ",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "353",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "86.67",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1452852",
-        "name": "أناناس",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%86%D9%86%D8%A7%D8%B3.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "51",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "12.94",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "546613",
-        "name": "فرولة ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%81%D8%B1%D9%88%D9%84%D8%A9.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "36",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.71",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "8.57",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1176358 ",
-        "name": "موز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D9%88%D8%B2.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "336",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "1.07",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "78.57",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1268171 ",
-        "name": "كرز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D8%B1%D8%B2.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "83",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "33.33",
+                "value": "40.37",
                 "unit": "g"
             }
         }
     }]
 }
 
-///-----------------------------------------------------
+///////////////
+
 
 {
     "_id": {
-        "$oid": "6057f844b29569d455562a9d"
+        "$oid": "605e7aaf6e1abfc8255c0077"
     },
-    "category": "fruits",
+    "category": "meat",
     "data": [{
-        "id": "1202963",
-        "name": "برتقال",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84.png",
+        "id": "1271897",
+        "name": "الدجاج",
         "FoodNutrients": {
             "Energy": {
-                "value": "381",
+                "value": "161",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "4.76",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "90.48",
+                "value": "16.07",
                 "unit": "g"
             },
             "fat": {
+                "value": "8.93",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "3.57",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D8%AF%D8%AC%D8%A7%D8%AC.png"
+    }, {
+        "id": "1181602",
+        "name": "سلمون",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "127",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "20.5",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "4.4",
+                "unit": "g"
+            },
+            "Carbohydrate": {
                 "value": "0",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D8%B3%D9%85%D9%83_%D8%B3%D9%84%D9%85%D9%88%D9%86.png"
     }, {
-        "id": "1298154",
-        "name": "عنب",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%B9%D9%86%D8%A8.png",
+        "id": "1257419",
+        "name": "جمبري",
         "FoodNutrients": {
             "Energy": {
-                "value": "54",
+                "value": "106",
+                "unit": "kcal"
+            },
+            "Protein": {
+                "value": "20.35",
+                "unit": "g"
+            },
+            "fat": {
+                "value": "1.77",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "0.88",
+                "unit": "g"
+            }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D8%AC%D9%85%D8%A8%D8%B1%D9%8A.png"
+    }, {
+        "id": "173578",
+        "name": "سردين",
+        "FoodNutrients": {
+            "Energy": {
+                "value": "902",
                 "unit": "kcal"
             },
             "Protein": {
@@ -588,784 +1423,268 @@
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "100",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "13.18",
+                "value": "0.0",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D8%B3%D9%85%D9%83_%D8%B3%D8%B1%D8%AF%D9%8A%D9%86.png"
     }, {
-        "id": "1270319",
-        "name": "خوخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AE%D9%88%D8%AE.png",
+        "id": "172617",
+        "name": "لحم خروف",
         "FoodNutrients": {
             "Energy": {
-                "value": "75",
+                "value": "193",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.42",
+                "value": "20.33",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "12.41",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "19.17",
+                "value": "0.0",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D9%84%D8%AD%D9%85_%D8%AE%D8%B1%D9%88%D9%81.png"
     }, {
-        "id": "1368860",
-        "name": "مشمش",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D8%B4%D9%85%D8%B4.png",
+        "id": "1099226",
+        "name": "لحم العجل",
         "FoodNutrients": {
             "Energy": {
-                "value": "250",
+                "value": "172",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "16.66",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "8.56",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "60.0",
+                "value": "6.52",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D9%84%D8%AD%D9%85_%D8%B9%D8%AC%D9%84.png"
     }, {
-        "id": "1328513",
-        "name": "بطيخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A8%D8%B7%D9%8A%D8%AE.png",
+        "id": "1099030",
+        "name": "طونة",
         "FoodNutrients": {
             "Energy": {
-                "value": "31",
+                "value": "109",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.78",
+                "value": "24.4",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.25",
+                "value": "0.49",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "7.45",
+                "value": "0",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/طونة.png"
     }, {
-        "id": "1356023",
-        "name": "تفاح",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%81%D8%A7%D8%AD.png",
+        "id": "1098902",
+        "name": "بوري",
         "FoodNutrients": {
             "Energy": {
-                "value": "46",
+                "value": "244",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "19.51",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "13.56",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "11.67",
+                "value": "9.85",
                 "unit": "g"
             }
-        }
-    }, {
-        "id": "1372059",
-        "name": "تين ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%8A%D9%86.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "250",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "3.57",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "64.29",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "472712",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D9%8A%D9%88%D9%8A.png",
-        "name": "كيوي ",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "353",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "86.67",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1452852",
-        "name": "أناناس",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%86%D9%86%D8%A7%D8%B3.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "51",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "12.94",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "546613",
-        "name": "فرولة ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%81%D8%B1%D9%88%D9%84%D8%A9.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "36",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.71",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "8.57",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1176358 ",
-        "name": "موز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D9%88%D8%B2.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "336",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "1.07",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "78.57",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1268171 ",
-        "name": "كرز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D8%B1%D8%B2.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "83",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "33.33",
-                "unit": "g"
-            }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/بوري.png"
     }]
 }
 
-//-------------------------------------------------
+////
 
 
 
 {
     "_id": {
-        "$oid": "6057f844b29569d455562a9d"
+        "$oid": "605e7abd6e1abfc8255c0078"
     },
-    "category": "fruits",
+    "category": "foliar",
     "data": [{
-        "id": "1202963",
-        "name": "برتقال",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84.png",
+        "id": "1103348",
+        "name": "ريحان",
         "FoodNutrients": {
             "Energy": {
-                "value": "381",
+                "value": "23",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "4.76",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "90.48",
+                "value": "3.15",
                 "unit": "g"
             },
             "fat": {
-                "value": "0",
+                "value": "0.64",
+                "unit": "g"
+            },
+            "Carbohydrate": {
+                "value": "2.65",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/foliar/ريحان.png"
     }, {
-        "id": "1298154",
-        "name": "عنب",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%B9%D9%86%D8%A8.png",
+        "id": "1103350",
+        "name": "كزبرة",
         "FoodNutrients": {
             "Energy": {
-                "value": "54",
+                "value": "23",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "2.13",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "0.52",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "13.18",
+                "value": "3.67",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/foliar/كزبرة.png"
     }, {
-        "id": "1270319",
-        "name": "خوخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AE%D9%88%D8%AE.png",
+        "id": "1103358",
+        "name": "خس",
         "FoodNutrients": {
             "Energy": {
-                "value": "75",
+                "value": "14",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.42",
+                "value": "1.13",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "0.14",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "19.17",
+                "value": "2.92",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/foliar/خس.png"
     }, {
-        "id": "1368860",
-        "name": "مشمش",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D8%B4%D9%85%D8%B4.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "250",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "60.0",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1328513",
-        "name": "بطيخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A8%D8%B7%D9%8A%D8%AE.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "31",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.78",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.25",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "7.45",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1356023",
-        "name": "تفاح",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%81%D8%A7%D8%AD.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "46",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "11.67",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1372059",
-        "name": "تين ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%8A%D9%86.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "250",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "3.57",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "64.29",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "472712",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D9%8A%D9%88%D9%8A.png",
-        "name": "كيوي ",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "353",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "86.67",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1452852",
-        "name": "أناناس",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%86%D9%86%D8%A7%D8%B3.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "51",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "12.94",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "546613",
-        "name": "فرولة ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%81%D8%B1%D9%88%D9%84%D8%A9.png",
+        "id": "1103365",
+        "name": "بقدونس",
         "FoodNutrients": {
             "Energy": {
                 "value": "36",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.71",
+                "value": "2.97",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "0.79",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "8.57",
+                "value": "6.33",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/meat/%D9%84%D8%AD%D9%85_%D8%AE%D8%B1%D9%88%D9%81.png"
     }, {
-        "id": "1176358 ",
-        "name": "موز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D9%88%D8%B2.png",
+        "id": "1103166",
+        "name": "جرجير",
         "FoodNutrients": {
             "Energy": {
-                "value": "336",
+                "value": "11",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "2.3",
                 "unit": "g"
             },
             "fat": {
-                "value": "1.07",
+                "value": "0.1",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "78.57",
+                "value": "1.29",
                 "unit": "g"
             }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/foliar/جرجير.png"
     }, {
-        "id": "1268171 ",
-        "name": "كرز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D8%B1%D8%B2.png",
+        "id": "1103136",
+        "name": "سبانخ",
         "FoodNutrients": {
             "Energy": {
-                "value": "83",
+                "value": "23",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "2.86",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "0.39",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "33.33",
+                "value": "3.63",
                 "unit": "g"
             }
-        }
-    }]
-}
-
-
-//------------------
-
-{
-    "_id": {
-        "$oid": "6057f844b29569d455562a9d"
-    },
-    "category": "fruits",
-    "data": [{
-        "id": "1202963",
-        "name": "برتقال",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "381",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "4.76",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "90.48",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0",
-                "unit": "g"
-            }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/foliar/سبانخ.png"
     }, {
-        "id": "1298154",
-        "name": "عنب",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%B9%D9%86%D8%A8.png",
+        "id": "168575",
+        "name": "ورق عنب",
         "FoodNutrients": {
             "Energy": {
-                "value": "54",
+                "value": "93",
                 "unit": "kcal"
             },
             "Protein": {
-                "value": "0.0",
+                "value": "5.6",
                 "unit": "g"
             },
             "fat": {
-                "value": "0.0",
+                "value": "2.12",
                 "unit": "g"
             },
             "Carbohydrate": {
-                "value": "13.18",
+                "value": "17.31",
                 "unit": "g"
             }
-        }
-    }, {
-        "id": "1270319",
-        "name": "خوخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AE%D9%88%D8%AE.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "75",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.42",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "19.17",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1368860",
-        "name": "مشمش",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D8%B4%D9%85%D8%B4.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "250",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "60.0",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1328513",
-        "name": "بطيخ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A8%D8%B7%D9%8A%D8%AE.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "31",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.78",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.25",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "7.45",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1356023",
-        "name": "تفاح",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%81%D8%A7%D8%AD.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "46",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "11.67",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1372059",
-        "name": "تين ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%AA%D9%8A%D9%86.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "250",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "3.57",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "64.29",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "472712",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D9%8A%D9%88%D9%8A.png",
-        "name": "كيوي ",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "353",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "86.67",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1452852",
-        "name": "أناناس",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D8%A7%D9%86%D9%86%D8%A7%D8%B3.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "51",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "12.94",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "546613",
-        "name": "فرولة ",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%81%D8%B1%D9%88%D9%84%D8%A9.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "36",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.71",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "8.57",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1176358 ",
-        "name": "موز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%85%D9%88%D8%B2.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "336",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "1.07",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "78.57",
-                "unit": "g"
-            }
-        }
-    }, {
-        "id": "1268171 ",
-        "name": "كرز",
-        "img": "https://jaber-server.herokuapp.com/images/Fruits/%D9%83%D8%B1%D8%B2.png",
-        "FoodNutrients": {
-            "Energy": {
-                "value": "83",
-                "unit": "kcal"
-            },
-            "Protein": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "fat": {
-                "value": "0.0",
-                "unit": "g"
-            },
-            "Carbohydrate": {
-                "value": "33.33",
-                "unit": "g"
-            }
-        }
+        },
+        "img": "https://jaber-server.herokuapp.com/images/foliar/ورق عنب.png"
     }]
 }
