@@ -13,8 +13,8 @@ import client from "twilio"
 import foodRoute from "./routes/foodRoute.js"
 import imageUploadRouter from "./routes/image-upload.js"
 import dailyReadingRoute from "./routes/dailyReadingRoute.js"
-
-
+import doseRoute from "./routes/doseRoute.js"
+import stepsRoute from "./routes/number-of-stepRoute.js"
 
 const app=express()
 
@@ -39,7 +39,8 @@ app.use('/event',eventRoute)
 app.use("/food",foodRoute)
 app.use("/dailyReading",dailyReadingRoute)
 app.use("/imagesUpload",imageUploadRouter)
-
+app.use("/dose",doseRoute)
+app.use("/steps",stepsRoute)
 app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
 })
