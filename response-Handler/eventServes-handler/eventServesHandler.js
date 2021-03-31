@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 import event from "../../model/event.js";
 import patient from "../../model/users/patient.js"
 import * as event_mid from "../../middleware/eventMiddleware.js"
-
+import patient from "../../model/users/patient.js"
 
 const addNewEvent=async (req,res,_)=>{
     try{
@@ -43,7 +43,6 @@ const addNewEvent=async (req,res,_)=>{
     }
 }
 
-
 const getEventWhereUserId=async (req,res,_)=>{
     const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
     try{
@@ -76,8 +75,12 @@ const getEventWhereUserId=async (req,res,_)=>{
 
 const selectEventForUser=async (req,res,_)=>{
     try{
+
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
         const patientResult =await patient.find({"id":resultDecodeJWT.id})
+
+
+
 
         const eventToSelect=await event.findById(req.body.id)
         if(eventToSelect.taken.available==false){
@@ -92,7 +95,9 @@ const selectEventForUser=async (req,res,_)=>{
 
             const  result=await event.findByIdAndUpdate(req.body.id,{
                 "taken.available":false,
-                "taken.userTake":resultDecodeJWT.id
+                "taken.userTake":resultDecodeJWT.id,
+                "title":patientResult[0].username
+
             });
             await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:result._id})
            return res.status(200).json({
@@ -105,7 +110,8 @@ const selectEventForUser=async (req,res,_)=>{
         if(selectedEventDate < Date.now()){
             const  result=await event.findByIdAndUpdate(req.body.id,{
                 "taken.available":false,
-                "taken.userTake":resultDecodeJWT.id
+                "taken.userTake":resultDecodeJWT.id,
+                "title":patientResult[0].username
             });
             await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:result._id})
             return res.status(200).json({
