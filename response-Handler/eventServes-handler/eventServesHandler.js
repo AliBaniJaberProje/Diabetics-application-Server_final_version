@@ -15,11 +15,11 @@ const addNewEvent=async (req,res,_)=>{
         console.log(req.body)
 
         const newEvent=new event({
-            _id:req.body.idEvent,
-            startEventTime:new Date(req.body.startTimeEvent),
-            endEventTime:new Date(req.body.endTimeEvent),
-            typeEvent:req.body.typeEvent,
-            title:req.body.title,
+            _id:req.body.event.idEvent,
+            startEventTime:new Date(req.body.event.startTimeEvent),
+            endEventTime:new Date(req.body.event.endTimeEvent),
+            typeEvent:req.body.event.typeEvent,
+            title:req.body.event.title,
             taken:{
                 available:true,
                 userTake:null,
