@@ -33,6 +33,7 @@ const addNewEvent=async (req,res,_)=>{
             msg:result
         })
     }catch(error){
+        console.log(error.message)
         res.status(400).json({
             msg:error.message
         })
