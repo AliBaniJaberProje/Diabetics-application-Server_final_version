@@ -10,6 +10,7 @@ const addNewEvent=async (req,res,_)=>{
 
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
+        console.log("eeeeeeeeeeeeee")
         const newEvent=new event({
             _id:req.body.idEvent,
             startEventTime:new Date(req.body.startTimeEvent),
@@ -23,9 +24,9 @@ const addNewEvent=async (req,res,_)=>{
             idDoctor:resultDecodeJWT.id
 
         })
-
+        console.log("22222222222222222")
         var result= await newEvent.save()
-
+        console.log("tttttttttttttttt")
 
         console.log("add done ")
         res.status(200).json({
