@@ -202,7 +202,7 @@ const deleteEvent=async(req,res,_)=>{
     try {
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
         await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:undefined})
-        await event.findByIdAndUpdate(req.param("id"),{"taken.available":true})
+        await event.findByIdAndUpdate(req.param("id"),{"taken.available":true,"title":""})
         res.status(200).json({
             "msg":"delete done"
         })
