@@ -1,8 +1,13 @@
 import mongoose from 'mongoose'
 import joi from 'joi'
-
+import doctor from  "../model/users/doctor.js"
 const event=new mongoose.Schema({
 
+
+    idDoctor:{
+        type:String,
+        ref : "doctor"
+    },
     startEventTime:{
         type:Date,
         required:true,
@@ -14,6 +19,10 @@ const event=new mongoose.Schema({
     typeEvent:{
         type:String,
         required:true,
+    },
+    title:{
+        type:String,
+
     },
     taken:{
         available:{

@@ -5,6 +5,39 @@ import patient from "../../model/users/patient.js"
 import * as event_mid from "../../middleware/eventMiddleware.js"
 
 
+const addNewEvent=async (req,res,_)=>{
+    try{
+
+        const token=req.headers.authorization.split(" ")[1]
+        const resultDecodeJWT=  jwt.decode(token);
+        const newEvent=new event({
+            _id:req.body.idEvent,
+            startEventTime:new Date.parse(req.body.startTimeEvent),
+            endEventTime:new Date.parse(req.body.endTimeEvent),
+            typeEvent:req.body.typeEvent,
+            title:req.body.title,
+            taken:{
+                available:true,
+                userTake:null,
+            },
+            idDoctor:resultDecodeJWT.id
+
+        })
+
+        var result= await newEvent.save()
+
+
+        console.log("add done ")
+        res.status(200).json({
+            msg:result
+        })
+    }catch(error){
+        res.status(400).json({
+            msg:error.message
+        })
+    }
+}
+
 
 const getEventWhereUserId=async (req,res,_)=>{
     const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
@@ -176,6 +209,7 @@ const deleteEvent=async(req,res,_)=>{
 
 
 export{
+    addNewEvent,
     getEventWhereUserId,
     selectEventForUser,
     getMyEvent,
