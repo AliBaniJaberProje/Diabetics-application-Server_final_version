@@ -219,7 +219,7 @@ const getAllEventToDoctor=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
         const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true})
         for(var index=0; index<events.length;index++){
-            events[index]._doc['endEventTime']=  new Date((new Date(events[0]._doc['endEventTime'])).setDate((new Date(events[0]._doc['endEventTime'])).getDate()+1))
+           // events[index]._doc['endEventTime']=  new Date((new Date(events[0]._doc['endEventTime'])).setDate((new Date(events[0]._doc['endEventTime'])).getDate()+1))
         }
         res.status(200).json(events)
     }catch (e) {
