@@ -23,10 +23,9 @@ const updateInfo=async (req,res,next)=>{
 const getIdAndIdCurrentDoctor=async (req, res, _)=>{
     try{
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-        const patientUser=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor")
+        const patientUser=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor username imgURL")
         const docotrimgURL=await doctor.findOne({id:patientUser["currentDoctor"]}).select({imgURL:true,username:true})
 
-        patientUser["doctorusername"]=docotrimgURL["username"]
 
         console.log(patientUser)
         res.status(200).json({
