@@ -26,7 +26,7 @@ const getIdAndIdCurrentDoctor=async (req, res, _)=>{
         const patientUser=await Patient.findOne({id:resultDecodeJWT.id},"id currentDoctor")
         const docotrimgURL=await doctor.findOne({id:patientUser["currentDoctor"]},"imgURL username")
 
-
+        patientUser["doctorusername"]=docotrimgURL["username"]
 
         console.log(patientUser)
         res.status(200).json({
