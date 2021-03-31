@@ -155,7 +155,8 @@ const getMyEvent=async (req,res,_)=>{
 
 const getAllAvailableEvent=async (req,res,_)=>{
     try{
-
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+         const pationInfo=await  patient.findOne({id:resultDecodeJWT.id}).select({currentDoctor:true})
 
        let startDate;
 
@@ -179,7 +180,7 @@ const getAllAvailableEvent=async (req,res,_)=>{
             Number(req.body["start"].split("-")[2].split(" ")[0]),23,59,59,0)
 
 
-        const  result=await event.find({$and:[{startEventTime: { $gte: startDate, $lte: endDate }},{"taken.available":true,},{"typeEvent":"1"}]},"typeEvent taken startEventTime endEventTime ").sort("startEventTime")
+        const  result=await event.find({$and:[{startEventTime: { $gte: startDate, $lte: endDate }},{"taken.available":true,},{"typeEvent":"1"},{idDoctor:pationInfo['currentDoctor']}]},"typeEvent taken startEventTime endEventTime ").sort("startEventTime")
         console.log(result.length)
         res.status(200).json({
             msg:result
