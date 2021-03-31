@@ -77,19 +77,12 @@ const selectEventForUser=async (req,res,_)=>{
 
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
         const patientResult =await patient.find({"id":resultDecodeJWT.id})
-
-
-
-
         const eventToSelect=await event.findById(req.body.id)
         if(eventToSelect.taken.available==false){
              return res.status(400).json({
                  msg:"this event was seleted"
              })
         }
-
-
-
         if(patientResult[0].idAppointment==undefined){
 
             const  result=await event.findByIdAndUpdate(req.body.id,{
@@ -116,7 +109,8 @@ const selectEventForUser=async (req,res,_)=>{
             return res.status(200).json({
                 msg:"selected operation done"
             })
-        }else{
+        }
+        else{
             console.log("ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp")
             return res.status(401).json({
                 msg:"error operation"
@@ -217,8 +211,23 @@ const deleteEvent=async(req,res,_)=>{
 
 }
 
+const getAllEventToDoctor=async (req,res,_)=>{
+
+    try{
+        const token=req.headers.authorization.split(" ")[1]
+        const resultDecodeJWT=  jwt.decode(token);
+        const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true})
+        res.status(200).json(events)
+    }catch (e) {
+        res.status(400).json({"msg":"errrorororor"})
+
+    }
+
+}
+
 
 export{
+    getAllEventToDoctor,
     addNewEvent,
     getEventWhereUserId,
     selectEventForUser,
