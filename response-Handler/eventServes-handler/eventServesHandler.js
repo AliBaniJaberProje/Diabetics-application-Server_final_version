@@ -3,7 +3,6 @@ import mongoose from "mongoose"
 import event from "../../model/event.js";
 import patient from "../../model/users/patient.js"
 import * as event_mid from "../../middleware/eventMiddleware.js"
-import patient from "../../model/users/patient.js"
 
 const addNewEvent=async (req,res,_)=>{
     try{
