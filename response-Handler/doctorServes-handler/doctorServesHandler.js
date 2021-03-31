@@ -59,6 +59,7 @@ const addNewPatient=async (req,res,_)=>{
 
 const updateCurrentDoctor=async (req,res,next)=>{
     try {
+        console.log(req.body)
 
         const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
         const idPatient =req.body.id;
