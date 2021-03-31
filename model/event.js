@@ -22,6 +22,7 @@ const event=new mongoose.Schema({
     },
     title:{
         type:String,
+        default :"أسد"
 
     },
     taken:{
