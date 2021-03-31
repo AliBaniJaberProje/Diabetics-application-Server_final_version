@@ -11,6 +11,9 @@ const addNewEvent=async (req,res,_)=>{
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
         console.log("eeeeeeeeeeeeee")
+
+        console.log(req.body)
+
         const newEvent=new event({
             _id:req.body.idEvent,
             startEventTime:new Date(req.body.startTimeEvent),
