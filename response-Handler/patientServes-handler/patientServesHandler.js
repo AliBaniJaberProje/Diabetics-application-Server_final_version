@@ -81,7 +81,6 @@ const getProfileInfo=async (req,res,_)=>{
 
 }
 
-
 const t=async (req,res,next)=>{
     try{
 

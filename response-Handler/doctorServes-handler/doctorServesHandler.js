@@ -60,11 +60,11 @@ const addNewPatient=async (req,res,_)=>{
 const updateCurrentDoctor=async (req,res,next)=>{
     try {
 
-
+        const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
         const idPatient =req.body.id;
         const patient=await Patient.find({id:idPatient})
         await Patient.updateOne({id:req.body.id},{$push:{"lastDoctor":patient[0].currentDoctor}})
-        await Patient.updateOne({id:req.body.id},{$set:{"currentDoctor":req.body.newDoctor}})
+        await Patient.updateOne({id:req.body.id},{$set:{"currentDoctor":resultDecodeJWT.id}})
         res.status(200).json({
             msg:"operation accomplished successfully",
             status:200,

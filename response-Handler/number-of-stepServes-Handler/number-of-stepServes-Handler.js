@@ -25,9 +25,13 @@ const addNewStep=async (req,res,_)=>{
 
 const selectInLastWeek=async (req,res,_)=> {
 
-    //const result=number_of_step.find({}).g
-
-    const result=await  number_of_step.find({})
+    const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+    var end =new  Date();
+    const startDate=new Date()
+    startDate.setDate(startDate.getDate()-7)
+    const result=await  number_of_step.find({$and:[{'idPatient':resultDecodeJWT.id},
+            {startDate:{ $gte: startDate, $lte: end }}
+        ]})
 
     let resultToResponse=[]
     resultToResponse[0]=0
@@ -46,7 +50,7 @@ const selectInLastWeek=async (req,res,_)=> {
 
     }
 
-    res.status(200).json(resultToResponse)
+   await res.status(200).json(resultToResponse)
 
 }
 
