@@ -12,8 +12,8 @@ const addNewEvent=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
         const newEvent=new event({
             _id:req.body.idEvent,
-            startEventTime:new Date.parse(req.body.startTimeEvent),
-            endEventTime:new Date.parse(req.body.endTimeEvent),
+            startEventTime:new Date(req.body.startTimeEvent),
+            endEventTime:new Date(req.body.endTimeEvent),
             typeEvent:req.body.typeEvent,
             title:req.body.title,
             taken:{
