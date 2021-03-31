@@ -16,8 +16,8 @@ const addNewEvent=async (req,res,_)=>{
 
         const newEvent=new event({
 
-            startEventTime: Date.parse(req.body.event.startTimeEvent),
-            endEventTime: Date.parse(req.body.event.endTimeEvent),
+            startEventTime:new Date(Number(req.body.event.startTimeEvent)),
+            endEventTime:new Date(Number(req.body.event.endTimeEvent)),
             typeEvent:req.body.event.typeEvent,
             title:req.body.event.title,
             taken:{
