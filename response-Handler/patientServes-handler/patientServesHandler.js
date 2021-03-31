@@ -33,7 +33,8 @@ const getIdAndIdCurrentDoctor=async (req, res, _)=>{
 
             patient: {
                 patientUser,
-                'imgURLDoctor':docotrimgURL["imgURL"]
+                'imgURLDoctor':docotrimgURL["imgURL"],
+                'doctorName':docotrimgURL["username"]
             },
 
         })
