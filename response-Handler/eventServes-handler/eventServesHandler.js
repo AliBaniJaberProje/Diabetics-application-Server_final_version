@@ -249,6 +249,8 @@ const deleteEventFromDoctor=async (req,res,_)=>{
 const updateEventFromDoctor=async (req,res,_)=>{
 
     try {
+        const token=req.headers.authorization.split(" ")[1]
+        const resultDecodeJWT=  jwt.decode(token);
         console.log("_---------------------------------")
         console.log(req.params.id)
         const result=await event.findOneAndUpdate(req.params.id,{$set:{
