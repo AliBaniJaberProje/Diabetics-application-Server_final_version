@@ -47,6 +47,7 @@ const updateDose=async (req,res,_)=>{
            msg:"update success"
        })
    }catch (e) {
+       console.log(e.message)
        res.status(404).json({
            msg:e.message
        })
