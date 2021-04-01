@@ -29,6 +29,8 @@ const getDoseForPatient=async (req,res,next)=>{
 const updateDose=async (req,res,_)=>{
 
    try{
+       console.log(req.body)
+       console.log("__________________________________")
        const previousDose=await dose.findOne({idPatient:req.params.id})
        const deleteResult=await dose.deleteOne({idPatient:req.params.id})
        const newHistoryObject=new doseHistory({
