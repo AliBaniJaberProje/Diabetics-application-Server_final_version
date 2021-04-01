@@ -230,7 +230,7 @@ const getAllEventToDoctor=async (req,res,_)=>{
 const deleteEventFromDoctor=async (req,res,_)=>{
 
     try {
-        const result=await event.findByIdAndDelete(req.param.id)
+        const result=await event.findByIdAndDelete(req.params.id)
         console.log(result)
         res.status(200).json({
             msg:"delete success "
