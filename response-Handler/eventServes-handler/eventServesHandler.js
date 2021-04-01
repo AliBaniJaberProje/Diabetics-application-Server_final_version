@@ -227,6 +227,18 @@ const getAllEventToDoctor=async (req,res,_)=>{
 
 }
 
+const deleteEventFromDoctor=async (req,res,_)=>{
+
+    try {
+        const result=await event.findByIdAndDelete(req.param("id"))
+        res.status(200).json({
+            msg:"delete success "
+        })
+    }catch (e) {
+        res.status(404).json(e.message)
+    }
+
+}
 
 export{
     getAllEventToDoctor,
@@ -236,5 +248,6 @@ export{
     getMyEvent,
     getAllAvailableEvent,
     deleteEvent,
+    deleteEventFromDoctor
 
 }
