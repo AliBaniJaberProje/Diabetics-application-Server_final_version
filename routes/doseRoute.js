@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.get('/:id',isAuthorisedUser.isAuthorisedPatient,doseServes_handler.getDoseForPatient)
 router.get('/doctor/:id',isAuthorisedUser.isAuthorisedDoctor,doseServes_handler.getDoseForPatient)
-
+router.patch('/:id',isAuthorisedUser.isAuthorisedDoctor,doseServes_handler.updateDose)
 
 export default router

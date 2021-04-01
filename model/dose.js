@@ -19,3 +19,4 @@ const dose=new mongoose.Schema({
 })
 
 export default mongoose.model('dose',dose)
+export {dose};
