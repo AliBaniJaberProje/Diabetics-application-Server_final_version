@@ -246,6 +246,36 @@ const deleteEventFromDoctor=async (req,res,_)=>{
 
 }
 
+const updateEventFromDoctor=async (req,res,_)=>{
+
+    try {
+        console.log("_---------------------------------")
+        console.log(req.params.id)
+        const result=await event.findOneAndUpdate(req.params.id,{$set:{
+            startEventTime:new Date(Number(req.body.event.startTimeEvent)),
+            endEventTime:new Date(Number(req.body.event.endTimeEvent)),
+            typeEvent:req.body.event.typeEvent,
+            title:req.body.event.titleEvent,
+            taken:{
+                available:true,
+                userTake:null,
+            },
+            idDoctor:resultDecodeJWT.id
+
+        }})
+        console.log(result)
+        res.status(200).json({
+            msg:"update success "
+        })
+        console.log("_---------------------------------")
+
+    }catch (e) {
+        console.log(e.message)
+        res.status(404).json(e.message)
+    }
+
+}
+
 export{
     getAllEventToDoctor,
     addNewEvent,
@@ -254,6 +284,7 @@ export{
     getMyEvent,
     getAllAvailableEvent,
     deleteEvent,
-    deleteEventFromDoctor
+    deleteEventFromDoctor,
+    updateEventFromDoctor
 
 }
