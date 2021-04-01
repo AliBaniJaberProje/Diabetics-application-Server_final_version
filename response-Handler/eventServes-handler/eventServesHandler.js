@@ -18,7 +18,7 @@ const addNewEvent=async (req,res,_)=>{
             startEventTime:new Date(Number(req.body.event.startTimeEvent)),
             endEventTime:new Date(Number(req.body.event.endTimeEvent)),
             typeEvent:req.body.event.typeEvent,
-            title:req.body.event.title,
+            title:req.body.event.titleEvent,
             taken:{
                 available:true,
                 userTake:null,
@@ -218,9 +218,7 @@ const getAllEventToDoctor=async (req,res,_)=>{
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
         const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true})
-        for(var index=0; index<events.length;index++){
-           // events[index]._doc['endEventTime']=  new Date((new Date(events[0]._doc['endEventTime'])).setDate((new Date(events[0]._doc['endEventTime'])).getDate()+1))
-        }
+
         res.status(200).json(events)
     }catch (e) {
         res.status(400).json({"msg":"errrorororor"})
