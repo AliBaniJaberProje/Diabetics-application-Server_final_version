@@ -12,7 +12,7 @@ const signInPatient =async (req,res,_)=>{
         const checkPassword =await bcrypt.compare(req.body.password,patientUser[0].password)
         if(checkPassword){
             await Patient.findOneAndUpdate({id:req.body.id},{isOnline:true})
-            const doctorName=await doctor.findOne({id:patientUser['currentDoctor']}).select({username:true})
+            const doctorName=await doctor.findOne({id:patientUser[0]['currentDoctor']}).select({username:true})
             const token=await jwt.sign({
                 id:patientUser[0].id,
                 password:patientUser[0].password
