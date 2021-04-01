@@ -287,6 +287,5 @@ export{
     getAllAvailableEvent,
     deleteEvent,
     deleteEventFromDoctor,
-    updateEventFromDoctor
-
+    updateEventFromDoctor,
 }

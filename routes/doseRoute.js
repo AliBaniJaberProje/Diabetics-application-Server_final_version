@@ -4,7 +4,8 @@ import * as isAuthorisedUser from '../middleware/auth/isAuthorisedUser.js'
 
 const router = express.Router()
 
-router.get('/:id'/*,isAuthorisedUser.isAuthorisedPatient*/,doseServes_handler.getDoseForPatient)
+router.get('/:id',isAuthorisedUser.isAuthorisedPatient,doseServes_handler.getDoseForPatient)
+router.get('/doctor/:id',isAuthorisedUser.isAuthorisedDoctor,doseServes_handler.getDoseForPatient)
 
 
 export default router
