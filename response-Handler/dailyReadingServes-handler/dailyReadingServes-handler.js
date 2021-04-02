@@ -129,9 +129,9 @@ const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
 
 const getDailyReadingToDoctor=async (req,res,_)=>{
     try {
-        console.log(req.headers)
-       const startDate=new Date(Number(req.headers['year']),Number(req.headers['month'])-1,0,0,0,0,0)
-        const endDate=new Date(Number(req.headers['year']),Number(req.headers['month'])-1,31,23,59,59,59)
+        console.log(req.params)
+       const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
+        const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
        const resultReading=await dailyReadingModel.findOne({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]})
         res.status(200).json(resultReading)
     }catch (e) {
