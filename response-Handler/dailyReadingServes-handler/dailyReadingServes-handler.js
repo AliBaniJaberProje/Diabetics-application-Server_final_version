@@ -127,10 +127,26 @@ const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
     })
 }
 
+const getDailyReadingToDoctor=async (req,res,_)=>{
+    try {
+
+       const startDate=new Date(Number(req.body['year']),Number(req.body['month']),0,0,0,0,0)
+        const endDate=new Date(Number(req.body['year']),Number(req.body['month']),31,23,59,59,59)
+       const resultReading=await dailyReadingModel.findOne({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]})
+        res.status(200).json(resultReading)
+    }catch (e) {
+        console.log(e.message)
+        res.status(404).json({msg:"error"})
+    }
+
+
+}
+
 export {
     addNewReading,
     getInformationDailyReadingAtThisDay,
     insertAndUpdate,
+    getDailyReadingToDoctor
 
 
 }

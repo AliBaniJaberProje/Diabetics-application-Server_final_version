@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.post("/add"/*,isAuthorisedUser.isAuthorisedPatient*/,dailyReadingServesHandler.addNewReading)
 router.post('/',isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.insertAndUpdate)
-
+router.get("/:id",isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getDailyReadingToDoctor)
 router.get("/thisDay"/*,isAuthorisedUser.isAuthorisedPatient*/,dailyReadingServesHandler.getInformationDailyReadingAtThisDay)
 
 
