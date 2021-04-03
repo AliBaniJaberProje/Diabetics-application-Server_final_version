@@ -16,6 +16,7 @@ import dailyReadingRoute from "./routes/dailyReadingRoute.js"
 import doseRoute from "./routes/doseRoute.js"
 import stepsRoute from "./routes/number-of-stepRoute.js"
 import doseHistoryRoute from "./routes/history-Dose-Route.js"
+import doseHistory from "./model/doseHistory.js";
 const app=express()
 
 connectMongoDB()
@@ -46,6 +47,46 @@ app.use('/rr',(req, res, next) =>{
 })
 
 app.get('/',async (req, res, next)=>{
+
+
+
+    try {
+
+        const inputDate=new Date(2021,4,5,0,0,0,0)
+        let resultReading=await doseHistory.find({$or:[{$and:[
+                    {startDate: {$gte: inputDate }},
+                    {endDate: {$lte: inputDate }},
+                    {"doseItem.idPatient":"123123123"},
+
+
+                ]},
+
+                // {$and:[{$mach:{
+                //             'startDate':inputDate,
+                //             'endDate':inputDate
+                //         }},{"doseItem.idPatient":req.params.id}]
+                //
+                // }
+
+
+            ]}
+
+
+
+        )
+
+
+
+
+        console.log(resultReading)
+        res.status(200).json(resultReading)
+    }catch (e) {
+        console.log(e.message)
+        res.status(404).json({
+            msg:"error"
+        })
+    }
+
 
 
     // const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";

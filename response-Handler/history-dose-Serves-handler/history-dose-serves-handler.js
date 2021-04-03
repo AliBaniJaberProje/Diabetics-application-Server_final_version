@@ -5,42 +5,37 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
 
 
 
-        try {
+    try {
+        const startDate1=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
+        const endDate1=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
 
-            const inputDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,1,0,0,0,0)
-            let resultReading=await doseHistory.find({$or:[{$and:[
-                            {'startDate.month': {$gte: Number(req.params['month']) }},
-                            {'endDate.month': {$lte: Number(req.params['month']) }},
-                            {"doseItem.idPatient":req.params.id},
-
-
+        let resultReading=await doseHistory.find({$and:[{$or:[
+                    {$and:[
+                            {startDate: {$lte: endDate1 }},
+                            {endDate: {$gte: startDate1 }},
+                        ]},
+                    {$and:[
+                            {startDate: {$gte:startDate1  }},
+                            {endDate: {$lte:startDate1  }},
                         ]},
 
-                        // {$and:[{$mach:{
-                        //             'startDate':inputDate,
-                        //             'endDate':inputDate
-                        //         }},{"doseItem.idPatient":req.params.id}]
-                        //
-                        // }
+                ]
 
-
-                        ]}
-
-
-
-                    )
+            },{"doseItem.idPatient":req.params.id},]}
+        )
 
 
 
 
-            console.log(resultReading)
-            res.status(200).json(resultReading)
-        }catch (e) {
-            console.log(e.message)
-            res.status(404).json({
-                msg:"error"
-            })
-        }
+        console.log(resultReading)
+        res.status(200).json(resultReading)
+    }
+    catch (e) {
+        console.log(e.message)
+        res.status(404).json({
+            msg:"error"
+        })
+    }
 
 
 
