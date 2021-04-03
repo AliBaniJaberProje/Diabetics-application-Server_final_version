@@ -15,7 +15,7 @@ import imageUploadRouter from "./routes/image-upload.js"
 import dailyReadingRoute from "./routes/dailyReadingRoute.js"
 import doseRoute from "./routes/doseRoute.js"
 import stepsRoute from "./routes/number-of-stepRoute.js"
-
+import doseHistoryRoute from "./routes/history-Dose-Route.js"
 const app=express()
 
 connectMongoDB()
@@ -33,7 +33,7 @@ app.use("/auth",authRoute)
 
 app.use("/doctor",doctorRoute)
 app.use("/patient",patientRoute)
-
+app.use("/doseHistory",doseHistoryRoute)
 
 app.use('/event',eventRoute)
 app.use("/food",foodRoute)
