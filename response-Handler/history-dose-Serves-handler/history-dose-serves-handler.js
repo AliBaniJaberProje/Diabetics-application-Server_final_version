@@ -3,7 +3,7 @@ import doseHistory from "../../model/doseHistory.js"
 const getHistoryDosesToDoctor=async (req,res,_)=>{
 
     try {
-        const dataForThisUser=await doseHistory.find({"":req.params.id}).sort({endDate:-1})
+        const dataForThisUser=await doseHistory.find({"doseItem.idPatient":req.params.id}).sort({endDate:1})
         console.log(dataForThisUser)
 
         res.status(200).json(dataForThisUser)
