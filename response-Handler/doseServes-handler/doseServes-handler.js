@@ -35,6 +35,7 @@ const updateDose=async (req,res,_)=>{
        const deleteResult=await dose.deleteOne({idPatient:req.params.id})
        const newHistoryObject=new doseHistory({
            startDate:previousDose['date'],
+
            doseItem:previousDose
        })
 
