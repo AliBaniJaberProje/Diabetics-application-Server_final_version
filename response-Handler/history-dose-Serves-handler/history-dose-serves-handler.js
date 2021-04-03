@@ -7,7 +7,7 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
         const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
         const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
         let resultReading=await doseHistory.find({$and:[{startDate: { $gte: startDate, $lte: endDate }},{"doseItem.idPatient":req.params.id}]})
-
+        console.log(resultReading)
         if(resultReading.length!=0){
             res.status(200).json(resultReading)
         }else{
