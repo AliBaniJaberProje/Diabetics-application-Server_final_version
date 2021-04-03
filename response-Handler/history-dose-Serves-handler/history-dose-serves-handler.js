@@ -3,6 +3,9 @@ import doseHistory from "../../model/doseHistory.js"
 const getHistoryDosesToDoctor=async (req,res,_)=>{
 
     try {
+        const dataForThisUser=await doseHistory.find({idPatient:req.params.id}).sort({endDate:true})
+        res.status(200).json(dataForThisUser)
+
         console.log(req.params)
         const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
         const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
