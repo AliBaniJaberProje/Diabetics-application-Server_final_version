@@ -9,8 +9,8 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
 
             const inputDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,1,0,0,0,0)
             let resultReading=await doseHistory.aggregate({$or:[{$and:[
-                            {startDate: {$gte: inputDate }},
-                            {endDate: {$lte: inputDate }},
+                            {'startDate.month': {$gte: inputDate }},
+                            {'endDate.month': {$lte: inputDate }},
                             {"doseItem.idPatient":req.params.id},
 
 
