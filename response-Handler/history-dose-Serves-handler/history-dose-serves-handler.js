@@ -17,8 +17,8 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
                         ]},
 
                         {$and:[{$mach:{
-                                    'startDate.month':Number(req.params['month'])-1,
-                                    'startDate.year':Number(req.params['year'])
+                                    'startDate':inputDate,
+                                    'endDate':inputDate
                                 }},{"doseItem.idPatient":req.params.id}]
 
                         }
