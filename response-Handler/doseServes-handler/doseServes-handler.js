@@ -1,12 +1,13 @@
 import dose from "../../model/dose.js"
 import doseHistory from "../../model/doseHistory.js"
+import jwt from "jsonwebtoken";
 
 
 const getDoseForPatient=async (req,res,next)=>{
 
   try{
-
-      const result=await dose.findOne({idPatient:req.params.id})
+      const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+      const result=await dose.findOne({idPatient:resultDecodeJWT.id})
       let inject=[]
 
       if(result){
