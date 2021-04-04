@@ -6,8 +6,7 @@ import jwt from "jsonwebtoken";
 const getDoseForPatient=async (req,res,next)=>{
 
   try{
-      const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-      const result=await dose.findOne({idPatient:resultDecodeJWT.id})
+      const result=await dose.findOne({idPatient:req.params.id})
       let inject=[]
 
       if(result){
