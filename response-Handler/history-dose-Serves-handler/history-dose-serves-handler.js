@@ -154,8 +154,13 @@ const getDoseHistoryToPatient=async (req,res,_)=>{
 
         }
 
-        console.log(resultReading)
-        res.status(200).json(result)
+        if(resultReading.length==0){
+            res.status(201).json(result)
+        }else{
+            console.log(resultReading)
+            res.status(200).json(result)
+        }
+
     }
     catch (e) {
         console.log(e.message)
