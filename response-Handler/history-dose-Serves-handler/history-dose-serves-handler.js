@@ -6,8 +6,10 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
 
 
     try {
+        const toFindNumberOfDays=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
+
         const startDate1=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
-        const endDate1=new Date(Number(req.params['year']),Number(req.params['month'])-1,30,23,59,59,59)
+        const endDate1=new Date(Number(req.params['year']),toFindNumberOfDays.getDate(),30,23,59,59,59)
 
         let resultReading=await doseHistory.find({$and:[{$or:[
                     {$and:[
