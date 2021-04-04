@@ -15,9 +15,14 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
                             {endDate: {$lte: endDate1 }},
                         ]},
                     {$and:[
-                            {startDate: {$gte:startDate1  }},
-                            {endDate: {$lte:startDate1  }},
+                            {startDate: {$lte:startDate1  }},
+                            {endDate: {$gte:startDate1  }},
                         ]},
+                    // {$and:[
+                    //         {startDate: {$lte:startDate1  }},
+                    //         {endDate: {$lte:endDate1  }},
+                    //     ]},
+
 
                 ]
 
