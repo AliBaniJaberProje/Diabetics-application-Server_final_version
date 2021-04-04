@@ -11,8 +11,8 @@ const getHistoryDosesToDoctor=async (req,res,_)=>{
 
         let resultReading=await doseHistory.find({$and:[{$or:[
                     {$and:[
-                            {startDate: {$lte: endDate1 }},
-                            {endDate: {$gte: startDate1 }},
+                            {startDate: {$gte:startDate1  }},
+                            {endDate: {$lte: endDate1 }},
                         ]},
                     {$and:[
                             {startDate: {$gte:startDate1  }},
