@@ -63,10 +63,10 @@ const getDoseHistoryToPatient=async (req,res,_)=>{
 
     try {
         const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-        const toFindNumberOfDays=new Date(2021,req.params.month,0,0,0,0,0)
+        const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
 
-        const startDate1=new Date(2021,Number(req.params.month)-1,0,0,0,0,0)
-        const endDate1=new Date(2021,Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
+        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
+        const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
 
         let resultReading=await doseHistory.find({
             $and:[
