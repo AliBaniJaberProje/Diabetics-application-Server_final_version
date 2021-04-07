@@ -146,19 +146,26 @@ const getDailyReadingToDoctor=async (req,res,_)=>{
 
 const getDailyReadingToPatient=async (req,res,_)=>{
     try {
+
         const token=req.headers["x-auth-token"];
         const resultJWTDecode=await jwt.decode(token)
         const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
         const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
-        const resultReading=await dailyReadingModel.find({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:resultJWTDecode.id}]})
-        res.status(200).json(resultReading)
+        const resultReading=await dailyReadingModel.find({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:resultJWTDecode.id}]}).select({_id:false,idPatient:false,__v:false}).sort({date:1})
+       let date
+        for(var i=0;i<resultReading.length;i++){
+            date=new Date(resultReading[i]["date"])
+            resultReading[i]._doc["date"]=date.getUTCDate()+"-"+(date.getMonth()+1);
+        }
+
+        return  res.status(200).json(resultReading)
     }catch (e) {
         console.log(e.message)
         res.status(404).json({msg:"error"})
     }
 }
 
-///headers["x-auth-token"]
+
 
 
 export {
