@@ -17,7 +17,7 @@ const addNewReading =async (req,res,_)=>{
                 inputInfo:[
                     {
                         id:1,
-                        value:0.0,
+                        value:-1,
                         taken:false,
                         timestamp:Date.now(),
                         description:"قبل الأفطار",
@@ -25,7 +25,7 @@ const addNewReading =async (req,res,_)=>{
                     },
                     {
                         id:2,
-                        value:0.0,
+                        value:-1,
                         taken:false,
                         timestamp:Date.now(),
                         description:"بعد الأفطار بساعتين",
@@ -33,14 +33,14 @@ const addNewReading =async (req,res,_)=>{
                     },
                     {
                         id:3,
-                        value:0.0,
+                        value:-1,
                         taken:false,
                         timestamp:Date.now(),
                         description:"بعد الغداء بساعتين",
                     },
                     {
                         id:4,
-                        value:0.0,
+                        value:-1,
                         taken:false,
                         timestamp:Date.now(),
                         description:"بعد العشاء بساعتين",
@@ -62,6 +62,7 @@ const addNewReading =async (req,res,_)=>{
         })
     }
 }
+
 const insertAndUpdate=async (req,res,_)=>{
     try{
         let statusCode=200
@@ -119,6 +120,7 @@ const insertAndUpdate=async (req,res,_)=>{
 
 
 }
+
 const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
     const resultJWT= await jwt.decode(req.headers.token)
     console.log(resultJWT.id)
@@ -142,11 +144,29 @@ const getDailyReadingToDoctor=async (req,res,_)=>{
 
 }
 
+const getDailyReadingToPatient=async (req,res,_)=>{
+    try {
+        const token=req.headers["x-auth-token"];
+        const resultJWTDecode=await jwt.decode(token)
+        const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
+        const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
+        const resultReading=await dailyReadingModel.find({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:resultJWTDecode.id}]})
+        res.status(200).json(resultReading)
+    }catch (e) {
+        console.log(e.message)
+        res.status(404).json({msg:"error"})
+    }
+}
+
+///headers["x-auth-token"]
+
+
 export {
     addNewReading,
     getInformationDailyReadingAtThisDay,
     insertAndUpdate,
-    getDailyReadingToDoctor
+    getDailyReadingToDoctor,
+    getDailyReadingToPatient
 
 
 }

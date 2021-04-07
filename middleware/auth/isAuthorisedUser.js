@@ -11,7 +11,6 @@ const isAuthorisedDoctor= async (req,res,next)=>{
     }
     try{
         const resultDecode= await jwt.verify(token,'privateKey')
-        // req.doctor=resultDecode
 
         await next()
     }
@@ -33,8 +32,6 @@ const isAuthorisedPatient= async (req, res, next)=>{
     }
     try{
         const resultDecode= await jwt.verify(token,'privateKey')
-        // req.doctor=resultDecode
-
         await next()
     }
     catch (error){
@@ -42,6 +39,9 @@ const isAuthorisedPatient= async (req, res, next)=>{
     }
 
 }
+
+
+
 
 export{
     isAuthorisedPatient,
