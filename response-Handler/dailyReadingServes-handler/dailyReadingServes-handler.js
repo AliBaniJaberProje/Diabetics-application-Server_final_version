@@ -17,7 +17,7 @@ const addNewReading =async (req,res,_)=>{
                 inputInfo:[
                     {
                         id:1,
-                        value:-1,
+                        value:0.0,
                         taken:false,
                         timestamp:Date.now(),
                         description:"قبل الأفطار",
@@ -25,7 +25,7 @@ const addNewReading =async (req,res,_)=>{
                     },
                     {
                         id:2,
-                        value:-1,
+                        value:0.0,
                         taken:false,
                         timestamp:Date.now(),
                         description:"بعد الأفطار بساعتين",
@@ -33,14 +33,14 @@ const addNewReading =async (req,res,_)=>{
                     },
                     {
                         id:3,
-                        value:-1,
+                        value:0.0,
                         taken:false,
                         timestamp:Date.now(),
                         description:"بعد الغداء بساعتين",
                     },
                     {
                         id:4,
-                        value:-1,
+                        value:0.0,
                         taken:false,
                         timestamp:Date.now(),
                         description:"بعد العشاء بساعتين",
