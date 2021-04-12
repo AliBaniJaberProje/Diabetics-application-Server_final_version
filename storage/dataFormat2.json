@@ -1,0 +1,653 @@
+{
+  "id": "577532",
+  "name": "بيض ",
+  "FoodNutrients": {
+    "Energy": {
+      "value": "136",
+      "unit": "kcal"
+    },
+    "Protein": {
+      "value": "13.64",
+      "unit": "g"
+    },
+    "fat": {
+      "value": "9.09",
+      "unit": "g"
+    },
+    "Carbohydrate": {
+      "value": "0.0",
+      "unit": "g"
+    }
+  },
+  "img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D8%A8%D9%8A%D8%B6.png",
+  "category": "eggs_and_milk"
+
+
+
+
+
+},
+
+
+
+
+{
+"id": "1274352",
+"img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D9%84%D8%A8%D9%86%D8%A9.png",
+"category": "eggs_and_milk",
+
+"name": "لبنة",
+"FoodNutrients": {
+"Energy": {
+"value": "286",
+"unit": "kcal"
+},
+"Protein": {
+"value": "17.86",
+"unit": "g"
+},
+"fat": {
+"value": "21.43",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "0",
+"unit": "g"
+}
+}},
+
+
+
+{
+"id": "1267780",
+"category": "eggs_and_milk",
+"name": "لبن",
+"FoodNutrients": {
+"Energy": {
+"value": "73",
+"unit": "kcal"
+},
+"Protein": {
+"value": "2.67",
+"unit": "g"
+},
+"fat": {
+"value": "2.67",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "8.67",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D9%84%D8%A8%D9%86.png"},
+
+{
+"id": "1259312",
+"category": "eggs_and_milk",
+"name": "حليب",
+"FoodNutrients": {
+"Energy": {
+"value": "42",
+"unit": "kcal"
+},
+"Protein": {
+"value": "3.33",
+"unit": "g"
+},
+"fat": {
+"value": "1.04",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "5",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D8%AD%D9%84%D9%8A%D8%A8.png"},
+
+
+{
+"id": "1293649",
+"category": "eggs_and_milk",
+"name": "قشطة",
+"FoodNutrients": {
+"Energy": {
+"value": "333",
+"unit": "kcal"
+},
+"Protein": {
+"value": "3.33",
+"unit": "g"
+},
+"fat": {
+"value": "36.67",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "3.33",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D9%82%D8%B4%D8%B7%D8%A9.png"},
+
+
+{
+"id": "1293649",
+"category": "eggs_and_milk",
+"name": "جبنة",
+"FoodNutrients": {
+"Energy": {
+"value": "393",
+"unit": "kcal"
+},
+"Protein": {
+"value": "25",
+"unit": "g"
+},
+"fat": {
+"value": "32.14",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "0",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/eggs_and_milk/%D8%AC%D8%A8%D9%86%D8%A9.png"
+}
+
+/////////////////////////////////////////////
+
+{
+"id": "1103861",
+"category": "oils_and_fats",
+"name": "زيت الزيتون",
+"FoodNutrients": {
+"Energy": {
+"value": "884",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.0",
+"unit": "g"
+},
+"fat": {
+"value": "100",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "0",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/oils_and_fats/زيت_زيتون.png"
+}, {
+"id": "1103861",
+"category": "oils_and_fats",
+"name": "سمنة",
+"FoodNutrients": {
+"Energy": {
+"value": "882",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.0",
+"unit": "g"
+},
+"fat": {
+"value": "100",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "0",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/oils_and_fats/سمنة.png"
+}, {
+"id": "551488",
+"category": "oils_and_fats",
+"name": "زبده",
+"FoodNutrients": {
+"Energy": {
+"value": "714",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.0",
+"unit": "g"
+},
+"fat": {
+"value": "78.57",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "0",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/oils_and_fats/%D8%B2%D8%A8%D8%AF%D9%87.png"
+}
+
+//////////////////////////
+
+
+
+{
+"id": "1164160",
+"name": "بندورة",
+"category": "vegetable",
+"FoodNutrients": {
+"Energy": {
+"value": "44",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.92",
+"unit": "g"
+},
+"fat": {
+"value": "0",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "9.89",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%A8%D9%86%D8%AF%D9%88%D8%B1%D8%A9.png"
+}, {
+"id": "1103352",
+"category": "vegetable",
+"name": "خيار",
+"FoodNutrients": {
+"Energy": {
+"value": "15",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.65",
+"unit": "g"
+},
+"fat": {
+"value": "0.11",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "3.63",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%AE%D9%8A%D8%A7%D8%B1.png"
+}, {
+"id": "539572",
+"category": "vegetable",
+"name": "بروكلي",
+"FoodNutrients": {
+"Energy": {
+"value": "34",
+"unit": "kcal"
+},
+"Protein": {
+"value": "2.7",
+"unit": "g"
+},
+"fat": {
+"value": "0.34",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "5.41",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%A8%D8%B1%D9%88%D9%83%D9%84%D9%8A.png"
+}, {
+"id": "1103193",
+"category": "vegetable",
+"name": "جزر",
+"FoodNutrients": {
+"Energy": {
+"value": "41",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.93",
+"unit": "g"
+},
+"fat": {
+"value": "0.24",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "9.58",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/%D8%AC%D8%B2%D8%B1.png"
+}, {
+"id": "1103364",
+"category": "vegetable",
+"name": "بصل",
+"FoodNutrients": {
+"Energy": {
+"value": "40",
+"unit": "kcal"
+},
+"Protein": {
+"value": "1.1",
+"unit": "g"
+},
+"fat": {
+"value": "0.1",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "9.34",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/بصل.png"
+}, {
+"id": "1103370",
+"category": "vegetable",
+"name": "فلفل",
+"FoodNutrients": {
+"Energy": {
+"value": "22",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.91",
+"unit": "g"
+},
+"fat": {
+"value": "0.22",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "5.13",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/فلفل.png"
+}, {
+"id": "169986",
+"category": "vegetable",
+"name": "قرنبيط",
+"FoodNutrients": {
+"Energy": {
+"value": "25",
+"unit": "kcal"
+},
+"Protein": {
+"value": "1.92",
+"unit": "g"
+},
+"fat": {
+"value": "0.28",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "4.97",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/قرنبيط.png"
+}, {
+"id": "169230",
+"category": "vegetable",
+"name": "ثوم",
+"FoodNutrients": {
+"Energy": {
+"value": "149",
+"unit": "kcal"
+},
+"Protein": {
+"value": "6.36",
+"unit": "g"
+},
+"fat": {
+"value": "0.5",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "33.06",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/ثوم.png"
+}, {
+"id": "169228",
+"category": "vegetable",
+"name": "باذنجان",
+"FoodNutrients": {
+"Energy": {
+"value": "25",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.98",
+"unit": "g"
+},
+"fat": {
+"value": "0.18",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "5.88",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/باذنجان.png"
+}, {
+"id": "1103351",
+"category": "vegetable",
+"name": "ذرة",
+"FoodNutrients": {
+"Energy": {
+"value": "86",
+"unit": "kcal"
+},
+"Protein": {
+"value": "3.27",
+"unit": "g"
+},
+"fat": {
+"value": "1.35",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "18.7",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/ذرة.png"
+}, {
+"id": "1102594",
+"category": "vegetable",
+"name": "ليمون",
+"FoodNutrients": {
+"Energy": {
+"value": "29",
+"unit": "kcal"
+},
+"Protein": {
+"value": "1.1",
+"unit": "g"
+},
+"fat": {
+"value": "0.3",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "9.32",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/لمون.png"
+}, {
+"id": "169260",
+"category": "vegetable",
+"name": "بامية",
+"FoodNutrients": {
+"Energy": {
+"value": "33",
+"unit": "kcal"
+},
+"Protein": {
+"value": "1.93",
+"unit": "g"
+},
+"fat": {
+"value": "0.19",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "7.45",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/بامية.png"
+}, {
+"id": "1103362",
+"category": "vegetable",
+"name": "فطر",
+"FoodNutrients": {
+"Energy": {
+"value": "22",
+"unit": "kcal"
+},
+"Protein": {
+"value": "3.09",
+"unit": "g"
+},
+"fat": {
+"value": "0.34",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "3.26",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/فطر.png"
+}, {
+"id": "169276",
+"category": "vegetable",
+"name": "فجل",
+"FoodNutrients": {
+"Energy": {
+"value": "16",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.68",
+"unit": "g"
+},
+"fat": {
+"value": "0.1",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "3.4",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/فجل.png"
+}, {
+"id": "168448",
+"category": "vegetable",
+"name": "يقطين",
+"FoodNutrients": {
+"Energy": {
+"value": "26",
+"unit": "kcal"
+},
+"Protein": {
+"value": "1.0",
+"unit": "g"
+},
+"fat": {
+"value": "0.1",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "6.5",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/يقطين.png"
+}, {
+"id": "1103380",
+"category": "vegetable",
+"name": "لفت",
+"FoodNutrients": {
+"Energy": {
+"value": "28",
+"unit": "kcal"
+},
+"Protein": {
+"value": "0.9",
+"unit": "g"
+},
+"fat": {
+"value": "0.1",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "6.43",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/اللفت.png"
+}, {
+"id": "1425386","category": "vegetable",
+"name": "افوكادوا",
+"FoodNutrients": {
+"Energy": {
+"value": "167",
+"unit": "kcal"
+},
+"Protein": {
+"value": "3.33",
+"unit": "g"
+},
+"fat": {
+"value": "15",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "10",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/افوكادوا.png"
+}, {
+"id": "169231","category": "vegetable",
+"name": "زنجبيل",
+"FoodNutrients": {
+"Energy": {
+"value": "80",
+"unit": "kcal"
+},
+"Protein": {
+"value": "1.82",
+"unit": "g"
+},
+"fat": {
+"value": "0.75",
+"unit": "g"
+},
+"Carbohydrate": {
+"value": "17.77",
+"unit": "g"
+}
+},
+"img": "https://jaber-server.herokuapp.com/images/vegetable/زنجبيل.png"
+}
+
+//////////////////////////////////
+
+

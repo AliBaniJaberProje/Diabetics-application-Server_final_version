@@ -1,6 +1,19 @@
 import mongoose from "mongoose"
 
-const food  = new mongoose.Schema({})
+
+const foodItem  = new mongoose.Schema({
+    id:{type:String,},
+    name:{type:String,},
+    img:{type:String},
+    FoodNutrients:{type:{}}
+
+})
+
+
+
+const food  = new mongoose.Schema({
+
+})
 
 
 

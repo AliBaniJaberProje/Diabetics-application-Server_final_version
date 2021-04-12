@@ -13,7 +13,7 @@ const patient=new mongoose.Schema({
     },
     username: {
         type: String,
-        unique: true,
+     //   unique: true,
         minlength: 5,
         max: 40,
     },

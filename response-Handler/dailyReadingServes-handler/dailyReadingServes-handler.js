@@ -88,11 +88,6 @@ const insertAndUpdate=async (req,res,_)=>{
         }
         console.log(responseString)
 
-
-
-
-
-
         const resultAddReading=await dailyReadingModel.updateOne({$and:[{'inputInfo.id':Number(req.body["idReading"])},
             {date:{ $gte: start, $lte: endDate }},
             {idPatient:resultJWTDecode.id}
@@ -117,8 +112,6 @@ const insertAndUpdate=async (req,res,_)=>{
             "error":err.message
         })
     }
-
-
 }
 
 const getInformationDailyReadingAtThisDay=async (req,res,_)=>{
@@ -140,8 +133,6 @@ const getDailyReadingToDoctor=async (req,res,_)=>{
         console.log(e.message)
         res.status(404).json({msg:"error"})
     }
-
-
 }
 
 const getDailyReadingToPatient=async (req,res,_)=>{
