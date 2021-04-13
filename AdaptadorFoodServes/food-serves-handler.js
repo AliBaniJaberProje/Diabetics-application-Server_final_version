@@ -52,7 +52,7 @@ const findFoodCategory=async(req,res,_)=>{
 
         for(var i=0;i<foodHistoryThisDay.length;i++)    {
             foodThatImEat.push({
-                "id":foodHistoryThisDay[i]["id"],
+                "id":foodHistoryThisDay[i]["idFood"],
                 "amount":foodHistoryThisDay[i]["amount"]
             })
         }
@@ -60,13 +60,13 @@ const findFoodCategory=async(req,res,_)=>{
 
 
         for(var i=0;i<foodHistoryThisDay.length;i++){
-            foodArr.push(foodHistoryThisDay[i]["id"])
+            foodArr.push(foodHistoryThisDay[i]["idFood"])
         }
         const allFood1=await food.find({_id: {$in:foodArr}  }).select({FoodNutrients:true,name:true,_id:true})
 
         for(var i=0;i<allFood1.length;i++){
             for(var t=0;t<foodHistoryThisDay.length;t++){
-                if(allFood1[i]._doc["_id"]==foodHistoryThisDay[t]["id"]){
+                if(allFood1[i]._doc["_id"]==foodHistoryThisDay[t]["idFood"]){
                     console.log("enterd")
                     foodThatImEat[t]["FoodNutrients"]=allFood1[i]._doc["FoodNutrients"]
                 }

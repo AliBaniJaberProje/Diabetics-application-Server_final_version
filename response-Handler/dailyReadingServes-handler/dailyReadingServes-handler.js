@@ -135,6 +135,7 @@ const getDailyReadingToDoctor=async (req,res,_)=>{
     }
 }
 
+
 const getDailyReadingToPatient=async (req,res,_)=>{
     try {
 
@@ -158,13 +159,33 @@ const getDailyReadingToPatient=async (req,res,_)=>{
 
 
 
+const getTheLastWeek=async (req,res,_)=>{
+
+    var end =new  Date();
+    const startDate=new Date()
+    startDate.setDate(startDate.getDate()-7)
+
+    try{
+        const result=await dailyReadingModel.find({$and:[{date:{ $gte: startDate, $lte: end }},{idPatient:req.params.id}]})
+        res.status(200).json(result)
+
+    }catch (e){
+        res.status(404).json({
+            "error":e.message
+        })
+    }
+
+}
+
+
 
 export {
     addNewReading,
     getInformationDailyReadingAtThisDay,
     insertAndUpdate,
     getDailyReadingToDoctor,
-    getDailyReadingToPatient
+    getDailyReadingToPatient,
+    getTheLastWeek
 
 
 }

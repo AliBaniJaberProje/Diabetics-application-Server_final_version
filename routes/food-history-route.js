@@ -1,11 +1,12 @@
 import express from "express"
 import * as foodHistoryHandler from "../response-Handler/food-history-serves-handler/food-history-servesHandler.js"
+import * as isAuthorisedUser from '../middleware/auth/isAuthorisedUser.js'
 
 
 const route =express.Router()
 
 route.post("/",foodHistoryHandler.addFood)
-route.get("/:year/:month/:day",foodHistoryHandler.getFoodHistoryInDay)
+route.get("/:year/:month/:day",isAuthorisedUser.isAuthorisedPatient,foodHistoryHandler.getFoodHistoryInDay)
 
 
 

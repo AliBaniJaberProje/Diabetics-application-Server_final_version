@@ -57,7 +57,12 @@ const doctor=new mongoose.Schema({
     },
     imgURL:{
         type:String
+    },
+    isOnline:{
+        type:Boolean,
+        default:true,
     }
+
 
 })
 

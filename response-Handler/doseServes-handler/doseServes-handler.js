@@ -7,6 +7,8 @@ const getDoseForPatient=async (req,res,next)=>{
 
   try{
       const result=await dose.findOne({idPatient:req.params.id})
+
+
       let inject=[]
 
       if(result){

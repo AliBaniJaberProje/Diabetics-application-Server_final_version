@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const food_history  = new mongoose.Schema({
 
-    id:{
+    idFood:{
         type:String,
         ref:"food",
         required:true
