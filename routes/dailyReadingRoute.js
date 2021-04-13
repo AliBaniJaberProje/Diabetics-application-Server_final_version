@@ -7,7 +7,7 @@ router.post("/add",isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandle
 router.post('/',isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.insertAndUpdate)
 router.get("/:id/:year/:month",isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getDailyReadingToDoctor)
 router.get("/:year/:month",isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.getDailyReadingToPatient)
-router.get('/:id/lastWeek',isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getTheLastWeek)
+router.get('/lastWeek/:id',isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getTheLastWeek)
 
 router.get("/thisDay"/*,isAuthorisedUser.isAuthorisedPatient*/,dailyReadingServesHandler.getInformationDailyReadingAtThisDay)
 
