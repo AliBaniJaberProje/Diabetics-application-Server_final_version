@@ -167,6 +167,8 @@ const getTheLastWeek=async (req,res,_)=>{
 
     try{
         const result=await dailyReadingModel.find({$and:[{date:{ $gte: startDate, $lte: end }},{idPatient:req.params.id}]})
+        console.log("---------------------")
+        console.log(result)
         res.status(200).json(result)
 
     }catch (e){
