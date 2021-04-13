@@ -160,12 +160,12 @@ const getDailyReadingToPatient=async (req,res,_)=>{
 
 
 const getTheLastWeek=async (req,res,_)=>{
-
+    try{
     var end =new  Date();
     const startDate=new Date()
     startDate.setDate(startDate.getDate()-7)
 
-    try{
+
         const result=await dailyReadingModel.find({$and:[{date:{ $gte: startDate, $lte: end }},{idPatient:req.params.id}]})
         console.log("---------------------")
         console.log(result)

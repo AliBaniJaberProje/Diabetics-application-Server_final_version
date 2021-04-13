@@ -5,9 +5,10 @@ const router = express.Router()
 
 router.post("/add",isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.addNewReading)
 router.post('/',isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.insertAndUpdate)
+router.get('/doctor/lastWeek/:id',isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getTheLastWeek)
+
 router.get("/:id/:year/:month",isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getDailyReadingToDoctor)
 router.get("/:year/:month",isAuthorisedUser.isAuthorisedPatient,dailyReadingServesHandler.getDailyReadingToPatient)
-router.get('/lastWeek/:id',isAuthorisedUser.isAuthorisedDoctor,dailyReadingServesHandler.getTheLastWeek)
 
 router.get("/thisDay"/*,isAuthorisedUser.isAuthorisedPatient*/,dailyReadingServesHandler.getInformationDailyReadingAtThisDay)
 
