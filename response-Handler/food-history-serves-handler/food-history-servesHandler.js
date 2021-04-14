@@ -241,7 +241,7 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
                 "fat":fat ,
                 "Carbohydrate":carboh,
                 "Energy":enarge,
-                "created_on":creat_on.getHours()+":"+creat_on.getMinutes()+":"+creat_on.getSeconds()
+                "created_on":creat_on.getHours()+3+":"+creat_on.getMinutes()+":"+creat_on.getSeconds()
             })
         }
         res.status(200).json(result)
