@@ -217,7 +217,7 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
         const startDate=new Date(Number(req.params.year) ,  Number(req.params.month)-1 , Number(req.params.day) , 0,0,0,0,)
 
         const endDate=new Date(Number(req.params.year) ,  Number(req.params.month)-1 , Number(req.params.day) ,  23,59,59,59,)
-        var foodHistoryThisDay=await food_history.find({$and:[{created_on:{ $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]}).populate('idFood')
+        var foodHistoryThisDay=await food_history.find({$and:[{created_on:{ $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]}).populate('idFood').sort({created_on:1})
 
         var result=[]
         let amount=0
