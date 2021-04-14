@@ -126,7 +126,7 @@ const updatePatientFromDoctor=async (req,res,_)=>{
         await Patient.updateOne({id:req.params.id},{$set:{
             "username":req.body["name"],
             // "birthDate":res.body["birthdate"],
-             "diagnosisYear":res.body["yearOfdiagnosis"],
+             "diagnosisYear":String(res.body["yearOfdiagnosis"]),
              "location":res.body["location"],
              "phoneNumber":res.body["phoneNum"],
              "diabetesType":res.body["diabetesType"],
