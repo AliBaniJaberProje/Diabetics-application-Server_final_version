@@ -3,10 +3,10 @@ import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
 import bcrypt from "bcryptjs";
 const saltRounds=10;
+
 async  function hashPassword(password,salt)  {
     return await bcrypt.hash(password,salt)
 }
-
 
 const addNewPatient=async (req,res,_)=>{
 

@@ -18,7 +18,7 @@ import stepsRoute from "./routes/number-of-stepRoute.js"
 import doseHistoryRoute from "./routes/history-Dose-Route.js"
 import doseHistory from "./model/doseHistory.js";
 import FoodHistoryRoute from "./routes/food-history-route.js"
-
+import cumulative_diabetesRouter from "./routes/cumulative_diabetesRoute.js"
 
 const app=express()
 
@@ -38,7 +38,7 @@ app.use("/auth",authRoute)
 app.use("/doctor",doctorRoute)
 app.use("/patient",patientRoute)
 app.use("/doseHistory",doseHistoryRoute)
-
+app.use("/cumulative_diabetes",cumulative_diabetesRouter)
 app.use('/event',eventRoute)
 app.use("/food",foodRoute)
 app.use("/dailyReading",dailyReadingRoute)
