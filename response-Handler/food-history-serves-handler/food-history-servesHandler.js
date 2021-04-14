@@ -225,15 +225,15 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
         let carboh=0
         let fat=0
         let enarge=0
+        let creat_on=new Date()
         for(var i=0; i<foodHistoryThisDay.length;i++){
-            amount=foodHistoryThisDay[i]["amount"]
+            amount=foodHistoryThisDay[i]["amount"];
+            creat_on=new Date(foodHistoryThisDay[i]["created_on"])
             proten=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Protein"]["value"])*amount /100).toFixed(3)
             carboh=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Carbohydrate"]["value"])*amount /100).toFixed(2)
             fat=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["fat"]["value"])*amount /100).toFixed(3)
             enarge=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Energy"]["value"])*amount /100).toFixed(3)
             result.push({
-                //"id":foodHistoryThisDay[i]["idFood"]["_id"],
-               // "category":foodHistoryThisDay[i]["idFood"]._doc["category"],
                 "name":foodHistoryThisDay[i]["idFood"]._doc["name"],
                 "img":foodHistoryThisDay[i]["idFood"]._doc["img"],
                 "amount":amount,
@@ -241,7 +241,7 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
                 "fat":fat ,
                 "Carbohydrate":carboh,
                 "Energy":enarge,
-                "created_on":foodHistoryThisDay[i]["created_on"]
+                "created_on":creat_on.getHours()+"-"+creat_on.getMinutes()+"-"+creat_on.getSeconds()
             })
         }
         res.status(200).json(result)
