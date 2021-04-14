@@ -134,7 +134,7 @@ const findFoodCategory=async(req,res,_)=>{
              toFilterCh=toFilterCh-ch
         }
         console.log(toFilterCh)
-        foods=await food.find({$and:[{"category":req.params.foodCategory},{"FoodNutrients.Carbohydrate.value":{  $lte: (toFilterCh+5) }}]}).sort({name:1})
+        foods=await food.find({$and:[{"category":req.params.foodCategory},{"FoodNutrients.Carbohydrate.value":{  $lte: (toFilterCh) }}]}).sort({name:1})
 
         var result=[];
 

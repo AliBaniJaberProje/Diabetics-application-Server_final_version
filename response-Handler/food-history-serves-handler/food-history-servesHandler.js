@@ -129,7 +129,7 @@ const addFood =async (req,res,_)=>{
                 idFood:req.body["id"],
                 amount:req.body["amount"],
                 idPatient:resultJWTDecode.id,
-                created_on:Date.now()
+                created_on:new Date()
             })
             const result=await newFoodItem.save()
             res.status(200).json({
@@ -172,7 +172,7 @@ const getFoodHistoryInDay=async (req,res,_)=>{
         for(var i=0; i<foodHistoryThisDay.length;i++){
             amount=foodHistoryThisDay[i]["amount"]
             proten=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Protein"]["value"])*amount /100).toFixed(3)
-            carboh=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Carbohydrate"]["value"])*amount /100).toFixed(3)
+            carboh=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Carbohydrate"]["value"])*amount /100).toFixed(2)
             fat=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["fat"]["value"])*amount /100).toFixed(3)
             totalCh+=Number(carboh)
             totalFat+=Number(fat)
@@ -228,7 +228,7 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
         for(var i=0; i<foodHistoryThisDay.length;i++){
             amount=foodHistoryThisDay[i]["amount"]
             proten=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Protein"]["value"])*amount /100).toFixed(3)
-            carboh=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Carbohydrate"]["value"])*amount /100).toFixed(3)
+            carboh=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Carbohydrate"]["value"])*amount /100).toFixed(2)
             fat=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["fat"]["value"])*amount /100).toFixed(3)
             enarge=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Energy"]["value"])*amount /100).toFixed(3)
             result.push({
@@ -240,7 +240,8 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
                 "Protein": proten,
                 "fat":fat ,
                 "Carbohydrate":carboh,
-                "Energy":enarge
+                "Energy":enarge,
+                "created_on":foodHistoryThisDay[i]["created_on"]
             })
         }
         res.status(200).json(result)
