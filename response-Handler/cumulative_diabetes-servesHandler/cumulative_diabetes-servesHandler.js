@@ -3,6 +3,7 @@ import cumulative_diabetes from "../../model/cumulative-diabetes.js"
 
 const addNewCumulative =async (req,res,_)=>{
     try{
+        console.log(req.body)
         const NewCumulative=new cumulative_diabetes({
             idPatient:req.body.id,
             value:req.body.value,
