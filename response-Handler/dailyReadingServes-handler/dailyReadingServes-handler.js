@@ -166,7 +166,7 @@ const getTheLastWeek=async (req,res,_)=>{
     startDate.setDate(startDate.getDate()-7)
 
 
-        const result=await dailyReadingModel.find({$and:[{date:{ $gte: startDate, $lte: end }},{idPatient:req.params.id}]})
+        const result=await dailyReadingModel.find({$and:[{date:{ $gte: startDate, $lte: end }},{idPatient:req.params.id}]}).sort({date:1})
         console.log("---------------------")
         console.log(result)
         res.status(200).json(result)
