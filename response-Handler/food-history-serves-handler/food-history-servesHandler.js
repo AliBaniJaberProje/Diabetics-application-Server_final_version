@@ -258,6 +258,6 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
 
 export {
     addFood,
-    getFoodHistoryInDay
+    getFoodHistoryInDay,getFoodToDoctorInDay
 
 }
