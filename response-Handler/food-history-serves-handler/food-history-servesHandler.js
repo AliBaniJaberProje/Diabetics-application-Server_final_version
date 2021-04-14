@@ -143,15 +143,6 @@ const addFood =async (req,res,_)=>{
 /// -----------------------------
 
 
-
-
-
-
-
-
-
-
-
     }catch (e){
         res.status(404).json({
             "error":e.message
@@ -159,6 +150,7 @@ const addFood =async (req,res,_)=>{
     }
 
 }
+
 const getFoodHistoryInDay=async (req,res,_)=>{
     try{
         const token=req.headers["x-auth-token"];
@@ -220,6 +212,47 @@ const getFoodHistoryInDay=async (req,res,_)=>{
     }
 }
 
+const getFoodToDoctorInDay=async (req,res,_)=>{
+    try{
+        const startDate=new Date(Number(req.params.year) ,  Number(req.params.month)-1 , Number(req.params.day) , 0,0,0,0,)
+
+        const endDate=new Date(Number(req.params.year) ,  Number(req.params.month)-1 , Number(req.params.day) ,  23,59,59,59,)
+        var foodHistoryThisDay=await food_history.find({$and:[{created_on:{ $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]}).populate('idFood')
+
+        var result=[]
+        let amount=0
+        let proten=0;
+        let carboh=0
+        let fat=0
+        let enarge=0
+        for(var i=0; i<foodHistoryThisDay.length;i++){
+            amount=foodHistoryThisDay[i]["amount"]
+            proten=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Protein"]["value"])*amount /100).toFixed(3)
+            carboh=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Carbohydrate"]["value"])*amount /100).toFixed(3)
+            fat=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["fat"]["value"])*amount /100).toFixed(3)
+            enarge=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Energy"]["value"])*amount /100).toFixed(3)
+            result.push({
+                "id":foodHistoryThisDay[i]["idFood"]["_id"],
+                "category":foodHistoryThisDay[i]["idFood"]._doc["category"],
+                "name":foodHistoryThisDay[i]["idFood"]._doc["name"],
+                "img":foodHistoryThisDay[i]["idFood"]._doc["img"],
+                "amount":amount,
+                "Protein": proten,
+                "fat":fat ,
+                "Carbohydrate":carboh,
+                "Energy":enarge
+            })
+        }
+        res.status(200).json(result)
+
+
+
+    }catch (e) {
+        res.status(404).json({
+            "error":e.message
+        })
+    }
+}
 
 
 

@@ -7,7 +7,7 @@ const route =express.Router()
 
 route.post("/",foodHistoryHandler.addFood)
 route.get("/:year/:month/:day",isAuthorisedUser.isAuthorisedPatient,foodHistoryHandler.getFoodHistoryInDay)
-
+route.get("/doctor/:id/:year/:month/:day",isAuthorisedUser.isAuthorisedDoctor,)
 
 
 export  default  route
