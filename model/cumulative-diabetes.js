@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 const cumulative_diabetes  = new mongoose.Schema({
     idPatient:{
         ref:'patient',
-        type:mongoose.Schema.Types.ObjectId
+        type:String
     },
     value:{
         type:Number
