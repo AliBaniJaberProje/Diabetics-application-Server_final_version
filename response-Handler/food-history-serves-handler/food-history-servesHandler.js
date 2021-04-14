@@ -217,7 +217,7 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
         const startDate=new Date(Number(req.params.year) ,  Number(req.params.month)-1 , Number(req.params.day) , 0,0,0,0,)
 
         const endDate=new Date(Number(req.params.year) ,  Number(req.params.month)-1 , Number(req.params.day) ,  23,59,59,59,)
-        var foodHistoryThisDay=await food_history.find({$and:[{created_on:{ $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]}).populate('idFood').select({id:false,}).sort({created_on:1})
+        var foodHistoryThisDay=await food_history.find({$and:[{created_on:{ $gte: startDate, $lte: endDate }},{idPatient:req.params.id}]}).populate('idFood').select({id:false,category:false}).sort({created_on:1})
 
         var result=[]
         let amount=0
@@ -232,8 +232,8 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
             fat=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["fat"]["value"])*amount /100).toFixed(3)
             enarge=(Number(foodHistoryThisDay[i]["idFood"]._doc["FoodNutrients"]["Energy"]["value"])*amount /100).toFixed(3)
             result.push({
-                "id":foodHistoryThisDay[i]["idFood"]["_id"],
-                "category":foodHistoryThisDay[i]["idFood"]._doc["category"],
+                //"id":foodHistoryThisDay[i]["idFood"]["_id"],
+               // "category":foodHistoryThisDay[i]["idFood"]._doc["category"],
                 "name":foodHistoryThisDay[i]["idFood"]._doc["name"],
                 "img":foodHistoryThisDay[i]["idFood"]._doc["img"],
                 "amount":amount,
