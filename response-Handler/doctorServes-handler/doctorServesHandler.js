@@ -142,6 +142,7 @@ const updatePatientFromDoctor=async (req,res,_)=>{
             status:200,
         })
     }catch (e) {
+        console.log(e.message)
         res.status(404).json({
             "error":e.message
         })
