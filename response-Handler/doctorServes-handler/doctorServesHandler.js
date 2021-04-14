@@ -119,7 +119,32 @@ const getPatientInfoById=async (req,res,_)=>{
     }
 }
 
+const updatePatientFromDoctor=async (req,res,_)=>{
+    try {
+        await Patient.updateOne({id:req.params.id},{$set:{
+            "username":req.body["name"],
+             "birthDate":res.body["birthdate"],
+             "diagnosisYear":res.body["yearOfdiagnosis"],
+             "location":res.body["location"],
+             "phoneNumber":res.body["phoneNum"],
+             "diabetesType":res.body["diabetesType"],
+             "weight":res.body["weight"],
+             "height": res.body["height"],
+             "notes":res.body["drNote"],
+              "id":  res.body["idNum"],
+                "gender": res.body["gender"]
 
+        }})
+        res.status(200).json({
+            msg:"operation accomplished successfully",
+            status:200,
+        })
+    }catch (e) {
+        res.status(404).json({
+            "error":e.message
+        })
+    }
+}
 
 
 
@@ -127,5 +152,6 @@ export {
     addNewPatient,
     getAllPatientForDoctor,
     updateCurrentDoctor,
-    getPatientInfoById
+    getPatientInfoById,
+    updatePatientFromDoctor
 }

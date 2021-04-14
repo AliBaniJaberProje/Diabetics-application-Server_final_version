@@ -6,7 +6,7 @@ const router=express.Router()
 
 router.post("/addNewPatient",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.addNewPatient)
 router.patch("/updateCurrentDoctor",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.updateCurrentDoctor)
-
+router.patch("/doctor/update/:id",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.updatePatientFromDoctor)
 router.get("/getMeAllPatient",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.getAllPatientForDoctor)
 router.get("/patients/:id",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.getPatientInfoById)
 export default router
