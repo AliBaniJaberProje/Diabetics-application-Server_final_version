@@ -14,6 +14,7 @@ const addNewCumulative =async (req,res,_)=>{
         })
 
     }catch (e) {
+        console.log(e.message)
         res.status(404).json({
             "error":e.message
         })
