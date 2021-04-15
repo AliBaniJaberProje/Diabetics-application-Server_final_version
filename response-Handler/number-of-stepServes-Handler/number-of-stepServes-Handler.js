@@ -88,8 +88,34 @@ const getTimestamp=async (req,res,_)=>{
 
 }
 
+const getAllStepsToPatient=async (req,res,_)=>{
+    try{
+
+        const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
+
+        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
+        const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
+
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+
+        const result=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{startDate:{ $gte: startDate1, $lte: endDate1 }}]}).select({startDate:true,numberStep:true})
+        res.status(200).json(
+            {
+                "msg":result
+            }
+        )
+    }
+    catch (e) {
+        res.status(404).json({
+            "error":e.message
+        })
+    }
+}
+
 export  {
     addNewStep,
     selectInLastWeek,
-    getTimestamp
+    getTimestamp,
+    getAllStepsToPatient
+
 }
