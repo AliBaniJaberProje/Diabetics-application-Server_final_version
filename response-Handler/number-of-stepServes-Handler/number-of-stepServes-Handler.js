@@ -27,7 +27,7 @@ const addNewStep=async (req,res,_)=>{
       }else{
 
           const resultupdate=await number_of_step.findByIdAndUpdate(resultCheekIfFondInThisDay["_id"],{$set:{numberStep:req.body['numberOfStep']+resultCheekIfFondInThisDay[0]["numberOfStep"]}})
-
+          console.log(resultupdate)
 
       }
 
