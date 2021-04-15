@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 const addNewStep=async (req,res,_)=>{
 
   try{
+      console.log(req.body)
       const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
 
       const nowDate=new Date()
@@ -19,8 +20,8 @@ const addNewStep=async (req,res,_)=>{
       console.log(resultCheekIfFondInThisDay)
       console.log("----------------------------------------")
       console.log("----------------------------------------")
-      console.log(resultCheekIfFondInThisDay[0]["_id"])
-      console.log(resultCheekIfFondInThisDay[0]["numberStep"])
+     // console.log(resultCheekIfFondInThisDay[0]["_id"])
+     // console.log(resultCheekIfFondInThisDay[0]["numberStep"])
       console.log("----------------------------------------")
       if(resultCheekIfFondInThisDay.length==0){
           console.log("eoteeeeeeee")
@@ -44,7 +45,7 @@ const addNewStep=async (req,res,_)=>{
       )
   }catch (e){
       res.status(400).json(
-          { "msg":"errorrrr"}
+          { "msg":e.message}
       )
   }
 
