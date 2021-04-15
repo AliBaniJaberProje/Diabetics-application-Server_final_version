@@ -26,11 +26,14 @@ const addNewStep=async (req,res,_)=>{
           const result=await newStep.save()
       }else{
 
+          const resultupdate=await number_of_step.findByIdAndUpdate(resultCheekIfFondInThisDay["_id"],{$set:{numberStep:req.body['numberOfStep']+resultCheekIfFondInThisDay[0]["numberOfStep"]}})
+
+
       }
 
 
       res.status(200).json(
-          { "msg":result}
+          { "msg":"done"}
       )
   }catch (e){
       res.status(400).json(
