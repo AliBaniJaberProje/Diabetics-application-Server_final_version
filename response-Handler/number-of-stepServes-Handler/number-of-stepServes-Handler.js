@@ -17,16 +17,18 @@ const addNewStep=async (req,res,_)=>{
 
       if(resultCheekIfFondInThisDay.length==0){
           console.log("eoteeeeeeee")
-      }else{
           const newStep= new number_of_step({
               idPatient:resultDecodeJWT.id,
               startDate:req.body['startTime'],
               endDate:new Date(Date.now()).getTime(),
               numberStep:req.body['numberOfStep'],
           })
+          const result=await newStep.save()
+      }else{
+
       }
 
-      const result=await newStep.save()
+
       res.status(200).json(
           { "msg":result}
       )
