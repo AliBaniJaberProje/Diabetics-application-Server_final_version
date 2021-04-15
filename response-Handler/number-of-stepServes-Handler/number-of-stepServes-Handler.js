@@ -18,6 +18,10 @@ const addNewStep=async (req,res,_)=>{
       console.log("----------------------------------------")
       console.log(resultCheekIfFondInThisDay)
       console.log("----------------------------------------")
+      console.log("----------------------------------------")
+      console.log(resultCheekIfFondInThisDay[0]["_id"])
+      console.log(resultCheekIfFondInThisDay[0]["numberOfStep"])
+      console.log("----------------------------------------")
       if(resultCheekIfFondInThisDay.length==0){
           console.log("eoteeeeeeee")
           const newStep= new number_of_step({
