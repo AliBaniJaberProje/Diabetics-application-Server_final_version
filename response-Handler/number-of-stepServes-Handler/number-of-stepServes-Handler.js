@@ -33,7 +33,7 @@ const addNewStep=async (req,res,_)=>{
           const result=await newStep.save()
       }else{
 
-          const resultupdate=await number_of_step.findByIdAndUpdate(resultCheekIfFondInThisDay[0]["_id"],{$set:{numberStep:req.body['numberOfStep']+resultCheekIfFondInThisDay[0]["numberStep"]}})
+          const resultupdate=await number_of_step.findByIdAndUpdate(resultCheekIfFondInThisDay[0]["_id"],{$set:{numberStep:Number(Number(req.body['numberOfStep'])+Number(resultCheekIfFondInThisDay[0]["numberStep"]))}})
           console.log(resultupdate)
 
       }
