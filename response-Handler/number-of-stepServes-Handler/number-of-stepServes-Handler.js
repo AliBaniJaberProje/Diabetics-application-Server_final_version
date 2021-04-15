@@ -13,7 +13,7 @@ const addNewStep=async (req,res,_)=>{
 
       const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
 
-       const resultCheekIfFondInThisDay=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{startDate:{ $gte: startDate, $lte: endDate }}]})
+       const resultCheekIfFondInThisDay=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{startDate:{ $gte: startDate.getTime(), $lte: endDate.getTime() }}]})
 
       if(resultCheekIfFondInThisDay.length==0){
           console.log("eoteeeeeeee")
