@@ -15,6 +15,9 @@ const addNewStep=async (req,res,_)=>{
 
        const resultCheekIfFondInThisDay=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{startDate:{ $gte: startDate.getTime(), $lte: endDate.getTime() }}]})
 
+      console.log("----------------------------------------")
+      console.log(resultCheekIfFondInThisDay)
+      console.log("----------------------------------------")
       if(resultCheekIfFondInThisDay.length==0){
           console.log("eoteeeeeeee")
           const newStep= new number_of_step({
