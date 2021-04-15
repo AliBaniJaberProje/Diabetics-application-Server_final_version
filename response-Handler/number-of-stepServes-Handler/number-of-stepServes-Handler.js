@@ -91,17 +91,30 @@ const getTimestamp=async (req,res,_)=>{
 const getAllStepsToPatient=async (req,res,_)=>{
     try{
 
+
         const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
 
         const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
         const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
 
-        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
 
-        const result=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{startDate:{ $gte: startDate1, $lte: endDate1 }}]}).select({startDate:true,numberStep:true})
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+        let resultServes=[]
+
+
+        const result=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{endDate:{ $gte: startDate1.getTime(), $lte: endDate1.getTime() }}]}).sort({endDate:1}).select({startDate:true,numberStep:true,_id:false})
+        let date;
+        for(var i=0;i<result.length;i++){
+            date=new Date(result[i]["startDate"])
+           resultServes.push({
+               "numberStep":result[i]["numberStep"],
+               "date":date.getMonth()+1+"-"+date.getDate()
+           })
+       }
+
         res.status(200).json(
             {
-                "msg":result
+                "msg":resultServes
             }
         )
     }
