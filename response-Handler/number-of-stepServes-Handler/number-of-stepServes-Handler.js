@@ -1,16 +1,31 @@
 import number_of_step from "../../model/number-of-step.js"
 import jwt from "jsonwebtoken";
+import Patient from "../../model/users/patient";
 
 const addNewStep=async (req,res,_)=>{
 
   try{
       const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
-      const newStep= new number_of_step({
-          idPatient:resultDecodeJWT.id,
-          startDate:req.body['startTime'],
-          endDate:new Date(Date.now()).getTime(),
-          numberStep:req.body['numberOfStep'],
-      })
+
+      const nowDate=new Date()
+
+      const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
+
+      const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
+
+       const resultCheekIfFondInThisDay=await number_of_step.find({$and:[{idPatient:resultDecodeJWT.id},{startDate:{ $gte: startDate, $lte: endDate }}]})
+
+      if(resultCheekIfFondInThisDay.length==0){
+          console.log("eoteeeeeeee")
+      }else{
+          const newStep= new number_of_step({
+              idPatient:resultDecodeJWT.id,
+              startDate:req.body['startTime'],
+              endDate:new Date(Date.now()).getTime(),
+              numberStep:req.body['numberOfStep'],
+          })
+      }
+
       const result=await newStep.save()
       res.status(200).json(
           { "msg":result}

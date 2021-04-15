@@ -87,6 +87,10 @@ const addFood =async (req,res,_)=>{
             }
             console.log("TDD")
             console.log(TDD)
+            if(TDD==0){
+                TDD=1;
+            }
+
             const rTDD=Math.round(500/TDD)
             const allCH=rTDD*TDD /// 780g CH
             //const totalCAL=allCH*4

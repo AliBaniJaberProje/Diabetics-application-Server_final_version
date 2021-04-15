@@ -4,7 +4,11 @@ import Patient from "../model/users/patient.js"
 import food_history from "../model/food-history.js"
 import dose from "../model/dose.js"
 import food from "../model/food.js"
-import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken"
+
+
+
+
 const getAllFood=async(req,res,_)=>{
     
     
@@ -98,7 +102,7 @@ const findFoodCategory=async(req,res,_)=>{
         let foods;
         let toFilterCh;
         if(userInfo["diabetesType"]=="أ"){
-            console.log("im A")
+
             var TDD=0
             const myDose=await dose.findOne({idPatient:resultJWTDecode.id})
             for(var t=0;t<myDose["inject"].length;t++){
@@ -106,17 +110,21 @@ const findFoodCategory=async(req,res,_)=>{
                     TDD+=Number(myDose["inject"][t]["amountOfinj"])
                 }
             }
-            console.log("TDD")
+
+
+            if(TDD==0){
+                TDD=1;
+            }
+            console.log("----------------TDD-----------------")
             console.log(TDD)
+            console.log("------------------------------------")
             const rTDD=Math.round(500/TDD)
             const allCH=rTDD*TDD /// 780g CH
             //const totalCAL=allCH*4
 
              toFilterCh= (allCH - ch);
 
-           // console.log(toFilterCh)
-            // foods=await food.find({$and:[{"category":req.params.foodCategory},{"FoodNutrients.Carbohydrate.value":{  $lte: (toFilterCh+5) }}]}).sort({name:1})
-            //console.log(foods)
+
 
 
         }else if(userInfo["diabetesType"]=="ب")
@@ -133,7 +141,9 @@ const findFoodCategory=async(req,res,_)=>{
 
              toFilterCh=toFilterCh-ch
         }
+        console.log("---------------toFilterCh---------------------")
         console.log(toFilterCh)
+        console.log("------------------------------------")
         foods=await food.find({$and:[{"category":req.params.foodCategory},{"FoodNutrients.Carbohydrate.value":{  $lte: (toFilterCh) }}]}).sort({name:1})
 
         var result=[];
@@ -153,14 +163,10 @@ const findFoodCategory=async(req,res,_)=>{
         res.status(200).json(result)
     }catch (e) {
         console.log(e.message)
+        res.status(404).json({
+            "result":e.message
+        })
     }
-
-
-}
-
-
-const getFoodHistoryInDay=async (req,res,_)=>{
-
 
 }
 
@@ -173,6 +179,9 @@ const getFoodDetails=async(req,res,_)=>{
 
 
 }
+
+
+
 
 export{
     getAllFood,
