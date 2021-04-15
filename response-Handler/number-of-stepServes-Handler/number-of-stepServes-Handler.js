@@ -20,7 +20,7 @@ const addNewStep=async (req,res,_)=>{
       console.log("----------------------------------------")
       console.log("----------------------------------------")
       console.log(resultCheekIfFondInThisDay[0]["_id"])
-      console.log(resultCheekIfFondInThisDay[0]["numberOfStep"])
+      console.log(resultCheekIfFondInThisDay[0]["numberStep"])
       console.log("----------------------------------------")
       if(resultCheekIfFondInThisDay.length==0){
           console.log("eoteeeeeeee")
@@ -33,7 +33,7 @@ const addNewStep=async (req,res,_)=>{
           const result=await newStep.save()
       }else{
 
-          const resultupdate=await number_of_step.findByIdAndUpdate(resultCheekIfFondInThisDay[0]["_id"],{$set:{numberStep:req.body['numberOfStep']+resultCheekIfFondInThisDay[0]["numberOfStep"]}})
+          const resultupdate=await number_of_step.findByIdAndUpdate(resultCheekIfFondInThisDay[0]["_id"],{$set:{numberStep:req.body['numberOfStep']+resultCheekIfFondInThisDay[0]["numberStep"]}})
           console.log(resultupdate)
 
       }
