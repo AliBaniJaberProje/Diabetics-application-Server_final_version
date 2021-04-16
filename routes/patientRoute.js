@@ -10,7 +10,7 @@ router.patch("/updateInfo",isAuthorisedUser.isAuthorisedPatient,patient_requestH
 router.get("/getIdCurrentDoctorAndMyId",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getIdAndIdCurrentDoctor)
 router.get("/getIdDoctors",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getAllDoctorToChat)
 router.get("/",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.getProfileInfo)
-
+router.post("/checkPrevious_passwordIsVaild",isAuthorisedUser.isAuthorisedPatient,patient_requestHandler.checkPrevious_passwordIsVaild)
 
 
 

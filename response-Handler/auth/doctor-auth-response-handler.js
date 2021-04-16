@@ -37,7 +37,8 @@ const signInDoctor=async (req, res, _)=>{
         if(checkPassword){
             const token= jwt.sign({
                 id:doctorUser[0].id,
-                password:doctorUser[0].password
+                password:doctorUser[0].password,
+                _id:doctorUser[0]["_id"]
             },'privateKey')
             res.status(200).header('token',token).json({
                 msg:"user Authorised",

@@ -2,6 +2,7 @@ import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken"
 import event from "../../model/event.js";
 import doctor  from "../../model/users/doctor.js";
+import bcrypt from "bcryptjs";
 
 const updateInfo=async (req,res,next)=>{
     const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
@@ -81,6 +82,30 @@ const getProfileInfo=async (req,res,_)=>{
 
 }
 
+const checkPrevious_passwordIsVaild=async (req, res, _)=>{
+    try {
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+        const patientUser=await Patient.find({"id":resultDecodeJWT.id})
+        const checkPassword =await bcrypt.compare(req.body.password,patientUser[0].password)
+        if(checkPassword){
+            res.status(200).json({
+                "msg":"yes"
+            })
+        }
+        else{
+            res.status(200).json({
+                "msg":"error"
+            })
+        }
+    }catch (e) {
+        console.log(e.message)
+        res.status(404).json({
+            "result":e.message
+        })
+    }
+}
+
+
 const t=async (req,res,next)=>{
     try{
 
@@ -116,6 +141,7 @@ export {
     updateInfo,
     getProfileInfo,
     getIdAndIdCurrentDoctor ,
-    getAllDoctorToChat
+    getAllDoctorToChat,
+    checkPrevious_passwordIsVaild
 
 }

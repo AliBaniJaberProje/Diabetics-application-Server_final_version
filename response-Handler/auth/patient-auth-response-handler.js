@@ -15,7 +15,8 @@ const signInPatient =async (req,res,_)=>{
             const doctorName=await doctor.findOne({id:patientUser[0]['currentDoctor']}).select({username:true})
             const token=await jwt.sign({
                 id:patientUser[0].id,
-                password:patientUser[0].password
+                password:patientUser[0].password,
+                _id:patientUser[0]["_id"]
             },'privateKey')
             console.log(token)
             res.status(200).header('x-auth-token',token).json({
