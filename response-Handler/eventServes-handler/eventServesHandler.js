@@ -273,7 +273,7 @@ const updateEventFromDoctor=async (req,res,_)=>{
         console.log("_---------------------------------")
         console.log(req.params.id)
         const patientr=await patient.findOne({"idAppointment":req.params.id})
-        const r=await patient.findOneAndUpdate({"idAppointment":req.params.id},{idAppointment:null})
+       // const r=await patient.findOneAndUpdate({"idAppointment":req.params.id},{idAppointment:null})
 
 
         const result=await event.findByIdAndUpdate(req.params.id,{
@@ -323,8 +323,6 @@ const getAllEventInThisDay=async (req,res,_)=>{
         const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
 
         const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
-
-
 
         const events=await event.find({$and:[{idDoctor:resultDecodeJWT.id},{startDate:{ $gte: startDate, $lte: endDate }}]}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
