@@ -320,7 +320,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
 
         const nowDate=new Date()
 
-        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
+        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 3,0,0,0,)
 
         const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
 
