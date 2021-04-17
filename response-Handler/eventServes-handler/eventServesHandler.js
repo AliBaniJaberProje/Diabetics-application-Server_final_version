@@ -246,7 +246,7 @@ const deleteEventFromDoctor=async (req,res,_)=>{
         if(patientr!=null  ){
             res.status(200).json({
                 "msg":"send notification to this user",
-                 "user id":patientr.id,
+                 "userId":patientr.id,
                  "phoneToken":patientr.phoneToken,
 
             })
