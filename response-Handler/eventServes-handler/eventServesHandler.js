@@ -86,8 +86,8 @@ const selectEventForUser=async (req,res,_)=>{
             const  result=await event.findByIdAndUpdate(req.body.id,{
                 "taken.available":false,
                 "taken.userTake":resultDecodeJWT.id,
-                "title":patientResult[0].username
-
+                "title":patientResult[0].username,
+                "taken.patientRef":resultDecodeJWT._id,
             });
             await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:result._id})
            return res.status(200).json({
@@ -270,18 +270,18 @@ const updateEventFromDoctor=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
         console.log("_---------------------------------")
         console.log(req.params.id)
-        const result=await event.findByIdAndUpdate(req.params.id,{$set:{
+        const result=await event.findByIdAndUpdate(req.params.id,{
             startEventTime:req.body.event.startTimeEvent,
             endEventTime:req.body.event.endTimeEvent,
             typeEvent:req.body.event.typeEvent,
             title:req.body.event.titleEvent,
-            taken:{
-                available:true,
-                userTake:null,
-            },
+            // taken:{
+            //     available:true,
+            //     userTake:null,
+            // },
             idDoctor:resultDecodeJWT.id
 
-        }})
+        })
         console.log(result)
         res.status(200).json({
             msg:"update success "
