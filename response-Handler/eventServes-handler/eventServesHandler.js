@@ -271,8 +271,8 @@ const updateEventFromDoctor=async (req,res,_)=>{
         console.log("_---------------------------------")
         console.log(req.params.id)
         const result=await event.findOneAndUpdate(req.params.id,{$set:{
-            startEventTime:new Date(Number(req.body.event.startTimeEvent)),
-            endEventTime:new Date(Number(req.body.event.endTimeEvent)),
+            startEventTime:req.body.event.startTimeEvent,
+            endEventTime:req.body.event.endTimeEvent,
             typeEvent:req.body.event.typeEvent,
             title:req.body.event.titleEvent,
             taken:{
