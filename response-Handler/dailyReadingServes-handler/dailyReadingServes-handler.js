@@ -143,6 +143,7 @@ const getDailyReadingToPatient=async (req,res,_)=>{
         const resultJWTDecode=await jwt.decode(token)
         const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
         const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
+
         const resultReading=await dailyReadingModel.find({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:resultJWTDecode.id}]}).select({_id:false,idPatient:false,__v:false}).sort({date:1})
        let date
         for(var i=0;i<resultReading.length;i++){

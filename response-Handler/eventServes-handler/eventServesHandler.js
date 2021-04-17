@@ -88,6 +88,7 @@ const selectEventForUser=async (req,res,_)=>{
                 "taken.userTake":resultDecodeJWT.id,
                 "title":patientResult[0].username,
                 "taken.patientRef":resultDecodeJWT._id,
+                "imagePatient":patientResult[0].imgURL,
             });
             await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:result._id})
            return res.status(200).json({
@@ -101,7 +102,8 @@ const selectEventForUser=async (req,res,_)=>{
             const  result=await event.findByIdAndUpdate(req.body.id,{
                 "taken.available":false,
                 "taken.userTake":resultDecodeJWT.id,
-                "title":patientResult[0].username
+                "title":patientResult[0].username,
+                "imagePatient":patientResult[0].imgURL,
             });
             await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:result._id})
             return res.status(200).json({
@@ -270,6 +272,10 @@ const updateEventFromDoctor=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
         console.log("_---------------------------------")
         console.log(req.params.id)
+        const patientr=await patient.findOne({"idAppointment":req.params.id})
+        const r=await patient.findOneAndUpdate({"idAppointment":req.params.id},{idAppointment:null})
+
+
         const result=await event.findByIdAndUpdate(req.params.id,{
             startEventTime:req.body.event.startTimeEvent,
             endEventTime:req.body.event.endTimeEvent,
@@ -283,9 +289,20 @@ const updateEventFromDoctor=async (req,res,_)=>{
 
         })
         console.log(result)
-        res.status(200).json({
-            msg:"update success "
-        })
+
+        if(patientr!=null){
+            res.status(200).json({
+                "msg":"send notification to this user",
+                "userId":patientr.id,
+                "phoneToken":patientr.phoneToken,
+
+            })
+        }else{
+            res.status(200).json({
+                msg:"update  success ",
+            })
+        }
+
         console.log("_---------------------------------")
 
     }catch (e) {
@@ -294,6 +311,31 @@ const updateEventFromDoctor=async (req,res,_)=>{
     }
 
 }
+
+const getAllEventInThisDay=async (req,res,_)=>{
+
+    try{
+        const token=req.headers.authorization.split(" ")[1]
+        const resultDecodeJWT=  jwt.decode(token);
+
+        const nowDate=new Date()
+
+        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
+
+        const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
+
+
+
+        const events=await event.find({$and:[{idDoctor:resultDecodeJWT.id},{startDate:{ $gte: startDate, $lte: endDate }}]}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
+
+        res.status(200).json(events)
+    }catch (e) {
+        res.status(400).json({"msg":"errrorororor"})
+
+    }
+
+}
+
 
 export{
     getAllEventToDoctor,
@@ -305,4 +347,5 @@ export{
     deleteEvent,
     deleteEventFromDoctor,
     updateEventFromDoctor,
+    //getAllEventInThisDay,
 }
