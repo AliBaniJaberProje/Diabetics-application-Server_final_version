@@ -43,7 +43,10 @@ const event=new mongoose.Schema({
             type:String,
             ref :'patient'
         },
-
+        patient:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref :'patient'
+        },
 
 
     },
