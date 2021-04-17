@@ -345,5 +345,5 @@ export{
     deleteEvent,
     deleteEventFromDoctor,
     updateEventFromDoctor,
-    //getAllEventInThisDay,
+    getAllEventInThisDay,
 }
