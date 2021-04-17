@@ -217,7 +217,7 @@ const getAllEventToDoctor=async (req,res,_)=>{
     try{
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
-        const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true})
+        const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
         res.status(200).json(events)
     }catch (e) {
