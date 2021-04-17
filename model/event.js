@@ -25,6 +25,10 @@ const event=new mongoose.Schema({
         default :"أسد"
 
     },
+    idDoctorRef:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref : "doctor"
+    },
     taken:{
         available:{
             type:Boolean,

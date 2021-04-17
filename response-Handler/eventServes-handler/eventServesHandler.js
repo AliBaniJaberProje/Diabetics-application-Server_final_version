@@ -22,8 +22,11 @@ const addNewEvent=async (req,res,_)=>{
             taken:{
                 available:true,
                 userTake:null,
+                note:"لم تقم بالزيارة",
+                comeOrNot:false,
             },
-            idDoctor:resultDecodeJWT.id
+            idDoctor:resultDecodeJWT.id,
+            idDoctorRef:resultDecodeJWT._id,
 
         })
         console.log("22222222222222222")
