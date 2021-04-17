@@ -20,6 +20,8 @@ import doseHistory from "./model/doseHistory.js";
 import FoodHistoryRoute from "./routes/food-history-route.js"
 import cumulative_diabetesRouter from "./routes/cumulative_diabetesRoute.js"
 import eventHistoryRoute from "./routes/eventHistoryRoute.js";
+import jwt from "jsonwebtoken";
+import event from "./model/event.js";
 const app=express()
 
 connectMongoDB()
@@ -55,41 +57,29 @@ app.get('/',async (req, res, next)=>{
 
 
 
-    try {
+    try{
+        const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMTExMTExMSIsInBhc3N3b3JkIjoiJDJhJDEwJGs3cEdXYUs4WlZJaEdDeXhSTi5KM08yM0ZOblNaVjh5Rm5YSGZJaUdzUHNreHh1SVhmbXplIiwiX2lkIjoiNjA3NjFlZWRlOWRmNDkwMDE1MDdmZDhmIiwiaWF0IjoxNjE4Njc4NzYyfQ.wrNFuMFQWtwPvth3xhZG2bZ6l3PmyeDOJU9BOpRKfKM"
+        const resultDecodeJWT=  jwt.decode(token);
 
-        const inputDate=new Date(2021,4,5,0,0,0,0)
-        let resultReading=await doseHistory.find({$or:[{$and:[
-                    {startDate: {$gte: inputDate }},
-                    {endDate: {$lte: inputDate }},
-                    {"doseItem.idPatient":"123123123"},
+        let nowDate=new Date()
 
 
-                ]},
+        console.log(nowDate)
 
-                // {$and:[{$mach:{
-                //             'startDate':inputDate,
-                //             'endDate':inputDate
-                //         }},{"doseItem.idPatient":req.params.id}]
-                //
-                // }
+        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
 
+        const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
 
-            ]}
+        const events=await event.find({$and:[
+                {idDoctor:resultDecodeJWT.id},
+                  {startEventTime:{ $gte: startDate, $lte: endDate }}
 
+            ]})///.select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
-
-        )
-
-
-
-
-        console.log(resultReading)
-        res.status(200).json(resultReading)
+        res.status(200).json(events)
     }catch (e) {
-        console.log(e.message)
-        res.status(404).json({
-            msg:"error"
-        })
+        res.status(400).json({"msg":e.message})
+
     }
 
 
