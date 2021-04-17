@@ -19,7 +19,7 @@ import doseHistoryRoute from "./routes/history-Dose-Route.js"
 import doseHistory from "./model/doseHistory.js";
 import FoodHistoryRoute from "./routes/food-history-route.js"
 import cumulative_diabetesRouter from "./routes/cumulative_diabetesRoute.js"
-
+import eventHistoryRoute from "./routes/eventHistoryRoute.js";
 const app=express()
 
 connectMongoDB()
@@ -46,6 +46,7 @@ app.use("/imagesUpload",imageUploadRouter)
 app.use("/dose",doseRoute)
 app.use("/steps",stepsRoute)
 app.use("/foodHistory",FoodHistoryRoute)
+app.use("/eventHistory",eventHistoryRoute)
 app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
 })
