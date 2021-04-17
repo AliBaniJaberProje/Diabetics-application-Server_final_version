@@ -318,9 +318,10 @@ const getAllEventInThisDay=async (req,res,_)=>{
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
 
-        const nowDate=new Date()
+        let nowDate=new Date()
+         nowDate.setHours(nowDate.getHours()+3)
 
-        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 3,0,0,0,)
+        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
 
         const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
 
