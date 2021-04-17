@@ -18,6 +18,7 @@ const addNewEvent=async (req,res,_)=>{
             endEventTime:new Date(Number(req.body.event.endTimeEvent)),
             typeEvent:req.body.event.typeEvent,
             title:req.body.event.titleEvent,
+            color:req.body.event.color,
             taken:{
                 available:true,
                 userTake:null,
@@ -217,7 +218,7 @@ const getAllEventToDoctor=async (req,res,_)=>{
     try{
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
-        const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
+        const events=await event.find({idDoctor:resultDecodeJWT.id}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true,color:true})
 
         res.status(200).json(events)
     }catch (e) {
