@@ -328,7 +328,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
 
         res.status(200).json(events)
     }catch (e) {
-        res.status(400).json({"msg":"errrorororor"})
+        res.status(400).json({"msg":e.message})
 
     }
 
