@@ -243,17 +243,18 @@ const deleteEventFromDoctor=async (req,res,_)=>{
         console.log(result)
         console.log("***********************************************")
         console.log(patientr)
-        if(patientr!=null  ){
+        if(patientr!=null){
             res.status(200).json({
-                "msg":"send notification to this user",
-                 "userId":patientr.id,
-                 "phoneToken":patientr.phoneToken,
+                  "msg":"send notification to this user",
+                  "userId":patientr.id,
+                  "phoneToken":patientr.phoneToken,
 
             })
 
         }
         else{
             res.status(200).json({
+
                 msg:"delete success ",
             })
         }
