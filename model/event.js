@@ -22,7 +22,7 @@ const event=new mongoose.Schema({
     },
     title:{
         type:String,
-        default :"أسد"
+        default :"موعد متاح"
 
     },
     idDoctorRef:{
@@ -43,6 +43,7 @@ const event=new mongoose.Schema({
             type:String,
             ref :'patient'
         },
+      
 
 
     },

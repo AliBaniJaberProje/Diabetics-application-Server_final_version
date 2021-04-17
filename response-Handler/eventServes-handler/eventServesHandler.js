@@ -22,11 +22,11 @@ const addNewEvent=async (req,res,_)=>{
             taken:{
                 available:true,
                 userTake:null,
-                note:"لم تقم بالزيارة",
-                comeOrNot:false,
+
+
             },
             idDoctor:resultDecodeJWT.id,
-            idDoctorRef:resultDecodeJWT._id,
+
 
         })
         console.log("22222222222222222")
@@ -236,10 +236,17 @@ const deleteEventFromDoctor=async (req,res,_)=>{
         console.log("_---------------------------------")
         console.log(req.params.id)
         const result=await event.findByIdAndDelete(req.params.id)
+        const patientr=await patient.findOne({"idAppointment":req.params.id})
+        const r=await patient.findOneAndUpdate({"idAppointment":req.params.id},{idAppointment:null})
+
+
         console.log(result)
+        console.log("***********************************************")
+        console.log(patientr)
         res.status(200).json({
-            msg:"delete success "
+            msg:"delete success ",
         })
+
         console.log("_---------------------------------")
 
     }catch (e) {
