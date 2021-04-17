@@ -319,7 +319,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
 
         let nowDate=new Date()
-         nowDate.setHours(nowDate.getHours()+3)
+
 
         const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
 
@@ -327,7 +327,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
 
         const events=await event.find({$and:[
             {idDoctor:resultDecodeJWT.id},
-                {startEventTime:{ $gte: startDate, $lte: endDate }}
+            //    {startEventTime:{ $gte: startDate, $lte: endDate }}
 
                 ]}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
