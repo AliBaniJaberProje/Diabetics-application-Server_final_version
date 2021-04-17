@@ -270,7 +270,7 @@ const updateEventFromDoctor=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
         console.log("_---------------------------------")
         console.log(req.params.id)
-        const result=await event.findOneAndUpdate(req.params.id,{$set:{
+        const result=await event.findByIdAndUpdate(req.params.id,{$set:{
             startEventTime:req.body.event.startTimeEvent,
             endEventTime:req.body.event.endTimeEvent,
             typeEvent:req.body.event.typeEvent,
