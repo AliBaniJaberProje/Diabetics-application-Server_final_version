@@ -14,7 +14,6 @@ const addNewEvent=async (req,res,_)=>{
         console.log(req.body)
 
         const newEvent=new event({
-
             startEventTime:new Date(Number(req.body.event.startTimeEvent)),
             endEventTime:new Date(Number(req.body.event.endTimeEvent)),
             typeEvent:req.body.event.typeEvent,
@@ -22,12 +21,8 @@ const addNewEvent=async (req,res,_)=>{
             taken:{
                 available:true,
                 userTake:null,
-
-
             },
             idDoctor:resultDecodeJWT.id,
-
-
         })
         console.log("22222222222222222")
         var result= await newEvent.save()
