@@ -331,7 +331,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
         const events=await event.find({$and:[
             {idDoctor:resultDecodeJWT.id}, {startEventTime:{ $gte: startDate, $lte: endDate }}
 
-                ]}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
+                ]}).populate("taken.patientRef").select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
         res.status(200).json(events)
     }catch (e) {
