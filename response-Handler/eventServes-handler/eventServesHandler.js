@@ -328,8 +328,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
         const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
 
         const events=await event.find({$and:[
-            {idDoctor:resultDecodeJWT.id},
-            //    {startEventTime:{ $gte: startDate, $lte: endDate }}
+            {idDoctor:resultDecodeJWT.id}, {startEventTime:{ $gte: startDate, $lte: endDate }}
 
                 ]}).select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
