@@ -9,11 +9,11 @@ const event=new mongoose.Schema({
         ref : "doctor"
     },
     startEventTime:{
-       // type:Date,
+        type:Date,
         required:true,
     },
     endEventTime:{
-       // type:Date,
+        type:Date,
         required:true,
     },
     typeEvent:{
