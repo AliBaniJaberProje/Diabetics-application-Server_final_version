@@ -5,7 +5,7 @@ import * as isAuthorisedUser from "../middleware/auth/isAuthorisedUser.js"
 const router=express.Router()
 
 router.post("/",isAuthorisedUser.isAuthorisedDoctor,cumulative_dServesHandler.addNewCumulative)
-
+router.get("/:id/:year",isAuthorisedUser.isAuthorisedDoctor,cumulative_dServesHandler.getCumulativeByYear)
 
 
 
