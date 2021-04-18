@@ -13,7 +13,7 @@ const patient=new mongoose.Schema({
     },
     username: {
         type: String,
-     //   unique: true,
+
         minlength: 5,
         max: 40,
     },
@@ -46,14 +46,7 @@ const patient=new mongoose.Schema({
         required:true,
 
     },
-    // injectionType:{
-    //     type:String,
-    //     required:true,
-    // },
-    // capsuleType:{
-    //     type:String,
-    //     required:true,
-    // },
+
     weight:{
         type:String,
         required:true,

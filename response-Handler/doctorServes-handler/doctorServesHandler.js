@@ -2,6 +2,8 @@ import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
 import bcrypt from "bcryptjs";
+import patient from "../../model/users/patient";
+import doctor from "../../model/users/doctor";
 const saltRounds=10;
 
 async  function hashPassword(password,salt)  {
@@ -149,6 +151,25 @@ const updatePatientFromDoctor=async (req,res,_)=>{
     }
 }
 
+const doctorInfoProfile=async (req,res,_)=>{
+    const token=req.headers.authorization.split(" ")[1]
+    const resultDecodeJWT=  jwt.decode(token);
+
+    const A_patient=await patient.count({$and:[{diabetesType:"أ"},{id:resultDecodeJWT.id}]})
+    const B_patient=await patient.count({$and:[{diabetesType:"ب"},{id:resultDecodeJWT.id}]})
+    const C_patient=await patient.count({$and:[{diabetesType:"سكري حمل"},{id:resultDecodeJWT.id}]})
+
+    const resultDoctorInfo=await doctor.findOne({id:resultDecodeJWT.id}).select({username:true,phoneNumber:true,email:true,birthDate:true,gender:true,locationOffice:true})
+
+    res.status(200).json({"result":{
+            "A":A_patient,
+            "B":B_patient,
+            "C":C_patient
+        },
+        "doctorInfo":resultDoctorInfo
+    })
+}
+
 
 
 export {
@@ -156,5 +177,6 @@ export {
     getAllPatientForDoctor,
     updateCurrentDoctor,
     getPatientInfoById,
-    updatePatientFromDoctor
+    updatePatientFromDoctor,
+    doctorInfoProfile
 }

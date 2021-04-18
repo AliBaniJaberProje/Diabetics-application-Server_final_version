@@ -22,6 +22,8 @@ import cumulative_diabetesRouter from "./routes/cumulative_diabetesRoute.js"
 import eventHistoryRoute from "./routes/eventHistoryRoute.js";
 import jwt from "jsonwebtoken";
 import event from "./model/event.js";
+import doctor from  "./model/users/doctor.js"
+import patient from "./model/users/patient.js";
 const app=express()
 
 connectMongoDB()
@@ -57,31 +59,6 @@ app.get('/',async (req, res, next)=>{
 
 
 
-    try{
-        const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMTExMTExMSIsInBhc3N3b3JkIjoiJDJhJDEwJGs3cEdXYUs4WlZJaEdDeXhSTi5KM08yM0ZOblNaVjh5Rm5YSGZJaUdzUHNreHh1SVhmbXplIiwiX2lkIjoiNjA3NjFlZWRlOWRmNDkwMDE1MDdmZDhmIiwiaWF0IjoxNjE4Njc4NzYyfQ.wrNFuMFQWtwPvth3xhZG2bZ6l3PmyeDOJU9BOpRKfKM"
-        const resultDecodeJWT=  jwt.decode(token);
-
-        let nowDate=new Date()
-
-
-        console.log(nowDate)
-
-        const startDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 0,0,0,0,)
-
-        const endDate=new Date(nowDate.getFullYear() , nowDate.getMonth(), nowDate.getDate() , 23,59,59,59,)
-
-        const events=await event.find({$and:[
-                {idDoctor:resultDecodeJWT.id},
-                  {startTime:{ $gte: startDate, $lte: endDate }}
-
-            ]})///.select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
-
-        res.status(200).json(events)
-    }catch (e) {
-        res.status(400).json({"msg":e.message})
-
-    }
-
 
 
     // const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
@@ -95,9 +72,9 @@ app.get('/',async (req, res, next)=>{
     //     })
     //     .then(message => console.log(message.sid));
 
-    res.status(200).json({
-        "token":'req.headers.authorization.split(" ")[1]'
-    })
+    // res.status(200).json({
+    //     "token":'req.headers.authorization.split(" ")[1]'
+    // })
 
 
 
