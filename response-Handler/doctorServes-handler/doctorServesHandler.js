@@ -2,8 +2,8 @@ import Patient from "../../model/users/patient.js"
 import jwt from "jsonwebtoken";
 import dose from '../../model/dose.js'
 import bcrypt from "bcryptjs";
-import patient from "../../model/users/patient";
-import doctor from "../../model/users/doctor";
+import patient from "../../model/users/patient.js";
+import doctor from "../../model/users/doctor.js";
 const saltRounds=10;
 
 async  function hashPassword(password,salt)  {

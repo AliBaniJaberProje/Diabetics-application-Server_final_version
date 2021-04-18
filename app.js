@@ -58,7 +58,22 @@ app.use('/rr',(req, res, next) =>{
 app.get('/',async (req, res, next)=>{
 
 
+    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMTExMTExMSIsInBhc3N3b3JkIjoiJDJhJDEwJGs3cEdXYUs4WlZJaEdDeXhSTi5KM08yM0ZOblNaVjh5Rm5YSGZJaUdzUHNreHh1SVhmbXplIiwiX2lkIjoiNjA3NjFlZWRlOWRmNDkwMDE1MDdmZDhmIiwiaWF0IjoxNjE4Njc4NzYyfQ.wrNFuMFQWtwPvth3xhZG2bZ6l3PmyeDOJU9BOpRKfKM"
+    const resultDecodeJWT=  jwt.decode(token);
 
+    const A_patient=await patient.count({$and:[{diabetesType:"أ"},{id:resultDecodeJWT.id}]})
+    const B_patient=await patient.count({$and:[{diabetesType:"ب"},{id:resultDecodeJWT.id}]})
+    const C_patient=await patient.count({$and:[{diabetesType:"سكري حمل"},{id:resultDecodeJWT.id}]})
+
+    const resultDoctorInfo=await doctor.findOne({id:resultDecodeJWT.id}).select({username:true,phoneNumber:true,email:true,birthDate:true,gender:true,locationOffice:true})
+
+    res.status(200).json({"result":{
+            "A":A_patient,
+            "B":B_patient,
+            "C":C_patient
+        },
+        "doctorInfo":resultDoctorInfo
+    })
 
 
     // const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
