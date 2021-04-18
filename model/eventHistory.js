@@ -3,8 +3,8 @@ import mongoose from "mongoose"
 const EventHistory  = new mongoose.Schema({
 
     idPatient:{
+     type:String
 
-        ref :'patient'
     },
     idDoctor:{
         type:mongoose.Schema.Types.ObjectId ,
