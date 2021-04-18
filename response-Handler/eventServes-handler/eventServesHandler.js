@@ -356,6 +356,7 @@ const moveEventToHistory=async (req,res,_)=>{
         const r=await patient.findOneAndUpdate({"idAppointment":req.body.idEvent},{$set:{idAppointment:null}})
         console.log("const r=await patient.findOneAndUpdate({idAppointment:req.body.idEvent},{$set:{idAppointment:null}})")
         const eventInfo=await event.findById(req.body.idEvent)
+        console.log(eventInfo)
         console.log("const eventInfo=await event.findById(req.body.idEvent)")
         const deletEvent=await event.findByIdAndRemove(req.body.idEvent)
         console.log("const deletEvent=await event.findByIdAndRemove(req.body.idEvent)")
