@@ -142,7 +142,7 @@ const getAllStepsToDoctor=async (req,res,_)=>{
         let resultServes=[]
 
 
-        const result=await number_of_step.find({$and:[{idPatient:req.body.id},{endDate:{ $gte: startDate1.getTime(), $lte: endDate1.getTime() }}]}).sort({endDate:1}).select({startDate:true,numberStep:true,_id:false})
+        const result=await number_of_step.find({$and:[{idPatient:req.params.id},{endDate:{ $gte: startDate1.getTime(), $lte: endDate1.getTime() }}]}).sort({endDate:1}).select({startDate:true,numberStep:true,_id:false})
         let date;
         for(var i=0;i<result.length;i++){
             date=new Date(result[i]["startDate"])
