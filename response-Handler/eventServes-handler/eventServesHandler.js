@@ -366,7 +366,7 @@ const moveEventToHistory=async (req,res,_)=>{
             endTime:eventInfo.endEventTime,
             isCome:req.body.isCome,
             note:req.body.note,
-            idEvent:tmp++
+           // idEvent:tmp++
 
         })
         await  newEventHistory.save()
