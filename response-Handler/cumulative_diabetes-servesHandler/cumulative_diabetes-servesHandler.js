@@ -33,7 +33,7 @@ const getCumulativeByYear=async (req,res,_)=>{
                 {idPatient:req.params.id},
                 {date:{ $gte: startDate, $lte:endDate }},
 
-            ]}).find({date:true,value:true})
+            ]}).select({date:true,value:true})
         res.status(200).json(result)
 
     }catch (e) {
