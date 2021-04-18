@@ -370,10 +370,11 @@ const moveEventToHistory=async (req,res,_)=>{
             idEvent:tmp
 
         })
+        tmp=tmp+1
         console.log("------------------------------------")
         console.log(tmp)
         console.log("------------------------------------")
-        tmp=tmp+1
+
         await  newEventHistory.save()
         console.log("await  newEventHistory.save()")
         res.status(200).json({
