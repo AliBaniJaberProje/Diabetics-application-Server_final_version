@@ -21,6 +21,10 @@ const EventHistory  = new mongoose.Schema({
     },
     note:{
         type:String
+    },
+    idEvent:{
+      type:Number,
+
     }
 
 })
