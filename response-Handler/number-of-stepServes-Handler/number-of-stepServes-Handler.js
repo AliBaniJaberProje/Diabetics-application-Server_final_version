@@ -128,6 +128,8 @@ const getAllStepsToPatient=async (req,res,_)=>{
 }
 const getAllStepsToDoctor=async (req,res,_)=>{
     try{
+        console.log("*/////////////***************")
+        console.log(req.params)
 
 
         const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
