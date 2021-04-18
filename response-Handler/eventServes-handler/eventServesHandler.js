@@ -353,7 +353,7 @@ const moveEventToHistory=async (req,res,_)=>{
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
 
-        const r=await patient.findOneAndUpdate({"idAppointment":req.body.idEvent},{idAppointment:null})
+        const r=await patient.findOneAndUpdate({"idAppointment":req.body.idEvent},{$set:{idAppointment:null}})
         const eventInfo=await event.findById(req.body.idEvent)
         const deletEvent=await event.findByIdAndDelete(req.body.idEvent)
         const newEventHistory=new eventHistory({
