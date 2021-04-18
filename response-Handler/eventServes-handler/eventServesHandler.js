@@ -363,8 +363,8 @@ const moveEventToHistory=async (req,res,_)=>{
         const newEventHistory=new eventHistory({
             idPatient:req.body.idPatient,
             idDoctor:resultDecodeJWT._id,
-            startTime:new Date(),//,
-            endTime:new Date(),//eventInfo.endEventTime,
+            startTime:eventInfo.startEventTime,
+            endTime:eventInfo.endEventTime,
             isCome:req.body.isCome,
             note:req.body.note,
            // idEvent:tmp++
