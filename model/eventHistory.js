@@ -1,10 +1,5 @@
 import mongoose from "mongoose"
 
-
-
-
-
-
 const EventHistory  = new mongoose.Schema({
 
     idPatient:{

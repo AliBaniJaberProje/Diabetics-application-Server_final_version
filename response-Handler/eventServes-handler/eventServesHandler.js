@@ -354,8 +354,11 @@ const moveEventToHistory=async (req,res,_)=>{
         const resultDecodeJWT=  jwt.decode(token);
 
         const r=await patient.findOneAndUpdate({"idAppointment":req.body.idEvent},{$set:{idAppointment:null}})
+        console.log("const r=await patient.findOneAndUpdate({idAppointment:req.body.idEvent},{$set:{idAppointment:null}})")
         const eventInfo=await event.findById(req.body.idEvent)
+        console.log("const eventInfo=await event.findById(req.body.idEvent)")
         const deletEvent=await event.findByIdAndRemove(req.body.idEvent)
+        console.log("const deletEvent=await event.findByIdAndRemove(req.body.idEvent)")
         const newEventHistory=new eventHistory({
             idPatient:req.body.idPatient,
             idDoctor:resultDecodeJWT._id,
@@ -367,6 +370,7 @@ const moveEventToHistory=async (req,res,_)=>{
 
         })
         await  newEventHistory.save()
+        console.log("await  newEventHistory.save()")
         res.status(200).json({
             "msg":"done"
         })
