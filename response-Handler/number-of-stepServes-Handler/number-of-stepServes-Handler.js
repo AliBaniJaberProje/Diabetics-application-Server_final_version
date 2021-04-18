@@ -148,7 +148,7 @@ const getAllStepsToDoctor=async (req,res,_)=>{
             date=new Date(result[i]["startDate"])
             resultServes.push({
                 "numberStep":result[i]["numberStep"],
-                "date":date.getFullYear()+"-"+date.getMonth()+1+"-"+date.getDate()
+                "date":date.getFullYear()+"-"+Number(Number(date.getMonth())+1)+"-"+date.getDate()
             })
         }
 
