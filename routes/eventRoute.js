@@ -13,6 +13,6 @@ router.get("/getMyEvent",isAuthorisedUser.isAuthorisedPatient,eventServesHandler
 router.post("/AvailableEvent",isAuthorisedUser.isAuthorisedPatient,eventServesHandler.getAllAvailableEvent)
 router.delete("/:id",isAuthorisedUser.isAuthorisedPatient,eventServesHandler.deleteEvent)
 router.get("/api/doctor/thisDayEvent",isAuthorisedUser.isAuthorisedDoctor,eventServesHandler.getAllEventInThisDay)
-
+router.patch("/api/doctor/moveEventToHistory",isAuthorisedUser.isAuthorisedDoctor,eventServesHandler.moveEventToHistory)
 
 export default router

@@ -23,6 +23,9 @@ const EventHistory  = new mongoose.Schema({
     },
     isCome:{
         type:Boolean
+    },
+    note:{
+        type:String
     }
 
 })

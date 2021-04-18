@@ -3,6 +3,9 @@ import mongoose from "mongoose"
 import event from "../../model/event.js";
 import patient from "../../model/users/patient.js"
 import * as event_mid from "../../middleware/eventMiddleware.js"
+import eventHistory from "../../model/eventHistory.js";
+
+let tmp=111001
 
 const addNewEvent=async (req,res,_)=>{
     try{
@@ -344,7 +347,28 @@ const getAllEventInThisDay=async (req,res,_)=>{
 
 
 const moveEventToHistory=async (req,res,_)=>{
+
     try{
+        const token=req.headers.authorization.split(" ")[1]
+        const resultDecodeJWT=  jwt.decode(token);
+
+        const r=await patient.findOneAndUpdate({"idAppointment":req.body.idEvent},{idAppointment:null})
+        const eventInfo=await event.findById(req.body.idEvent)
+        const deletEvent=await event.findByIdAndDelete(req.body.idEvent)
+        const newEventHistory=new eventHistory({
+            idPatient:req.body.idPatient,
+            idDoctor:resultDecodeJWT._id,
+            startTime:eventInfo.startEventTime,
+            endTime:eventInfo.endEventTime,
+            isCome:req.body.isCome,
+            note:req.body.note,
+            idEvent:tmp++
+
+        })
+        await  newEventHistory.save()
+        res.status(200).json({
+            "msg":"done"
+        })
 
 
     }
@@ -367,4 +391,5 @@ export{
     deleteEventFromDoctor,
     updateEventFromDoctor,
     getAllEventInThisDay,
+    moveEventToHistory
 }
