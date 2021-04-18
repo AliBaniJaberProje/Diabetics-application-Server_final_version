@@ -59,7 +59,7 @@ app.get('/',async (req, res, next)=>{
 
 
     try{
-        const result=doctor.find({}).select({phoneNumber:true,username:true,locationOffice:true,imgURL:true})
+        const result=await doctor.find().select({phoneNumber:true,username:true,locationOffice:true,imgURL:true})
         res.status(200).json(result)
 
     }catch (e) {

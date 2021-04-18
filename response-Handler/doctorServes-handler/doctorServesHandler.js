@@ -173,7 +173,7 @@ const doctorInfoProfile=async (req,res,_)=>{
 
 const getAllDoctors=async (req,res,_)=>{
     try{
-        const result=doctor.find({}).select({phoneNumber:true,username:true,locationOffice:true,imgURL:true})
+        const result=await doctor.find({}).select({phoneNumber:true,username:true,locationOffice:true,imgURL:true})
         res.status(200).json(result)
 
     }catch (e) {
