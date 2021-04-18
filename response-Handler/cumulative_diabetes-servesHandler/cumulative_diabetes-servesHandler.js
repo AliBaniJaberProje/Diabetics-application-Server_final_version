@@ -26,6 +26,7 @@ const addNewCumulative =async (req,res,_)=>{
 
 const getCumulativeByYear=async (req,res,_)=>{
     try {
+        console.log(req.params)
         const startDate=new Date(Number(req.params.year),0,0,0,0,0,0)
         const endDate=new Date(Number(req.params.year),11,31,23,59,59,59)
         const result=await cumulative_diabetes.find({$and:[
