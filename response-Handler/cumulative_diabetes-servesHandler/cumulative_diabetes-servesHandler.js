@@ -36,6 +36,7 @@ const getCumulativeByYear=async (req,res,_)=>{
         res.status(200).json(result)
 
     }catch (e) {
+        console.log(e.message)
         res.status(404).json({
             "msg":e.message
         })
