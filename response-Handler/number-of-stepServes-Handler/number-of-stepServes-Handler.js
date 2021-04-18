@@ -170,6 +170,7 @@ export  {
     selectInLastWeek,
     getTimestamp,
     getAllStepsToPatient,
-    getAllStepsToDoctor
+    getAllStepsToDoctor,
+
 
 }
