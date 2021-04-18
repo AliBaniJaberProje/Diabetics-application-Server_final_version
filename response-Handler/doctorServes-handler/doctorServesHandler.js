@@ -171,6 +171,16 @@ const doctorInfoProfile=async (req,res,_)=>{
 }
 
 
+const getAllDoctors=async (req,res,_)=>{
+    try{
+        const result=doctor.find({}).select({phoneNumber:true,username:true,locationOffice:true,imgURL:true})
+        res.status(200).json(result)
+
+    }catch (e) {
+        res.status(404).json({"msg":e.message})
+    }
+}
+
 
 export {
     addNewPatient,
@@ -178,5 +188,6 @@ export {
     updateCurrentDoctor,
     getPatientInfoById,
     updatePatientFromDoctor,
-    doctorInfoProfile
+    doctorInfoProfile,
+    getAllDoctors
 }
