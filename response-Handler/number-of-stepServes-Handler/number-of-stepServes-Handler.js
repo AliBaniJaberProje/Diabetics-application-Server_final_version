@@ -124,12 +124,50 @@ const getAllStepsToPatient=async (req,res,_)=>{
             "error":e.message
         })
     }
+
+}
+const getAllStepsToDoctor=async (req,res,_)=>{
+    try{
+
+
+        const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
+
+        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
+        const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
+
+
+
+        let resultServes=[]
+
+
+        const result=await number_of_step.find({$and:[{idPatient:req.body.id},{endDate:{ $gte: startDate1.getTime(), $lte: endDate1.getTime() }}]}).sort({endDate:1}).select({startDate:true,numberStep:true,_id:false})
+        let date;
+        for(var i=0;i<result.length;i++){
+            date=new Date(result[i]["startDate"])
+            resultServes.push({
+                "numberStep":result[i]["numberStep"],
+                "date":date.getFullYear()+"-"+date.getMonth()+1+"-"+date.getDate()
+            })
+        }
+
+        res.status(200).json(
+            {
+                "msg":resultServes
+            }
+        )
+    }
+    catch (e) {
+        res.status(404).json({
+            "error":e.message
+        })
+    }
 }
 
 export  {
     addNewStep,
     selectInLastWeek,
     getTimestamp,
-    getAllStepsToPatient
+    getAllStepsToPatient,
+    getAllStepsToDoctor
 
 }
