@@ -5,7 +5,7 @@ import * as EventHistoryServesHandler from "../response-Handler/event_history_se
 const Route =express.Router()
 
 
-Route.get("/",EventHistoryServesHandler.getEventHistoryToDoctor)
+Route.get("/:idPatient/:year/:month",EventHistoryServesHandler.getEventHistoryToDoctor)
 
 
 

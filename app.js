@@ -72,7 +72,7 @@ app.get('/',async (req, res, next)=>{
 
         const events=await event.find({$and:[
                 {idDoctor:resultDecodeJWT.id},
-                  {startEventTime:{ $gte: startDate, $lte: endDate }}
+                  {startTime:{ $gte: startDate, $lte: endDate }}
 
             ]})///.select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true})
 
