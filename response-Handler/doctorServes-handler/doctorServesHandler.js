@@ -155,9 +155,9 @@ const doctorInfoProfile=async (req,res,_)=>{
     const token=req.headers.authorization.split(" ")[1]
     const resultDecodeJWT=  jwt.decode(token);
 
-    const A_patient=await patient.count({$and:[{diabetesType:"أ"},{id:resultDecodeJWT.id}]})
-    const B_patient=await patient.count({$and:[{diabetesType:"ب"},{id:resultDecodeJWT.id}]})
-    const C_patient=await patient.count({$and:[{diabetesType:"سكري حمل"},{id:resultDecodeJWT.id}]})
+    const A_patient=await patient.count({$and:[{diabetesType:"أ"},{currentDoctor:resultDecodeJWT.id}]})
+    const B_patient=await patient.count({$and:[{diabetesType:"ب"},{currentDoctor:resultDecodeJWT.id}]})
+    const C_patient=await patient.count({$and:[{diabetesType:"سكري حمل"},{currentDoctor:resultDecodeJWT.id}]})
 
     const resultDoctorInfo=await doctor.findOne({id:resultDecodeJWT.id}).select({username:true,phoneNumber:true,email:true,birthDate:true,gender:true,locationOffice:true})
 
