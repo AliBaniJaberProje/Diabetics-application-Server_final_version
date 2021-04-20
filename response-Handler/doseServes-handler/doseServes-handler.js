@@ -16,6 +16,7 @@ const getDoseForPatient=async (req,res,next)=>{
            for(var i=0;i<result['inject'].length;i++){
                if(result['inject'][i]['flag']!=="")
                    inject.push(result['inject'][i])
+               console.log("processing")
            }
           console.log(result)
           result['inject']=inject
