@@ -7,7 +7,9 @@ const getDoseForPatient=async (req,res,next)=>{
 
   try{
       console.log("______________-dose test")
-      const result=await dose.findOne({idPatient:req.params.id})
+      const resultJWTDecode=await jwt.decode(req.headers['x-auth-token'])
+
+      const result=await dose.findOne({idPatient:resultJWTDecode.id})
 
 
       let inject=[]
