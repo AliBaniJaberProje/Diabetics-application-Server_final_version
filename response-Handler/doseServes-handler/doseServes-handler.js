@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 const getDoseForPatient=async (req,res,next)=>{
 
   try{
+      console.log("______________-dose test")
       const result=await dose.findOne({idPatient:req.params.id})
 
 
@@ -21,6 +22,7 @@ const getDoseForPatient=async (req,res,next)=>{
 
       }
   }catch (e) {
+      console.log(e.message)
      res.status(400).json(
          {mag:"error"}
      )
