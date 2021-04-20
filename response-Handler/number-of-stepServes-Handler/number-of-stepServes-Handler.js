@@ -50,7 +50,6 @@ const addNewStep=async (req,res,_)=>{
   }
 
 }
-
 const selectInLastWeek=async (req,res,_)=> {
 
     const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
@@ -81,14 +80,12 @@ const selectInLastWeek=async (req,res,_)=> {
    await res.status(200).json(resultToResponse)
 
 }
-
 const getTimestamp=async (req,res,_)=>{
     res.status(200).json(
         {"now":new Date(Date.now()).getTime()}
     )
 
 }
-
 const getAllStepsToPatient=async (req,res,_)=>{
     try{
 

@@ -90,6 +90,9 @@ const patient=new mongoose.Schema({
     idAppointment:{
         type:mongoose.Schema.Types.ObjectId ,
         ref:"event"
+    },
+    pinCode:{
+        type:Number
     }
 
 })

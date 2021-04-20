@@ -20,6 +20,7 @@ import doseHistory from "./model/doseHistory.js";
 import FoodHistoryRoute from "./routes/food-history-route.js"
 import cumulative_diabetesRouter from "./routes/cumulative_diabetesRoute.js"
 import eventHistoryRoute from "./routes/eventHistoryRoute.js";
+import password_router from "./routes/password_router.js";
 import jwt from "jsonwebtoken";
 import event from "./model/event.js";
 import doctor from  "./model/users/doctor.js"
@@ -51,6 +52,7 @@ app.use("/dose",doseRoute)
 app.use("/steps",stepsRoute)
 app.use("/foodHistory",FoodHistoryRoute)
 app.use("/eventHistory",eventHistoryRoute)
+app.use("/password",password_router)
 app.use('/rr',(req, res, next) =>{
     res.status(200).json(req.body)
 })
