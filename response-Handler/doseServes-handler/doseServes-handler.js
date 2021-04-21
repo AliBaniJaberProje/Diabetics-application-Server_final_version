@@ -34,6 +34,39 @@ const getDoseForPatient=async (req,res,next)=>{
 
 }
 
+const getDoseToDoctor=async (req,res,next)=>{
+
+    try{
+        console.log("______________-dose test")
+        //const resultJWTDecode=await jwt.decode(req.headers['x-auth-token'])
+
+        const result=await dose.findOne({idPatient:req.params.id})
+
+
+        let inject=[]
+
+        if(result){
+            for(var i=0;i<result['inject'].length;i++){
+                if(result['inject'][i]['flag']!=="")
+                    inject.push(result['inject'][i])
+                console.log("processing")
+            }
+            console.log(result)
+            result['inject']=inject
+            res.status(200).json(result)
+
+        }
+    }catch (e) {
+        console.log(e.message)
+        res.status(400).json(
+            {mag:"error"}
+        )
+    }
+
+}
+
+
+
 const updateDose=async (req,res,_)=>{
 
    try{
@@ -69,6 +102,7 @@ const updateDose=async (req,res,_)=>{
 
 export {
     getDoseForPatient,
-    updateDose
+    updateDose,getDoseToDoctor
+
 
 }
