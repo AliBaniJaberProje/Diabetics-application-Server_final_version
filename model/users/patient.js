@@ -93,6 +93,10 @@ const patient=new mongoose.Schema({
     },
     pinCode:{
         type:Number
+    },
+    active:{
+        type:Boolean,
+        default:true
     }
 
 })
