@@ -379,10 +379,10 @@ const moveEventToHistory=async (req,res,_)=>{
         console.log(tmp)
         console.log("------------------------------------")
 
-        await  newEventHistory.save()
-        console.log("await  newEventHistory.save()")
+     const result=   await  newEventHistory.save()
+        console.log(result)
         res.status(200).json({
-            "msg":"done"
+            "msg":result
         })
 
 
