@@ -5,14 +5,15 @@ import jwt from "jsonwebtoken";
 const getEventHistoryToDoctor=async (req,res,_)=>{
 
    try {
-
+       const token=req.headers.authorization.split(" ")[1]
+       const resultDecodeJWT=  jwt.decode(token);
 
        const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
 
        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
        const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
 
-        const resultEvents=await eventHistory.find({$and:[{idPatient:req.params.idPatient},{startTime:{ $gte: startDate1, $lte: endDate1 }}]}).select({startTime:true,isCome:true,note:true,idEvent:true})
+        const resultEvents=await eventHistory.find({$and:[{idD:resultDecodeJWT.id},{idPatient:req.params.idPatient},{startTime:{ $gte: startDate1, $lte: endDate1 }}]}).select({startTime:true,isCome:true,note:true,idEvent:true})
         res.status(200).json(resultEvents)
 
    }catch (e) {
