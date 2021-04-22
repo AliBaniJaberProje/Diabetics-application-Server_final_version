@@ -370,7 +370,7 @@ const moveEventToHistory=async (req,res,_)=>{
             endTime:eventInfo.endEventTime,
             isCome:req.body.isCome,
             note:req.body.note,
-            idD:eventInfo["idDoctor"],
+            idD:req.body.idd,
             idEvent:tmp
 
         })
