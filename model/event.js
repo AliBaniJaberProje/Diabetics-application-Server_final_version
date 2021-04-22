@@ -52,6 +52,9 @@ const event=new mongoose.Schema({
     },
     idEvent:{
         type:Number
+    },
+    idD:{
+        type:String
     }
 
 
