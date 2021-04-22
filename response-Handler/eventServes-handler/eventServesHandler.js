@@ -335,7 +335,7 @@ const getAllEventInThisDay=async (req,res,_)=>{
             {idDoctor:resultDecodeJWT.id}, {startEventTime:{ $gte: startDate, $lte: endDate }},
                 {"taken.available":false}
 
-                ]}).populate("taken.patientRef","imgURL id phoneToken").select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true,})
+                ]}).populate("taken.patientRef","imgURL id phoneToken").select({_id:true,startEventTime:true,endEventTime:true,title:true,typeEvent:true,taken:true,}).sort({startEventTime:1})
 
         res.status(200).json(events)
     }catch (e) {
