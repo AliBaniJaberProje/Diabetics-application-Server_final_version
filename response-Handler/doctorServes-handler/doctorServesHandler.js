@@ -90,7 +90,7 @@ const getAllPatientForDoctor=async (req,res,_)=>{
         //console.log(req.headers.authorization.split(" ")[1])
         const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
         //console.log(resultDecodeJWT.id)
-        const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id},).select({imgURL:true,_id :false,username:true,phoneToken:true,isOnline:true,})
+        const patuiontResult=await Patient.find({"currentDoctor":resultDecodeJWT.id},).select({imgURL:true,_id :false,username:true,phoneToken:true,isOnline:true,id:true})
 
         ///const lastPatient=await Patient.find({lastDoctor:{$in:[]}})
       //  console.log(patuiontResult)
