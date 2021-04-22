@@ -8,6 +8,7 @@ const getEventHistoryToDoctor=async (req,res,_)=>{
        const token=req.headers.authorization.split(" ")[1]
        const resultDecodeJWT=  jwt.decode(token);
 
+
        const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
 
        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)

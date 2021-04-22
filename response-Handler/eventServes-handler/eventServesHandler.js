@@ -359,7 +359,10 @@ const moveEventToHistory=async (req,res,_)=>{
         console.log(eventInfo)
 
         const deletEvent=await event.findByIdAndDelete(req.body.idEvent)
+        console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
         console.log(req.body)
+        console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+
         const newEventHistory=new eventHistory({
             idPatient:req.body.idPatient,
             idDoctor:resultDecodeJWT._id,
