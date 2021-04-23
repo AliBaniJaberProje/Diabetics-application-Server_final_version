@@ -134,9 +134,36 @@ const t=async (req,res,next)=>{
         })
     }
 }
+const updateCurrentDoctorFromPatient=async (req,res,next)=>{
+    try {
+        console.log(req.body)
+
+        const resultDecodeJWT= await jwt.decode(req.headers["x-auth-token"]);
+
+
+
+        const patient=await Patient.find({id:resultDecodeJWT.id})
+        await Patient.updateOne({id:resultDecodeJWT.id},{$push:{"lastDoctor":patient[0].currentDoctor}})
+        await Patient.updateOne({id:resultDecodeJWT.id},{$set:{"currentDoctor":req.body.newDoctorId}})
+
+        res.status(200).json({
+            msg:"operation accomplished successfully",
+            status:200,
+        })
+    }catch (e) {
+        res.status(401).json({
+            msg:e.message,
+            status:401,
+        })
+    }
+
+}
+
+
 
 
 export {
+    updateCurrentDoctorFromPatient,
     t,
     updateInfo,
     getProfileInfo,
