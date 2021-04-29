@@ -160,7 +160,7 @@ const doctorInfoProfile=async (req,res,_)=>{
     const B_patient=await patient.count({$and:[{diabetesType:"ب"},{currentDoctor:resultDecodeJWT.id}]})
     const C_patient=await patient.count({$and:[{diabetesType:"سكري حمل"},{currentDoctor:resultDecodeJWT.id}]})
 
-    const resultDoctorInfo=await doctor.findOne({id:resultDecodeJWT.id}).select({username:true,phoneNumber:true,email:true,birthDate:true,gender:true,locationOffice:true})
+    const resultDoctorInfo=await doctor.findOne({id:resultDecodeJWT.id}).select({username:true,phoneNumber:true,email:true,birthDate:true,gender:true,locationOffice:true,imgURL:true})
 
     res.status(200).json({"result":{
             "A":A_patient,

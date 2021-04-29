@@ -157,6 +157,7 @@ const addFood =async (req,res,_)=>{
 
 const getFoodHistoryInDay=async (req,res,_)=>{
     try{
+        console.log(req.body)
         const token=req.headers["x-auth-token"];
         const resultJWTDecode=await jwt.decode(token)
 
@@ -258,7 +259,6 @@ const getFoodToDoctorInDay=async (req,res,_)=>{
         })
     }
 }
-
 
 
 export {
