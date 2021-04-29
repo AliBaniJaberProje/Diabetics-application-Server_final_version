@@ -4,6 +4,7 @@ import * as doctor_ServesApi from "../response-Handler/doctorServes-handler/doct
 const router=express.Router()
 
 router.get("/",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.doctorInfoProfile)
+router.get("/phoneToken/:id",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.getPhoneToken)
 router.get("/allDoctor",doctor_ServesApi.getAllDoctors)
 router.post("/addNewPatient",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.addNewPatient)
 router.patch("/updateCurrentDoctor",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.updateCurrentDoctor)

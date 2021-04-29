@@ -183,6 +183,19 @@ const getAllDoctors=async (req,res,_)=>{
 }
 
 
+const getPhoneToken=async (req,res,_)=>{
+    try {
+        const result=await patient.findOne({id:req.params.id}).select({phoneToken:true})
+        res.status(200).json({
+            "msg":result
+        })
+    }catch (e) {
+        res.status(400).json({
+            "msg":e.message
+        })
+    }
+}
+
 export {
     addNewPatient,
     getAllPatientForDoctor,
@@ -190,5 +203,6 @@ export {
     getPatientInfoById,
     updatePatientFromDoctor,
     doctorInfoProfile,
-    getAllDoctors
+    getAllDoctors,
+    getPhoneToken
 }
