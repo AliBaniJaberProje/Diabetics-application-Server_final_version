@@ -92,7 +92,7 @@ const getAllStepsToPatient=async (req,res,_)=>{
 
         const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
 
-        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
+        const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,1,0,0,0,0)
         const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
 
 
