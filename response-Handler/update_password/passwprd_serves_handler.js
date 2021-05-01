@@ -92,7 +92,7 @@ const updatePasswordPatientNotForgetIt=async (req,res,_)=>{
 const sendCodeToDoctor=async (req,res,_)=>{
     try{
         const randomCode=getRandom()
-        const doctorinfo=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{code:randomCode}})
+        const doctorinfo=await doctor.updateOne({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{code:randomCode}})
         if(doctorinfo!=null){
             console.log(doctorinfo)
             res.status(200).json({
