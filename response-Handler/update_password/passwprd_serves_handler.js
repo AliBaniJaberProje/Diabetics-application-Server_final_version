@@ -154,7 +154,8 @@ const updatePasswordDoctorForgetIt=async (req, res, _)=>{
         const  salt=await bcrypt.genSalt(saltRounds);
         const passwordD=await hashPassword( req.body.password,salt)
 
-        const patientInfo=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber,pinCode:req.body.pinCode},{$set:{password:passwordD}})
+        const patientInfo=await doctor.updateOne({id:req.body.id,phoneNumber:req.body.phoneNumber,pinCode:req.body.pinCode},{$set:{password:passwordD}})
+        console.log(patientInfo)
         res.status(200).json(req.body.password)
     }catch (e) {
         res.status(404).json(e.message)
