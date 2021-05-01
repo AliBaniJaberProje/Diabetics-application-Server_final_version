@@ -91,7 +91,7 @@ const sendCodeToDoctor=async (req,res,_)=>{
     try{
 
         const randomCode=getRandom()
-        const result=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{"pinCode":randomCode}})
+        const result=await doctor.updateOne({id:req.body.id},{$set:{"pinCode":randomCode}})
         console.log(result)
         if(result!=null){
             res.status(200).json({
