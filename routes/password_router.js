@@ -7,7 +7,7 @@ const router=express.Router()
 router.patch("/sendCodePatient",password_serves.sendCodeToPatient)
 router.patch("/updatePassword",password_serves.updatePasswordPatientForgetIt)
 router.patch("/forgetPassword",isAuthorisedUser.isAuthorisedPatient,password_serves.updatePasswordPatientNotForgetIt)
-
+router.patch("/doctor/updatePassword",isAuthorisedUser.isAuthorisedDoctor,password_serves.updatePasswordDoctorNotForgetIt)
 export default router
 
 

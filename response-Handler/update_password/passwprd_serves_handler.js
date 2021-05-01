@@ -90,7 +90,44 @@ const updatePasswordPatientNotForgetIt=async (req,res,_)=>{
 
 
 
+const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
+    try{
+        console.log(req.body)
+        const resultJWTDecode=  jwt.decode(req.headers.authorization.split(" ")[1]);
 
+        const doctorUser=await doctor.findOne({"id":resultJWTDecode.id})
+        if(doctorUser!=null){
+            const checkPassword =await bcrypt.compare(req.body.password,patientUser.password)
+            if(checkPassword){
+                const saltRounds=10;
+                console.log(req.body)
+                const  salt=await bcrypt.genSalt(saltRounds);
+                const passwordD=await hashPassword( req.body.newPassword,salt)
+
+                const doctorInfo=await doctor.findOneAndUpdate({id:resultJWTDecode.id},{$set:{password:passwordD}})
+                res.status(200).json({
+                    "msg":"تم تغير كلمة السر بنجاح"
+                })
+                // done
+
+            }else{
+                res.status(201)({
+                    "msg":"كلمة السر السابقة غير صحيحة"
+                })
+            }
+        }
+        else{
+            res.status(400).json({
+                "msg":"العملية خاطئ "
+            })
+        }
+
+
+    }
+    catch (e) {
+        res.status(404).json({"msg":"error"+e.message})
+    }
+}
 
 
 
@@ -98,5 +135,6 @@ const updatePasswordPatientNotForgetIt=async (req,res,_)=>{
 export {
     sendCodeToPatient,
     updatePasswordPatientForgetIt,
-    updatePasswordPatientNotForgetIt
+    updatePasswordPatientNotForgetIt,
+    updatePasswordDoctorNotForgetIt
 }

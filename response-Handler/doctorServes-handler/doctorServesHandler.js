@@ -211,6 +211,8 @@ const updateInfo=async (req,res,_)=>{
 
 }
 
+
+
 export {
     addNewPatient,
     getAllPatientForDoctor,
