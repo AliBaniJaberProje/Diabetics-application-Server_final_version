@@ -132,7 +132,7 @@ const getAllStepsToDoctor=async (req,res,_)=>{
         const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)///شرفي هان تغير
 
         const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
-        const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
+        const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),20,59,59,59)
 
 
 
