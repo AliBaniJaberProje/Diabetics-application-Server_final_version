@@ -8,7 +8,7 @@ router.patch("/sendCodePatient",password_serves.sendCodeToPatient)
 router.patch("/updatePassword",password_serves.updatePasswordPatientForgetIt)
 router.patch("/forgetPassword",isAuthorisedUser.isAuthorisedPatient,password_serves.updatePasswordPatientNotForgetIt)
 router.patch("/doctor/updatePassword",isAuthorisedUser.isAuthorisedDoctor,password_serves.updatePasswordDoctorNotForgetIt)
-router.post("sendCodeToDoctor",password_serves.sendCodeToDoctor)
+router.post("/doctor/sendCodeToDoctor",password_serves.sendCodeToDoctor)
 
 
 export default router
