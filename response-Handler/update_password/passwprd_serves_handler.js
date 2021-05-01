@@ -19,7 +19,6 @@ function getRandom() {
 
 const sendCodeToPatient=async (req,res,_)=>{
   try{
-
       const randomCode=getRandom()
       const patientInfo=await Patient.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{pinCode:randomCode}})
       if(patientInfo!=null){
@@ -32,7 +31,6 @@ const sendCodeToPatient=async (req,res,_)=>{
   }catch (e){
       res.status(404).json({"msg":e.message})
   }
-    ///// send Code to phone
 }
 
 const updatePasswordPatientForgetIt=async (req, res, _)=>{
@@ -93,8 +91,9 @@ const sendCodeToDoctor=async (req,res,_)=>{
     try{
 
         const randomCode=getRandom()
-        const patientInfo=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{"pinCode":randomCode}})
-        if(patientInfo!=null){
+        const result=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{"pinCode":randomCode}})
+        console.log(result)
+        if(result!=null){
             res.status(200).json({
                 "code":randomCode,
             })
@@ -148,7 +147,20 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
     }
 }
 
+const updatePasswordDoctorForgetIt=async (req, res, _)=>{
+    try {
+        const saltRounds=10;
+        console.log(req.body)
+        const  salt=await bcrypt.genSalt(saltRounds);
+        const passwordD=await hashPassword( req.body.password,salt)
 
+        const patientInfo=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber,pinCode:req.body.pinCode},{$set:{password:passwordD}})
+        res.status(200).json(req.body.password)
+    }catch (e) {
+        res.status(404).json(e.message)
+    }
+
+}
 
 
 export {
@@ -156,5 +168,6 @@ export {
     updatePasswordPatientForgetIt,
     updatePasswordPatientNotForgetIt,
     updatePasswordDoctorNotForgetIt,
-    sendCodeToDoctor
+    sendCodeToDoctor,
+    updatePasswordDoctorForgetIt
 }
