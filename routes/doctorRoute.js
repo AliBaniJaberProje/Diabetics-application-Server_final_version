@@ -11,4 +11,5 @@ router.patch("/updateCurrentDoctor",isAuthorisedUser.isAuthorisedDoctor,doctor_S
 router.patch("/doctor/update/:id",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.updatePatientFromDoctor)
 router.get("/getMeAllPatient",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.getAllPatientForDoctor)
 router.get("/patients/:id",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.getPatientInfoById)
+router.patch("/update/info",isAuthorisedUser.isAuthorisedDoctor,doctor_ServesApi.updateInfo)
 export default router

@@ -196,6 +196,21 @@ const getPhoneToken=async (req,res,_)=>{
     }
 }
 
+
+const updateInfo=async (req,res,_)=>{
+
+  try{
+      const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
+      const updateInfo=await doctor.findOneAndUpdate({id:resultDecodeJWT.id},{$set:req.body})
+      res.status(200).json(updateInfo)
+  }catch (e) {
+      res.status(404).json({
+          "msg":e.message
+      })
+  }
+
+}
+
 export {
     addNewPatient,
     getAllPatientForDoctor,
@@ -204,5 +219,6 @@ export {
     updatePatientFromDoctor,
     doctorInfoProfile,
     getAllDoctors,
-    getPhoneToken
+    getPhoneToken,
+    updateInfo
 }
