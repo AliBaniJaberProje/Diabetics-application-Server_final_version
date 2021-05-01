@@ -102,18 +102,18 @@ const addFood =async (req,res,_)=>{
             //console.log(foods)
 
 
-        }else if(userInfo["diabetesType"]=="ب")
+        }else if(userInfo["diabetesType"]=="ب" || userInfo["diabetesType"]=="سكري حمل")
         {
-
             console.log("im B")
             let BMR=0;
             if(userInfo["gender"]=="ذكر"){
                 BMR=(13.75*Number(userInfo["weight"]))+(5*Number(userInfo["height"]))-(6.76*Number(age))+66
-            }else if(userInfo["gender"]=="انثى"){
+            }
+            else if(userInfo["gender"]=="انثى"){
                 BMR=(9.6*Number(userInfo["weight"]))+(1.8*Number(userInfo["height"]))-(4.7*Number(age))+655
             }
-            toFilterCh=Math.round(BMR/4) * .65
 
+            toFilterCh=Math.round(BMR/4) * .65
             toFilterCh=toFilterCh-ch
         }
         console.log(toFilterCh)

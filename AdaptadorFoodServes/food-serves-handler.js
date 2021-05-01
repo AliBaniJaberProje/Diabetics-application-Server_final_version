@@ -127,7 +127,8 @@ const findFoodCategory=async(req,res,_)=>{
 
 
 
-        }else if(userInfo["diabetesType"]=="ب")
+        }
+        else if(userInfo["diabetesType"]=="ب"||userInfo["diabetesType"]== "سكري حمل")
         {
 
             console.log("im B")
