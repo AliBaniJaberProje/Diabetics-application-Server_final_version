@@ -97,7 +97,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
 
         const doctorUser=await doctor.findOne({"id":resultJWTDecode.id})
         if(doctorUser!=null){
-            const checkPassword =await bcrypt.compare(req.body.password,patientUser.password)
+            const checkPassword =await bcrypt.compare(req.body.password,doctorUser.password)
             if(checkPassword){
                 const saltRounds=10;
                 console.log(req.body)
