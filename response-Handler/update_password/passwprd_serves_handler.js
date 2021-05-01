@@ -89,6 +89,24 @@ const updatePasswordPatientNotForgetIt=async (req,res,_)=>{
 }
 
 
+const sendCodeToDoctor=async (req,res,_)=>{
+    try{
+        const randomCode=getRandom()
+        const patientInfo=await doctor.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{pinCode:randomCode}})
+        if(patientInfo!=null){
+            res.status(200).json({
+                "code":randomCode,
+            })
+        }else{
+            res.status(201).json({"msg":"بيانات خاطىء "})
+        }
+    }catch (e){
+        res.status(404).json({"msg":e.message})
+    }
+    ///// send Code to phone
+}
+
+
 
 const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
     try{
@@ -136,5 +154,6 @@ export {
     sendCodeToPatient,
     updatePasswordPatientForgetIt,
     updatePasswordPatientNotForgetIt,
-    updatePasswordDoctorNotForgetIt
+    updatePasswordDoctorNotForgetIt,
+    sendCodeToDoctor
 }
