@@ -148,15 +148,19 @@ const getMyEvent=async (req,res,_)=>{
           console.log("________________myEvent___________")
           if(new Date(myEvent["endEventTime"]) < new Date()){
               console.log(" lesss  ")
+              return res.status(400).json({
+                  msg:"user not selected time"
+              })
           }
           else{
+              return  res.status(200).json({
+                  msg:myEvent
+              })
               console.log("zoooob")
           }
           console.log(myEvent)
           console.log("___________________________________")
-       return  res.status(200).json({
-              msg:myEvent
-          })
+
       }
 
   }catch(error){
