@@ -6,7 +6,7 @@ const route=express.Router()
 
 route.get("/title",information_serves.getAllTitle)
 route.get("/documant/:id",information_serves.getDocumant)
-
+route.get("/patient/getTip",information_serves.getTip)
 
 
 export default route
