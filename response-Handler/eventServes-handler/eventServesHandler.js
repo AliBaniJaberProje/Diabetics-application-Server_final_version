@@ -145,6 +145,9 @@ const getMyEvent=async (req,res,_)=>{
           })
       }else{
        const myEvent=await event.findById(patientUser.idAppointment)
+          console.log("________________myEvent___________")
+          console.log(myEvent)
+          console.log("___________________________________")
        return  res.status(200).json({
               msg:myEvent
           })
