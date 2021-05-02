@@ -131,8 +131,8 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
 
             }else{
 
-               res.status(200)({
-                    "msg":"كلمة السر السابقة غير صحيحة"
+                res.status(200).json({
+                    "msg":"تحلس صرمي غلط"
                 })
             }
         }
