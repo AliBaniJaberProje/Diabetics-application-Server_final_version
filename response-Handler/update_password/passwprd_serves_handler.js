@@ -124,20 +124,20 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
                 const passwordD=await hashPassword( req.body.newPassword,salt)
 
                 const doctorInfo=await doctor.findOneAndUpdate({id:resultJWTDecode.id},{$set:{password:passwordD}})
-              return   res.status(200).json({
+              return await res.status(200).json({
                     "msg":"تم تغير كلمة السر بنجاح"
                 })
                 // done
 
             }else{
 
-              return   res.status(200)({
+              return await res.status(200)({
                     "msg":"كلمة السر السابقة غير صحيحة"
                 })
             }
         }
         else{
-          return   res.status(404).json({
+          return  await res.status(404).json({
                 "msg":"العملية خاطئ "
             })
         }
