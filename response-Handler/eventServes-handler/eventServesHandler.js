@@ -148,6 +148,8 @@ const getMyEvent=async (req,res,_)=>{
           console.log("________________myEvent___________")
           if(new Date(myEvent["endEventTime"]) < new Date()){
               console.log(" lesss  ")
+              await patient.findOneAndUpdate({id:resultDecodeJWT.id},{idAppointment:undefined})
+
               return res.status(400).json({
                   msg:"user not selected time"
               })
@@ -158,7 +160,7 @@ const getMyEvent=async (req,res,_)=>{
               })
               console.log("zoooob")
           }
-          console.log(myEvent)
+
           console.log("___________________________________")
 
       }
