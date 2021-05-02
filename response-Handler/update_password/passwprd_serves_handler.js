@@ -132,7 +132,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
             }else{
 
                 res.status(200).json({
-                    "msg":"تحلس صرمي غلط"
+                    "msg":"كلمة المرور غير  صحيحة"
                 })
             }
         }
