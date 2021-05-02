@@ -144,6 +144,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
 
     }
     catch (e) {
+        console.log(e.message)
         res.status(404).json({"msg":"error"+e.message})
     }
 }
