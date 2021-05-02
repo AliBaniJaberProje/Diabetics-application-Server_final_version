@@ -124,7 +124,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
                 const passwordD=await hashPassword( req.body.newPassword,salt)
 
                 const doctorInfo=await doctor.findOneAndUpdate({id:resultJWTDecode.id},{$set:{password:passwordD}})
-                res.status(200).json({
+              return   res.status(200).json({
                     "msg":"تم تغير كلمة السر بنجاح"
                 })
                 // done
