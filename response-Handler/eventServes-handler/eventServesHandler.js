@@ -146,6 +146,12 @@ const getMyEvent=async (req,res,_)=>{
       }else{
        const myEvent=await event.findById(patientUser.idAppointment)
           console.log("________________myEvent___________")
+          if(new Date(myEvent["endEventTime"]) < new Date()){
+              console.log(" lesss  ")
+          }
+          else{
+              console.log("zoooob")
+          }
           console.log(myEvent)
           console.log("___________________________________")
        return  res.status(200).json({
