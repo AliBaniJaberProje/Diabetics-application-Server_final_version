@@ -130,7 +130,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
                 // done
 
             }else{
-                res.status(201)({
+                res.status(200)({
                     "msg":"كلمة السر السابقة غير صحيحة"
                 })
             }
