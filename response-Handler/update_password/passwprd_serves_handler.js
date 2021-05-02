@@ -130,13 +130,14 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
                 // done
 
             }else{
-                res.status(200)({
+
+              return   res.status(200)({
                     "msg":"كلمة السر السابقة غير صحيحة"
                 })
             }
         }
         else{
-            res.status(404).json({
+          return   res.status(404).json({
                 "msg":"العملية خاطئ "
             })
         }
@@ -145,7 +146,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
     }
     catch (e) {
         console.log(e.message)
-        res.status(404).json({"msg":"error"+e.message})
+       return  res.status(404).json({"msg":"error"+e.message})
     }
 }
 
