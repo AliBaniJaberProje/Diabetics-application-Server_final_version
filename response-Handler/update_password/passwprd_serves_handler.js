@@ -114,6 +114,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
         const resultJWTDecode=  jwt.decode(req.headers.authorization.split(" ")[1]);
 
         const doctorUser=await doctor.findOne({"id":resultJWTDecode.id})
+
         if(doctorUser!=null){
             const checkPassword =await bcrypt.compare(req.body.password,doctorUser.password)
             if(checkPassword){
@@ -135,7 +136,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
             }
         }
         else{
-            res.status(400).json({
+            res.status(404).json({
                 "msg":"العملية خاطئ "
             })
         }
