@@ -136,7 +136,7 @@ const updatePasswordDoctorNotForgetIt=async (req,res,_)=>{
             }
         }
         else{
-            res.status(200).json({
+            res.status(404).json({
                 "msg":"العملية خاطئ "
             })
         }
