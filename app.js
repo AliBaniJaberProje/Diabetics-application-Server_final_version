@@ -27,6 +27,7 @@ import event from "./model/event.js";
 import doctor from  "./model/users/doctor.js"
 import patient from "./model/users/patient.js";
 import number_of_step from "./model/number-of-step.js";
+import eventHistory from "./model/eventHistory.js";
 const app=express()
 
 connectMongoDB()
@@ -63,63 +64,32 @@ app.use('/rr',(req, res, next) =>{
 app.get('/',async (req, res, next)=>{
 
 
+    try {
 
-    const toFindNumberOfDays=new Date(2021,5,0,0,0,0,0)///شرفي هان تغير
+        const toFindNumberOfDays=new Date(2021,5,1,0,0,0,0)
+        const startDate1=new Date(2021,4,0,0,0,0,0)
+        const endDate1=new Date(2021,4,toFindNumberOfDays.getDate(),23,59,59,59)
+        const resultEvents=await eventHistory.find({$and:[{idD:"111111111"},{startTime:{ $gte: startDate1, $lte: endDate1 }}]})
 
-    const startDate1=new Date(2021,4,0,0,0,0,0)
-    const endDate1=new Date(2021,4,toFindNumberOfDays.getDate(),20,59,59,59)
+       var data={}
+       var date_serves=new Date()
 
+        for(var i=0;i<resultEvents.length;i++){
+            date_serves=new Date(resultEvents[i]["startTime"])
+            if(!data[date_serves.getFullYear()+"-"+date_serves.getMonth()+"-"+date_serves.getDate()]){
+                data[date_serves.getFullYear()+"-"+date_serves.getMonth()+"-"+date_serves.getDate()]=0
+            }
+            data[date_serves.getFullYear()+"-"+date_serves.getMonth()+"-"+date_serves.getDate()]+=1
+        }
 
+        res.status(200).json(data)
 
-    let resultServes=[]
-
-
-    const result=await number_of_step.find({$and:[{idPatient:"111111112"},{endDate:{ $gte: startDate1.getTime(), $lte: endDate1.getTime() }}]}).sort({endDate:1}).select({startDate:true,numberStep:true,_id:false})
-
-     res.status(200).json(result)
-
-
-    // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMTExMTExMSIsInBhc3N3b3JkIjoiJDJhJDEwJGs3cEdXYUs4WlZJaEdDeXhSTi5KM08yM0ZOblNaVjh5Rm5YSGZJaUdzUHNreHh1SVhmbXplIiwiX2lkIjoiNjA3NjFlZWRlOWRmNDkwMDE1MDdmZDhmIiwiaWF0IjoxNjE4Njc4NzYyfQ.wrNFuMFQWtwPvth3xhZG2bZ6l3PmyeDOJU9BOpRKfKM"
-    // const resultDecodeJWT=  jwt.decode(token);
-    //
-    // const A_patient=await patient.count({$and:[{diabetesType:"أ"},{id:resultDecodeJWT.id}]})
-    // const B_patient=await patient.count({$and:[{diabetesType:"ب"},{id:resultDecodeJWT.id}]})
-    // const C_patient=await patient.count({$and:[{diabetesType:"سكري حمل"},{id:resultDecodeJWT.id}]})
-    //
-    // const resultDoctorInfo=await doctor.findOne({id:resultDecodeJWT.id}).select({username:true,phoneNumber:true,email:true,birthDate:true,gender:true,locationOffice:true})
-    //
-    // res.status(200).json({"result":{
-    //         "A":A_patient,
-    //         "B":B_patient,
-    //         "C":C_patient
-    //     },
-    //     "doctorInfo":resultDoctorInfo
-    // })
-
-
-    // const accountSid = "ACf756b0d39f3611d01dc4871da717e97c";
-    // const authToken ="d38fb8f5f22be6af88451f263177a08b";
-    // const client2 = client(accountSid, authToken);
-    // client2.messages
-    //     .create({
-    //         body: 'server side',
-    //         from: '+14704358572',
-    //         to: '+972598045018'
-    //     })
-    //     .then(message => console.log(message.sid));
-
-    // res.status(200).json({
-    //     "token":'req.headers.authorization.split(" ")[1]'
-    // })
+    }catch (e) {
+        res.status(404).json({"msg":e.message})
+    }
 
 
 
-
-
-
-    // res.status(200).json({
-    //     "message":"Ali Bani Jaber Server  ",
-    // })
 })
 
 

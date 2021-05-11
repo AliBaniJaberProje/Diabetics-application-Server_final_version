@@ -32,13 +32,9 @@ const getTip=async (req,res,_)=>{
     try {
 
 
-
         const result=await tip_model.find({}).select({data:true,_id:false})
         const randomCode=getRandomA(result.length)
-
-        res.status(200).json(
-            result[randomCode]
-        )
+        res.status(200).json(result[randomCode])
 
     }catch (e) {
         res.status(404).json({"msg":e.message})
