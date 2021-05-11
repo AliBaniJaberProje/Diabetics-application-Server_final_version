@@ -40,13 +40,24 @@ const getTip=async (req,res,_)=>{
         res.status(404).json({"msg":e.message})
     }
 }
-
+const add=async (req,res,_)=>{
+   try {
+       const new_tip=new tip_model({
+           data:req.data
+       })
+       const result=await new_tip.save()
+       res.status(200).json(result)
+   }catch (e) {
+       res.status(400).json(e.message)
+   }
+}
 
 
 export {
     getAllTitle,
     getDocumant,
-    getTip
+    getTip,
+    add
 }
 
 
