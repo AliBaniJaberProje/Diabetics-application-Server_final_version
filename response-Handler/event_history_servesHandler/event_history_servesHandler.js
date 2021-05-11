@@ -65,7 +65,6 @@ const eventHistoryCount=async (req,res,_)=>{
     try {
         console.log("************************")
         console.table(req)
-
         console.log("************************")
 
         const token=req.headers.authorization.split(" ")[1]
@@ -78,10 +77,10 @@ const eventHistoryCount=async (req,res,_)=>{
         var date_serves=new Date()
         for(var i=0;i<resultEvents.length;i++){
             date_serves=new Date(resultEvents[i]["startTime"])
-            if(!data[date_serves.getFullYear()+"-"+date_serves.getMonth()+"-"+date_serves.getDate()]){
-                data[date_serves.getFullYear()+"-"+date_serves.getMonth()+"-"+date_serves.getDate()]=0
+            if(!data[date_serves.getFullYear()+"-"+Number(date_serves.getMonth()+1)+"-"+date_serves.getDate()]){
+                data[date_serves.getFullYear()+"-"+Number(date_serves.getMonth()+1)+"-"+date_serves.getDate()]=0
             }
-            data[date_serves.getFullYear()+"-"+date_serves.getMonth()+"-"+date_serves.getDate()]+=1
+            data[date_serves.getFullYear()+"-"+Number(date_serves.getMonth()+1)+"-"+date_serves.getDate()]+=1
         }
         res.status(200).json(data)
     }catch (e) {

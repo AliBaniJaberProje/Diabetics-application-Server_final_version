@@ -7,7 +7,7 @@ const Route =express.Router()
 
 Route.get("/:idPatient/:year/:month",isAuthorisedUser.isAuthorisedDoctor,EventHistoryServesHandler.getEventHistoryToDoctor)
 Route.get("/api/patient/:year/:month",isAuthorisedUser.isAuthorisedPatient,EventHistoryServesHandler.getEventHistoryToPatient)
-Route.patch("/api/patient/:year/:month",isAuthorisedUser.isAuthorisedDoctor,EventHistoryServesHandler.eventHistoryCount)
+Route.get("/index/api/patient/:year/:month",isAuthorisedUser.isAuthorisedDoctor,EventHistoryServesHandler.eventHistoryCount)
 Route.get("/",EventHistoryServesHandler.event)
 
 
