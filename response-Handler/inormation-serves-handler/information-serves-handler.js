@@ -43,7 +43,7 @@ const getTip=async (req,res,_)=>{
 const add=async (req,res,_)=>{
    try {
        const new_tip=new tip_model({
-           data:req.data
+           data:req["data"]
        })
        const result=await new_tip.save()
        res.status(200).json(result)
