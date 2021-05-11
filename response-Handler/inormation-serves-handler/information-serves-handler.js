@@ -42,6 +42,7 @@ const getTip=async (req,res,_)=>{
 }
 const add=async (req,res,_)=>{
    try {
+       console.log(req.data)
        const new_tip=new tip_model({
            data:req["data"]
        })
