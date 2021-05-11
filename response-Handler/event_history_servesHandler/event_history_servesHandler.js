@@ -64,7 +64,8 @@ const event=async (req,res,_)=>{
 const eventHistoryCount=async (req,res,_)=>{
     try {
         console.log("************************")
-        console.log(req.headers)
+        console.table(req)
+
         console.log("************************")
 
         const token=req.headers.authorization.split(" ")[1]
