@@ -63,7 +63,10 @@ const event=async (req,res,_)=>{
 
 const eventHistoryCount=async (req,res,_)=>{
     try {
+        console.log("************************")
         console.log(req.headers)
+        console.log("************************")
+
         const token=req.headers.authorization.split(" ")[1]
         const resultDecodeJWT=  jwt.decode(token);
         const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
