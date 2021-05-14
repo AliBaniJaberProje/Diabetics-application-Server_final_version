@@ -45,7 +45,9 @@ const signInDoctor=async (req, res, _)=>{
                 token:token,
             })
         }else{
-            res.status(404).json({msg:' user not Authorised',token:"error pass"})
+
+            res.status(200).json({msg:' user not Authorised',token:"error pass"})
+
         }
 
     }

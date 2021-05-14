@@ -60,7 +60,6 @@ const event=async (req,res,_)=>{
     }
 }
 
-
 const eventHistoryCount=async (req,res,_)=>{
     try {
         console.log("************************")
