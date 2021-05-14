@@ -4,6 +4,7 @@ import dose from '../../model/dose.js'
 import bcrypt from "bcryptjs";
 import patient from "../../model/users/patient.js";
 import doctor from "../../model/users/doctor.js";
+import client from "twilio";
 const saltRounds=10;
 
 async  function hashPassword(password,salt)  {
@@ -14,6 +15,8 @@ const addNewPatient=async (req,res,_)=>{
 
     console.log(req.body)
     const  salt=await bcrypt.genSalt(saltRounds);
+    const passV_0=req.body.password;
+
     req.body.password = await hashPassword( req.body.password,salt)
     const resultDecodeJWT=  jwt.decode(req.headers.authorization.split(" ")[1]);
 
@@ -44,6 +47,22 @@ const addNewPatient=async (req,res,_)=>{
             })
 
         await newdose.save()
+
+        const accountSid = 'AC0b9475923abd11f5ba71acd3eaa14cbd';
+        const authToken = '234330d1198b1b72fa226dc1634e1a44';
+        const client1 =client(accountSid, authToken);
+
+        client1.messages
+            .create({
+                body: "رابط تنزيل التطبيق" +
+                    "12325241"+   "رقم المستخدم :" +"\n"+
+                    passV_0+  "  كلمة السر    :"+"\n",
+                from: '+13613362834',
+                to: '+97'+req.body.phoneNumber,
+            })
+            .then(message => console.log(message.sid))
+            .done();
+
 
         res.status(200).json({
             message:"operation accomplished successfully",
@@ -171,7 +190,6 @@ const doctorInfoProfile=async (req,res,_)=>{
     })
 }
 
-
 const getAllDoctors=async (req,res,_)=>{
     try{
         const result=await doctor.find({}).select({phoneNumber:true,username:true,locationOffice:true,imgURL:true})
@@ -181,7 +199,6 @@ const getAllDoctors=async (req,res,_)=>{
         res.status(404).json({"msg":e.message})
     }
 }
-
 
 const getPhoneToken=async (req,res,_)=>{
     try {
@@ -196,7 +213,6 @@ const getPhoneToken=async (req,res,_)=>{
     }
 }
 
-
 const updateInfo=async (req,res,_)=>{
 
   try{
@@ -210,7 +226,6 @@ const updateInfo=async (req,res,_)=>{
   }
 
 }
-
 
 
 export {
