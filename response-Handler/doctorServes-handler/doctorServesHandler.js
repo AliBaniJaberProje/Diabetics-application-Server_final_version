@@ -55,7 +55,7 @@ const addNewPatient=async (req,res,_)=>{
         client1.messages
             .create({
                 body: "رابط تنزيل التطبيق" +
-                    "12325241"+   "رقم المستخدم :" +"\n"+
+                    req.body.id+   "رقم المستخدم :" +"\n"+
                     passV_0+  "  كلمة السر    :"+"\n",
                 from: '+13613362834',
                 to: '+97'+req.body.phoneNumber,
