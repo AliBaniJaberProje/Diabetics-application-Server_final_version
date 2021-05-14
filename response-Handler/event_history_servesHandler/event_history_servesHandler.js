@@ -72,7 +72,7 @@ const eventHistoryCount=async (req,res,_)=>{
         const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)
         const startDate1=new Date(Number(req.params.year),Number(req.params.month)-1,0,0,0,0,0)
         const endDate1=new Date(Number(req.params.year),Number(req.params.month)-1,toFindNumberOfDays.getDate(),23,59,59,59)
-        const resultEvents=await eventHistory.find({$and:[{idD:resultDecodeJWT.id},{startTime:{ $gte: startDate1, $lte: endDate1 }}]})
+        const resultEvents=await eventHistory.find({$and:[{idD:resultDecodeJWT.id},{startTime:{ $gte: startDate1, $lte: endDate1 }}]}).sort({startTime:1})
         var data={}
         var date_serves=new Date()
         for(var i=0;i<resultEvents.length;i++){
