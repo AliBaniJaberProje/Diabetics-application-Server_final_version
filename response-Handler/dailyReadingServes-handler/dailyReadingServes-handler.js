@@ -143,14 +143,17 @@ const getDailyReadingToPatient=async (req,res,_)=>{
 
         const token=req.headers["x-auth-token"];
         const resultJWTDecode=await jwt.decode(token)
-        const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,0,0,0,0,0)
-        const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,31,23,59,59,59)
+        const toFindNumberOfDays=new Date(Number(req.params.year),Number(req.params.month),0,0,0,0,0)///شرفي هان تغير
+
+
+        const startDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,1,0,0,0,0)
+        const endDate=new Date(Number(req.params['year']),Number(req.params['month'])-1,toFindNumberOfDays.getDate(),23,59,59,59)
 
         const resultReading=await dailyReadingModel.find({$and:[{date: { $gte: startDate, $lte: endDate }},{idPatient:resultJWTDecode.id}]}).select({_id:false,idPatient:false,__v:false}).sort({date:1})
        let date
         for(var i=0;i<resultReading.length;i++){
             date=new Date(resultReading[i]["date"])
-            resultReading[i]._doc["date"]=date.getUTCDate()+"-"+(date.getMonth()+1);
+            resultReading[i]._doc["date"]=(date.getMonth()+1)+"-"+date.getUTCDate();
         }
 
         return  res.status(200).json(resultReading)
