@@ -117,7 +117,7 @@ const sendCodeToDoctor=async (req,res,_)=>{
                 .create({
                     body: "\n"+randomCode,
                     from: '+13613362834',
-                    to: '+97'+result.phoneNumber,
+                    to: '+970598045018',
                 })
                 .then(message => console.log(message.sid))
                 .done();
