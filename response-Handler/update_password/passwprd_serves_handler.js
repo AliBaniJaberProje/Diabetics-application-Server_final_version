@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken"
 import Patient from "../../model/users/patient.js"
 import doctor from "../../model/users/doctor.js"
 import bcrypt from "bcryptjs";
+import client from "twilio";
 
 async  function hashPassword(password,salt)  {
     return await bcrypt.hash(password,salt)
@@ -22,6 +23,20 @@ const sendCodeToPatient=async (req,res,_)=>{
       const randomCode=getRandom()
       const patientInfo=await Patient.findOneAndUpdate({id:req.body.id,phoneNumber:req.body.phoneNumber},{$set:{pinCode:randomCode}})
       if(patientInfo!=null){
+
+          const accountSid = 'AC0b9475923abd11f5ba71acd3eaa14cbd';
+          const authToken = '234330d1198b1b72fa226dc1634e1a44';
+          const client1 =client(accountSid, authToken);
+          client1.messages
+              .create({
+                  body: "\n"+randomCode,
+                  from: '+13613362834',
+                  to: '+97'+req.body.phoneNumber,
+              })
+              .then(message => console.log(message.sid))
+              .done();
+
+
           res.status(200).json({
               "code":randomCode,
           })
@@ -94,6 +109,21 @@ const sendCodeToDoctor=async (req,res,_)=>{
         const result=await doctor.updateOne({id:req.body.id},{$set:{"pinCode":randomCode}})
         console.log(result)
         if(result!=null){
+
+            const accountSid = 'AC0b9475923abd11f5ba71acd3eaa14cbd';
+            const authToken = '234330d1198b1b72fa226dc1634e1a44';
+            const client1 =client(accountSid, authToken);
+            client1.messages
+                .create({
+                    body: "\n"+randomCode,
+                    from: '+13613362834',
+                    to: '+97'+result.phoneNumber,
+                })
+                .then(message => console.log(message.sid))
+                .done();
+
+
+
             res.status(200).json({
                 "code":randomCode,
             })
